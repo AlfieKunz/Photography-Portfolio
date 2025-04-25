@@ -835,7 +835,7 @@ input, select, textarea {
 		-webkit-overflow-scrolling: touch;
 		position: fixed;
 		top: 0;
-		width: 22.63em;
+		width: 22.64em;
 		height: 100%;
 		background: #fff;
 		outline: 0;
@@ -929,7 +929,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 2.05em 2em 1.75em 2.05em ;
+		padding: 2em 1.4em 1.5em 1.2em ;
 	}
 
 		#header h1 {
