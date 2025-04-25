@@ -21,15 +21,14 @@ def generate_json():
             continue
 
         image_entries = []
-        for fname in sorted(os.listdir(full_path)):
+        for fname in sorted(os.listdir(full_path), reverse=True):
             if not fname.lower().endswith((".jpg", ".jpeg", ".png")):
                 continue
 
             entry = {
                 "filename": fname,
                 "title": format_title(fname),
-                "desc": "A description for " + format_title(fname),
-                # Optional: add position like "top center", "left center" etc if needed
+                # "desc": "A description for " + format_title(fname),
                 # "position": "center center"
             }
             image_entries.append(entry)

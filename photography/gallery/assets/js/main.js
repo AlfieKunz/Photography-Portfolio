@@ -484,13 +484,13 @@ var main = (function($) { var _ = {
 			_.initViewer();
 			_.initEvents();
 
-		// Show first slide if xsmall isn't active.
-			breakpoints.on('>xsmall', function() {
+		// // Show first slide if xsmall isn't active.
+		// 	breakpoints.on('>xsmall', function() {
 
-				if (_.current === null)
-					_.switchTo(0, true);
+		// 		if (_.current === null)
+		// 			_.switchTo(0, true);
 
-			});
+		// 	});
 
 	},
 
