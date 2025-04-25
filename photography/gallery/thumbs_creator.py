@@ -28,7 +28,7 @@ def save_thumbnail(img, output_path):
 
 
 direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/images/ball"
-input_folder = direc + "/full"
+input_folder = direc + "/full/new"
 output_folder = direc + "/thumb"
 os.makedirs(output_folder, exist_ok=True)
 
