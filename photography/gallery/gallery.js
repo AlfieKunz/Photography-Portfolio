@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    fetch(`data/${category}.json`)  // Adjusted path: remove `../`
+    fetch(`data/${category}.json`)
       .then(response => {
         if (!response.ok) throw new Error("Gallery not found");
         return response.json();
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const article = document.createElement("article");
           article.innerHTML = `
             <a class="thumbnail" href="images/${category}/full/${img.filename}" data-position="${img.position || 'center center'}">
-              <img src="images/${category}/thumb/${img.filename}" alt="" />  <!-- Adjusted path -->
+              <img src="images/${category}/thumb/${img.filename}" alt="" />
             </a>
             <h2>${img.title}</h2>
             <p>${img.desc}</p>
