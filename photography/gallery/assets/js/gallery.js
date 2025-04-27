@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     astro: {
         title: "Gallery -<br>Astrophotography",
         description: "Studying physics at university, and having a knack for long exposure photography, has given me a huge appreciation for the stars & sky. Countless blissful nights were spent taking these photos, nights have now become some of the happiest of my life.",
-        startIndex: 3
+        startIndex: 7
     },
     ball: {
         title: "Gallery -<br>Balls & Formals",
