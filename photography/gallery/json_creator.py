@@ -7,8 +7,6 @@ direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/"
 IMAGE_ROOT = direc + "images"
 DATA_ROOT = direc + "data"
 
-THUMB_SUBDIR = "thumb"  # not needed here, but for clarity
-
 def format_title(filename):
     base = os.path.splitext(filename)[0]
     return base.replace("-", " ").replace("_", " ").title()
@@ -22,8 +20,10 @@ def generate_json():
     os.makedirs(DATA_ROOT, exist_ok=True)
 
     for category in os.listdir(IMAGE_ROOT):
-        full_dir = os.path.join(IMAGE_ROOT, category, "full")
+        full_dir = os.path.join(IMAGE_ROOT, category, "thumb")
         if not os.path.isdir(full_dir):
+            continue
+        if category != "studioportrait":
             continue
 
         # 1) Collect & reverse filenames
@@ -41,7 +41,7 @@ def generate_json():
 
             entry = {
                 "filename": fname,
-                "title": "Sample Photo",
+                "title": "",
                 # "desc": "A description for " + format_title(fname),
                 # "position": "center center"
             }

@@ -1,8 +1,13 @@
-from PIL import Image, ImageCms
+from PIL import Image, ImageCms, ImageOps
 import os, io
 
 def load_with_icc(path):
     img = Image.open(path)
+    
+    try:
+        img = ImageOps.exif_transpose(img)
+    except Exception as e:
+        print(f"Warning: Could not apply EXIF transpose to {os.path.basename(path)}. Error: {e}")
 
     # If the image has an ICC profile, convert to sRGB using it
     if "icc_profile" in img.info:
@@ -27,13 +32,13 @@ def save_thumbnail(img, output_path):
     img.save(output_path, "JPEG", quality=95, subsampling=0, optimize=True)
 
 
-direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/images/ball"
-input_folder = direc + "/full/new"
+direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/images/studioportrait"
+input_folder = direc + "/full"
 output_folder = direc + "/thumb"
 os.makedirs(output_folder, exist_ok=True)
 
 for filename in os.listdir(input_folder):
-    if filename.lower().endswith(".jpg") or filename.lower().endswith(".jpeg"):
+    if filename.lower().endswith(".jpg") or filename.lower().endswith(".jpeg") or filename.lower().endswith(".png"):
         print(filename)
         input_path = os.path.join(input_folder, filename)
         output_path = os.path.join(output_folder, filename)
