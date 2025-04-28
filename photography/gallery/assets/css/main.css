@@ -80,7 +80,7 @@ input, select, textarea {
 			}
 		*/
 
-	@media screen and (max-width: 480px) {
+	@media screen and (max-width: 650px) {
 
 		html, body {
 			min-width: 320px;
@@ -753,7 +753,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 650px) {
 
 			ul.actions:not(.fixed) {
 				-moz-flex-direction: column;
@@ -900,7 +900,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 650px) {
 
 			#main {
 				-moz-transition: opacity 0.5s ease, visibility 0.5s;
@@ -1026,7 +1026,7 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 650px) {
 
 			#thumbnails article .thumbnail:before {
 				display: none;
@@ -1333,7 +1333,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 650px) {
 
 			#viewer {
 				-moz-transition: opacity 0.5s ease;
