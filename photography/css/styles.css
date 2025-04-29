@@ -93,6 +93,8 @@
   }
 }
 
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -6185,8 +6187,7 @@ textarea.form-control-lg {
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 767.98px) {
+
   .offcanvas-md.offcanvas-end {
     top: 0;
     right: 0;
@@ -6194,8 +6195,7 @@ textarea.form-control-lg {
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 767.98px) {
+
   .offcanvas-md.offcanvas-top {
     top: 0;
     right: 0;
@@ -6205,8 +6205,7 @@ textarea.form-control-lg {
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 767.98px) {
+
   .offcanvas-md.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6215,13 +6214,11 @@ textarea.form-control-lg {
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 767.98px) {
+
   .offcanvas-md.showing, .offcanvas-md.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 767.98px) {
+
   .offcanvas-md.showing, .offcanvas-md.hiding, .offcanvas-md.show {
     visibility: visible;
   }
@@ -6273,8 +6270,7 @@ textarea.form-control-lg {
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 991.98px) {
+
   .offcanvas-lg.offcanvas-end {
     top: 0;
     right: 0;
@@ -6282,8 +6278,7 @@ textarea.form-control-lg {
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 991.98px) {
+
   .offcanvas-lg.offcanvas-top {
     top: 0;
     right: 0;
@@ -6293,8 +6288,7 @@ textarea.form-control-lg {
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 991.98px) {
+
   .offcanvas-lg.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6303,13 +6297,11 @@ textarea.form-control-lg {
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 991.98px) {
+
   .offcanvas-lg.showing, .offcanvas-lg.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 991.98px) {
+
   .offcanvas-lg.showing, .offcanvas-lg.hiding, .offcanvas-lg.show {
     visibility: visible;
   }
@@ -10941,16 +10933,22 @@ hr.divider-light {
   }
 }
 
+
+
 header.masthead {
-  padding-top: 14rem;
-  padding-bottom: calc(14rem + 0.9rem);
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.5) 0%, rgba(92, 77, 66, 0.25) 100%), url("../assets/img/bg-masthead-port.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
   background-size: cover;
-}
 
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+}
 
 header.masthead h1, header.masthead .h1 {
   font-size: 4rem;
@@ -10961,29 +10959,32 @@ header.masthead p {
 header.masthead p.about-text {
   font-size: 1rem;
 }
+
+
 @media (min-width: 500px) {
-  header.masthead {
-    padding-bottom: calc(14rem - 0.2rem);
-    }
-  header.masthead p.about-text {
-    font-size: 1.15rem;
-  }
+   header.masthead p.about-text {
+     font-size: 1.15rem;
+   }
 }
+
+
 @media (min-width: 768px) {
-  header.masthead {
-  padding-bottom: calc(14rem + 1.5rem);
-  }
+  header.masthead h1, header.masthead .h1 {
+     font-size: 4.5rem;
+   }
+   header.masthead p {
+     font-size: 1.25rem;
+   }
 }
+
+
 @media (min-width: 992px) {
   header.masthead {
-    height: 100vh;
-    min-height: 40rem;
-    padding-top: 4.5rem;
-    padding-bottom: 0;
-    
     background: linear-gradient(to bottom, rgba(92, 77, 66, 0.5) 0%, rgba(92, 77, 66, 0.25) 100%), url("../assets/img/bg-masthead-land.jpg");
     background-size: cover;
+    padding-top: 4.5rem;
   }
+
   header.masthead p {
     font-size: 1.25rem;
   }
@@ -10991,6 +10992,7 @@ header.masthead p.about-text {
     font-size: 4.5rem;
   }
 }
+
 @media (min-width: 1200px) {
   header.masthead h1, header.masthead .h1 {
     font-size: 5rem;
@@ -10999,6 +11001,8 @@ header.masthead p.about-text {
     font-size: 1.35rem;
   }
 }
+
+
 
 #portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
   max-width: 1920px;
@@ -11016,15 +11020,15 @@ header.masthead p.about-text {
   height: 100%;
   position: absolute;
 
-  bottom: 0; /* Can also use top: 0; */
-  left: 0; /* Added: Ensure it covers from the left */
+  bottom: 0;
+  left: 0;
   text-align: center;
-  opacity: 0; /* Caption starts hidden */
+  opacity: 0;
   color: #fff;
   background: rgba(244, 98, 58, 0.9);
   transition: opacity 0.25s ease;
   text-align: center;
-  pointer-events: none; /* Prevent interaction when hidden */
+  pointer-events: none;
 }
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-category {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -11040,19 +11044,16 @@ header.masthead p.about-text {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption,
-  /* ... other selectors ... */
-  #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
+  #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
     opacity: 1;
-    pointer-events: auto; /* Allow interaction when visible */
+    pointer-events: auto;
   }
 }
 
 /* --- Mobile/Touch Visibility Effect (controlled by JS) --- */
-/* This class will be added/removed by JavaScript */
 #portfolio .portfolio-box .portfolio-box-caption.is-visible {
    opacity: 1;
-   pointer-events: auto; /* Allow interaction when visible */
+   pointer-events: auto;
 }
 
 

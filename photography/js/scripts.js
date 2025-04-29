@@ -6,11 +6,10 @@
 //
 // Scripts
 // 
-
+let HamburgerActive = false;
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
-    let HamburgerActive = false;
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) { // stops scroll from undoing hamburder toggle animation.
@@ -25,6 +24,7 @@ window.addEventListener('DOMContentLoaded', event => {
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
+        console.log(HamburgerActive);
     };
 
     // Shrink the navbar 
@@ -54,12 +54,16 @@ window.addEventListener('DOMContentLoaded', event => {
             }
             const isCollapsed = document.getElementById('navbarResponsive').classList.contains('show');
             
-            if (isCollapsed) {
+            if (HamburgerActive) {
                 HamburgerActive = false;
+                if (window.scrollY === 0) {
+                    navbarCollapsible.classList.remove('navbar-shrink')
+                }
             } else {
                 HamburgerActive = true;
                 navbarCollapsible.classList.add('navbar-shrink');
             }
+            console.log(HamburgerActive);
         });
     }
 
@@ -79,10 +83,9 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // controls for making picture captions show on mobile devices.
     const lacksHoverSupport = window.matchMedia('(hover: none), (pointer: coarse)').matches;
-    const isMobileScreen = window.matchMedia('(max-width: 991px)').matches;
     const onePictureMode = window.matchMedia('(max-width: 575px)').matches;
 
-    if (lacksHoverSupport && isMobileScreen) {
+    if (lacksHoverSupport) {
         const portfolioBoxes = document.querySelectorAll('#portfolio .portfolio-box');
         let currentlyVisibleCaption = null; // Track the currently shown caption element
 
