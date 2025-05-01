@@ -962,77 +962,79 @@ input, select, textarea {
 					margin-left: 0;
 				}
 
+				
 /* Thumbnails */
 
-	#thumbnails {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
+#thumbnails {
+    padding: 0 0.5em;
+    column-count: 2;
+    column-gap: 0em;
+}
 
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		padding: 0 0.5em;
+#thumbnails article {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid; 
+    page-break-inside: avoid;
+
+    width: 100%;
+    position: relative;
+    background: #101010;
+    outline: 0;
+}
+
+
+#thumbnails article .thumbnail {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: block;
+    position: relative;
+    border: 0;
+    outline: 0;
+}
+
+    #thumbnails article .thumbnail img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #thumbnails article .thumbnail:before {
+        pointer-events: none;
+        -moz-transition: opacity 0.25s ease;
+        -webkit-transition: opacity 0.25s ease;
+        -ms-transition: opacity 0.25s ease;
+        transition: opacity 0.25s ease;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 0 0 2px #00D3B7, inset 0 0 0px 3px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    #thumbnails article .thumbnail:focus:before {
+        opacity: 0.5;
+    }
+
+#thumbnails article h2, #thumbnails article p {
+    display: none;
+}
+
+#thumbnails article.active .thumbnail:before {
+    opacity: 1;
+}
+
+@media screen and (max-width: 650px) {
+
+	#thumbnails article .thumbnail:before {
+		display: none;
 	}
 
-		#thumbnails article {
-			position: relative;
-			width: 50%;
-			background: #101010;
-			outline: 0;
-		}
+}
 
-			#thumbnails article .thumbnail {
-				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-				display: block;
-				position: relative;
-				border: 0;
-				outline: 0;
-			}
 
-				#thumbnails article .thumbnail img {
-					display: block;
-					width: 100%;
-				}
-
-				#thumbnails article .thumbnail:before {
-					pointer-events: none;
-					-moz-transition: opacity 0.25s ease;
-					-webkit-transition: opacity 0.25s ease;
-					-ms-transition: opacity 0.25s ease;
-					transition: opacity 0.25s ease;
-					content: '';
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					box-shadow: inset 0 0 0 2px #00D3B7, inset 0 0 0px 3px rgba(0, 0, 0, 0.15);
-					opacity: 0;
-					z-index: 1;
-				}
-
-				#thumbnails article .thumbnail:focus:before {
-					opacity: 0.5;
-				}
-
-			#thumbnails article h2, #thumbnails article p {
-				display: none;
-			}
-
-			#thumbnails article.active .thumbnail:before {
-				opacity: 1;
-			}
-
-		@media screen and (max-width: 650px) {
-
-			#thumbnails article .thumbnail:before {
-				display: none;
-			}
-
-		}
 
 /* Viewer */
 
@@ -1284,6 +1286,7 @@ input, select, textarea {
 		body.is-preload-2 #viewer .slide {
 			opacity: 0;
 		}
+
 
 		@media screen and (max-width: 1280px) {
 

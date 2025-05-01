@@ -32,7 +32,7 @@ def save_thumbnail(img, output_path):
     img.save(output_path, "JPEG", quality=95, subsampling=0, optimize=True)
 
 
-direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/images/studioportrait"
+direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/images/ball"
 input_folder = direc + "/full"
 output_folder = direc + "/thumb"
 os.makedirs(output_folder, exist_ok=True)

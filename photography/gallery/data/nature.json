@@ -1,286 +1,499 @@
 [
   {
     "filename": "DSR_0412.JPG",
-    "title": ""
+    "title": "",
+    "datetime": "2025-04-20T15:53:54",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0410.JPG",
-    "title": ""
+    "title": "",
+    "datetime": "2025-04-17T19:12:04",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0384_1.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2025-04-13T15:33:24",
+    "type": "",
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0382_1.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2025-04-13T15:27:57",
+    "type": "",
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0381_1.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2025-04-13T15:22:40",
+    "type": "",
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0365_1.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2025-04-12T12:43:22",
+    "type": "",
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0364_1.jpg",
-    "title": ""
-  },
-  {
-    "filename": "DSR_0344.JPG",
-    "title": ""
+    "title": "",
+    "datetime": "2025-04-12T12:42:33",
+    "type": "",
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0362_1.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2025-04-12T12:41:49",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0344.JPG",
+    "title": "",
+    "datetime": "2025-04-07T17:48:03",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0341.JPG",
-    "title": ""
+    "title": "",
+    "datetime": "2025-04-07T17:37:01",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0334_1.jpg",
-    "title": ""
-  },
-  {
-    "filename": "DSR_0209_2.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2025-03-22T01:09:42",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0303.JPG",
-    "title": ""
+    "title": "",
+    "datetime": "2025-03-05T17:15:17",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0209_2.jpg",
+    "title": "",
+    "datetime": "2024-09-20T00:47:39",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0117.JPG",
-    "title": ""
+    "title": "",
+    "datetime": "2024-09-06T13:55:13",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0057.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_8710_1.jpg",
-    "title": ""
-  },
-  {
-    "filename": "DSC_9212_1~2.jpg",
-    "title": ""
-  },
-  {
-    "filename": "DSC_7762_1.jpg",
-    "title": ""
-  },
-  {
-    "filename": "DSC_7755.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_7722.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_7699.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_6911.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_5092.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_4887_1.jpg",
-    "title": ""
-  },
-  {
-    "filename": "DSC_4446.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_4024.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_3989.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_3904.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_3533.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_3481_1.jpg",
-    "title": ""
-  },
-  {
-    "filename": "DSC_3358.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_3276_1.jpg",
-    "title": ""
-  },
-  {
-    "filename": "DSC_3015.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_1334_1.jpg",
-    "title": ""
-  },
-  {
-    "filename": "DSC_1295.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_1279.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_1263.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_1150.JPG",
-    "title": ""
+    "title": "",
+    "datetime": "2024-09-05T12:02:59",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10864_1.jpg",
-    "title": "Europe Interrailing 2024"
-  },
-  {
-    "filename": "DSC_10759_1.jpg",
-    "title": "Europe Interrailing 2024"
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-18T13:04:22",
+    "type": "",
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10824_1.jpg",
-    "title": "Europe Interrailing 2024"
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-17T13:59:53",
+    "type": "",
+    "aspect_ratio": 1.499
   },
   {
-    "filename": "DSC_10709_1.jpg",
-    "title": "Europe Interrailing 2024"
+    "filename": "DSC_10759_1.jpg",
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-14T14:42:04",
+    "type": "",
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10754_1.jpg",
-    "title": "Europe Interrailing 2024"
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-14T13:34:28",
+    "type": "",
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSC_10709_1.jpg",
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-13T10:12:02",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10707_1.jpg",
-    "title": "Europe Interrailing 2024"
-  },
-  {
-    "filename": "DSC_10657.JPG",
-    "title": "Europe Interrailing 2024"
-  },
-  {
-    "filename": "DSC_10656_1.jpg",
-    "title": "Europe Interrailing 2024"
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-13T10:07:31",
+    "type": "",
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10670_2.jpg",
-    "title": "Europe Interrailing 2024"
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-11T13:07:50",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
-    "filename": "DSC_10649_1.jpg",
-    "title": "Europe Interrailing 2024"
+    "filename": "DSC_10657.JPG",
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-11T12:12:22",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_10656_1.jpg",
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-11T12:08:00",
+    "type": "",
+    "aspect_ratio": 0.666
   },
   {
     "filename": "DSC_10650_1.jpg",
-    "title": "Europe Interrailing 2024"
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-11T12:00:36",
+    "type": "",
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSC_10649_1.jpg",
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-11T11:59:27",
+    "type": "",
+    "aspect_ratio": 1.501
   },
   {
     "filename": "DSC_10617_1.jpg",
-    "title": "Europe Interrailing 2024"
-  },
-  {
-    "filename": "DSC_10539_1.jpg",
-    "title": "Europe Interrailing 2024"
-  },
-  {
-    "filename": "DSC_10494.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_10427_1.jpg",
-    "title": ""
-  },
-  {
-    "filename": "DSC_10422_1.jpg",
-    "title": ""
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-11T10:19:52",
+    "type": "",
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10540_1.jpg",
-    "title": "Europe Interrailing 2024"
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-08T10:31:58",
+    "type": "",
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSC_10539_1.jpg",
+    "title": "Europe Interrailing 2024",
+    "datetime": "2024-07-08T10:17:02",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_10494.JPG",
+    "title": "",
+    "datetime": "2024-07-02T17:47:12",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_10427_1.jpg",
+    "title": "",
+    "datetime": "2024-06-08T16:37:10",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_10422_1.jpg",
+    "title": "",
+    "datetime": "2024-05-19T19:02:57",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10408_1.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2024-04-30T15:56:04",
+    "type": "",
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10392_1.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2024-04-17T19:41:09",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10390.JPG",
-    "title": ""
+    "title": "",
+    "datetime": "2024-04-17T19:37:56",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10379_2.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2024-04-16T13:13:31",
+    "type": "",
+    "aspect_ratio": 1.333
   },
   {
     "filename": "DSC_10370.JPG",
-    "title": ""
-  },
-  {
-    "filename": "DSC_10224_1.jpg",
-    "title": "Raby Castle - County Durham"
-  },
-  {
-    "filename": "DSC_10221_1.jpg",
-    "title": "Raby Castle - County Durham"
-  },
-  {
-    "filename": "DSC_10222_1.jpg",
-    "title": "Raby Castle - County Durham"
-  },
-  {
-    "filename": "DSC_10130_2.png",
-    "title": ""
-  },
-  {
-    "filename": "DSC_10218_1.jpg",
-    "title": "Raby Castle - County Durham"
+    "title": "",
+    "datetime": "2024-04-14T18:21:06",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10266_1.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2024-04-14T18:16:07",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_10224_1.jpg",
+    "title": "Raby Castle - County Durham",
+    "datetime": "2024-03-28T14:52:38",
+    "type": "",
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSC_10222_1.jpg",
+    "title": "Raby Castle - County Durham",
+    "datetime": "2024-03-28T14:48:23",
+    "type": "",
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSC_10221_1.jpg",
+    "title": "Raby Castle - County Durham",
+    "datetime": "2024-03-28T14:46:31",
+    "type": "",
+    "aspect_ratio": 0.666
+  },
+  {
+    "filename": "DSC_10218_1.jpg",
+    "title": "Raby Castle - County Durham",
+    "datetime": "2024-03-28T14:41:58",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10200_1.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2024-03-26T11:58:10",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_10130_2.png",
+    "title": "",
+    "datetime": "2024-03-29T15:06:00",
+    "type": "",
+    "aspect_ratio": 1.0
+  },
+  {
+    "filename": "DSC_9212_1~2.jpg",
+    "title": "",
+    "datetime": "2023-07-05T14:29:54",
+    "type": "",
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSC_8710_1.jpg",
+    "title": "",
+    "datetime": "2023-07-02T13:27:57",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_7762_1.jpg",
+    "title": "",
+    "datetime": "2023-04-02T11:30:26",
+    "type": "",
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSC_7755.JPG",
+    "title": "",
+    "datetime": "2023-04-02T11:30:05",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_7722.JPG",
+    "title": "",
+    "datetime": "2023-03-18T14:05:38",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_7699.JPG",
+    "title": "",
+    "datetime": "2023-03-18T14:00:27",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_6911.JPG",
+    "title": "",
+    "datetime": "2023-02-28T15:33:30",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_5092.JPG",
+    "title": "",
+    "datetime": "2022-09-01T13:54:32",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_4887_1.jpg",
+    "title": "",
+    "datetime": "2022-08-31T11:43:59",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_4446.JPG",
+    "title": "",
+    "datetime": "2022-08-25T18:50:55",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_4024.JPG",
+    "title": "",
+    "datetime": "2022-08-06T13:29:00",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_3989.JPG",
+    "title": "",
+    "datetime": "2022-08-06T13:27:37",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_3904.JPG",
+    "title": "",
+    "datetime": "2022-07-31T16:38:58",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_3533.JPG",
+    "title": "",
+    "datetime": "2022-07-21T08:30:08",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_3481_1.jpg",
+    "title": "",
+    "datetime": "2022-06-11T11:15:58",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_3358.JPG",
+    "title": "",
+    "datetime": "2022-05-29T16:11:10",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_3276_1.jpg",
+    "title": "",
+    "datetime": "2022-05-29T14:44:12",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_3015.JPG",
+    "title": "",
+    "datetime": "2022-04-10T18:02:42",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_1334_1.jpg",
+    "title": "",
+    "datetime": "2021-09-19T15:38:02",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_1295.JPG",
+    "title": "",
+    "datetime": "2021-09-06T12:12:07",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_1279.JPG",
+    "title": "",
+    "datetime": "2021-09-03T13:08:08",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_1263.JPG",
+    "title": "",
+    "datetime": "2021-09-03T12:01:54",
+    "type": "",
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSC_1150.JPG",
+    "title": "",
+    "datetime": "2021-08-30T14:47:14",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_0969.JPG",
-    "title": ""
+    "title": "",
+    "datetime": "2021-08-28T17:01:06",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_0900_1.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2021-08-25T12:03:13",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_0641.JPG",
-    "title": ""
+    "title": "",
+    "datetime": "2021-08-04T16:37:56",
+    "type": "",
+    "aspect_ratio": 1.5
   },
   {
     "filename": "AIMG_20201021_150050.jpg",
-    "title": ""
+    "title": "",
+    "datetime": "2020-10-21T15:00:51",
+    "type": "",
+    "aspect_ratio": 1.333
   }
 ]

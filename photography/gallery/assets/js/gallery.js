@@ -13,35 +13,66 @@ document.addEventListener("DOMContentLoaded", () => {
     astro: {
         title: "Gallery -<br>Astrophotography",
         description: "Studying physics at university, and having a knack for long exposure photography, has given me a huge appreciation for the stars & sky. Countless blissful nights were spent taking these photos, nights have now become some of the happiest of my life.",
-        startIndex: 7
+        startIndex: 7,
+        heightDelta: 0
     },
     ball: {
         title: "Gallery -<br>Balls & Formals",
         description: "Whether it be photos of groups, candids, awards, speeches or the venue, I strive to showcase the excitement and atmosphere of an event to remember. I excel in busy situations and when meeting new people, and pride myself on building a friendly and charismatic rapport with guests while maintaining professionalism and strong directorial skills.",
-        startIndex: 2
+        startIndex: 1,
+        heightDelta: 0.5
     },
     landscape: {
         title: "Gallery -<br>Landscapes",
         description: "Powerful, raw, sublime, whatever you want to call it - there's a reason why landscapes move us so deeply. Here, I try to capture some of that feeling, aiming to preserve a place or moment in the beauty it deserves.",
-        startIndex: 10
+        startIndex: 6,
+        heightDelta: 0.5
     },
     nature: {
         title: "Gallery -<br>Animals & Nature",
         description: "<b>Eutierria</b> (noun): 'a pleasing feeling of oneness with the earth and life'. Okay, <i>perhaps</i> that's a little pretentious, but there's a reason why the majority of my photos are of nature! :) I'm really lucky to live where I do, to be surrounded by so much life. Photography helps me explore that 'oneness' through curiosity and mindfulness; I hope to share a piece of that feeling here - hope you enjoy! 😌",
-        startIndex: 10
+        startIndex: 40,
+        heightDelta: 0.5
     },
     studioportrait: {
         title: "Gallery -<br>Studio Work & Portraits",
         description: "This might just be my favourite kind of photography - getting together with a friend or two, spending hours brainstorming and planning every detail, then jumping up and down with childlike joy when unveiling the results. It's always a blast :D.",
-        startIndex: 27
+        startIndex: 19,
+        heightDelta: -0.5
     },
     travel: {
         title: "Gallery -<br>Adventures & Travel",
         description: "This is slightly more of a <i>variety</i> collection, spanning everything from everyday travels to international expeditions. Despite the range, I hope that each photo remains striking, telling a unique story that stays true to the original moment.",
-        startIndex: 26
+        startIndex: 26,
+        heightDelta: -0.25
     }
   };
 
+    function SplitImages(images, category) {
+    let groupA = [];
+    let groupB = [];
+    let heightA = 0;
+    let heightB = category.heightDelta;
+
+    images.forEach(image => {
+        const imageHeight = 1 / image.aspect_ratio;
+        
+        if (heightA <= heightB) {
+            groupA.push(image);
+            heightA += imageHeight;
+        } else {
+            groupB.push(image);
+            heightB += imageHeight;
+        }
+    });
+
+    console.log(groupA);
+    console.log(groupB);
+    console.log(heightA);
+    console.log(heightB);
+    
+    return [...groupA, ...groupB];
+    }
 
   fetch(`data/${category}.json`)
       .then(response => {
@@ -58,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const container = document.getElementById("thumbnails");
           container.innerHTML = ""; // Clear placeholder
 
-          // Create and append the new thumbnail articles
-          images.forEach(img => {
+          orderedImages = SplitImages(images, headerContent)
+          orderedImages.forEach(img => {
               const article = document.createElement("article");
               article.innerHTML = `
                   <a class="thumbnail" href="images/${category}/full/${img.filename}" data-position="${img.position || 'center center'}">
