@@ -1,70 +1,108 @@
 import os
 import json
+from datetime import datetime
 from PIL import Image
+from PIL.ExifTags import TAGS
 
-# Paths
-direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/"
-IMAGE_ROOT = direc + "images"
-DATA_ROOT = direc + "data"
+# --- CONFIGURATION ---
+CATEGORY = "studioportrait"
+DIREC = "C:/Users/alfie/Photography-Portfolio/photography/gallery"
+IMAGE_FOLDER = DIREC + "/images/" + CATEGORY + "/full/"
+JSON_OUTPUT_PATH = DIREC + "/data/" + CATEGORY + " - New.json"
+DEFAULT_TITLE = ""
+DEFAULT_TYPE = ""
+DEFAULT_DATE = "30/04/25"
+# ---------------------
 
-def format_title(filename):
-    base = os.path.splitext(filename)[0]
-    return base.replace("-", " ").replace("_", " ").title()
+def get_exif_data(image):
+    """Extract EXIF data dictionary from a PIL image."""
+    exif_data = {}
+    try:
+        raw = image._getexif()
+        if raw:
+            for tag, value in raw.items():
+                tag_name = TAGS.get(tag, tag)
+                exif_data[tag_name] = value
+    except AttributeError:
+        pass
+    return exif_data
 
-def get_orientation(image_path):
-    with Image.open(image_path) as img:
-        w, h = img.size
-    return "landscape" if w >= h else "portrait"
+def extract_capture_datetime(exif_data):
+    """Try to extract the original date+time and return (formatted_date_str, datetime_obj)."""
+    date_str = exif_data.get("DateTimeOriginal") or exif_data.get("DateTime")
+    if date_str:
+        try:
+            dt = datetime.strptime(date_str, "%Y:%m:%d %H:%M:%S")
+            formatted = dt.strftime("%d/%m/%y")
+            return formatted, dt
+        except Exception:
+            pass
+    # Fallback
+    fallback_dt = datetime.strptime(DEFAULT_DATE, "%d/%m/%y")
+    return DEFAULT_DATE, fallback_dt
 
-def generate_json():
-    os.makedirs(DATA_ROOT, exist_ok=True)
 
-    for category in os.listdir(IMAGE_ROOT):
-        full_dir = os.path.join(IMAGE_ROOT, category, "thumb")
-        if not os.path.isdir(full_dir):
-            continue
-        if category != "studioportrait":
-            continue
+def get_image_metadata(image_path):
+    try:
+        with Image.open(image_path) as img:
+            exif = get_exif_data(img)
+            width, height = img.size
+            aspect_ratio = round(width / height, 3) if height != 0 else 0
+            date_str, full_dt = extract_capture_datetime(exif)
+    except Exception as e:
+        print(f"Error processing {image_path}: {e}")
+        aspect_ratio = 1
+        date_str = DEFAULT_DATE
+        full_dt = datetime.strptime(DEFAULT_DATE, "%d/%m/%y")
 
-        # 1) Collect & reverse filenames
-        all_files = [f for f in sorted(os.listdir(full_dir))
-                     if f.lower().endswith((".jpg", ".jpeg", ".png"))]
-        all_files.reverse()
+    return {
+        "filename": os.path.basename(image_path),
+        "title": DEFAULT_TITLE,
+        "datetime": full_dt.isoformat(),
+        "type": DEFAULT_TYPE,
+        "aspect_ratio": aspect_ratio
+    }
 
-        # 2) Pairing logic by orientation
-        pending = {"landscape": None, "portrait": None}
-        output_entries = []
 
-        for fname in all_files:
-            img_path = os.path.join(full_dir, fname)
-            orient = get_orientation(img_path)
+def load_existing_json(path):
+    if os.path.exists(path):
+        with open(path, 'r') as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                return []
+    return []
 
-            entry = {
-                "filename": fname,
-                "title": "",
-                # "desc": "A description for " + format_title(fname),
-                # "position": "center center"
-            }
+def save_json(data, path):
+    with open(path, 'w') as f:
+        json.dump(data, f, indent=2)
 
-            if pending[orient] is None:
-                # hold this image until we find a matching orientation
-                pending[orient] = entry
-            else:
-                # we have a pending partner: emit both together
-                output_entries.append(pending[orient])
-                output_entries.append(entry)
-                pending[orient] = None
+def sort_by_date_desc(data):
+    def parse_dt(entry):
+        try:
+            return datetime.fromisoformat(entry['datetime'])
+        except Exception:
+            return datetime.min
+    return sorted(data, key=parse_dt, reverse=True)
 
-        # 3) Append any leftover pending entry (if odd count)
-        for orient in ("landscape", "portrait"):
-            if pending[orient] is not None:
-                output_entries.append(pending[orient])
 
-        # 4) Write out JSON
-        out_path = os.path.join(DATA_ROOT, f"{category}.json")
-        with open(out_path, "w") as f:
-            json.dump(output_entries, f, indent=2)
-        print(f"[✓] {category}: {len(output_entries)} images → {out_path}")
+def main():
+    existing_data = load_existing_json(JSON_OUTPUT_PATH)
+    filenames_in_existing = {entry['filename'] for entry in existing_data}
+
+    new_data = []
+    for fname in os.listdir(IMAGE_FOLDER):
+        if fname.lower().endswith((".jpg", ".jpeg", ".png", ".bmp", ".tiff")):
+            if fname not in filenames_in_existing:
+                image_path = os.path.join(IMAGE_FOLDER, fname)
+                metadata = get_image_metadata(image_path)
+                new_data.append(metadata)
+
+    all_data = existing_data + new_data
+    all_data = sort_by_date_desc(all_data)
+
+    save_json(all_data, JSON_OUTPUT_PATH)
+    print(f"Processed {len(new_data)} new images. Total entries: {len(all_data)}.")
 
 if __name__ == "__main__":
-    generate_json()
+    main()
