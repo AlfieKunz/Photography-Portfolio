@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     astro: {
         title: "Gallery -<br>Astrophotography",
         description: "Studying physics at university, and having a knack for long exposure photography, has given me a huge appreciation for the stars & sky. Countless blissful nights were spent taking these photos, nights have now become some of the happiest of my life.",
-        startIndex: 7,
+        startIndex: 14,
         heightDelta: 0
     },
     ball: {
@@ -25,25 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
     landscape: {
         title: "Gallery -<br>Landscapes",
         description: "Powerful, raw, sublime, whatever you want to call it - there's a reason why landscapes move us so deeply. Here, I try to capture some of that feeling, aiming to preserve a place or moment in the beauty it deserves.",
-        startIndex: 6,
+        startIndex: 7,
         heightDelta: 0.5
     },
     nature: {
         title: "Gallery -<br>Animals & Nature",
         description: "<b>Eutierria</b> (noun): 'a pleasing feeling of oneness with the earth and life'. Okay, <i>perhaps</i> that's a little pretentious, but there's a reason why the majority of my photos are of nature! :) I'm really lucky to live where I do, to be surrounded by so much life. Photography helps me explore that 'oneness' through curiosity and mindfulness; I hope to share a piece of that feeling here - hope you enjoy! 😌",
-        startIndex: 40,
+        startIndex: 5,
         heightDelta: 0.5
     },
     studioportrait: {
         title: "Gallery -<br>Studio Work & Portraits",
         description: "This might just be my favourite kind of photography - getting together with a friend or two, spending hours brainstorming and planning every detail, then jumping up and down with childlike joy when unveiling the results. It's always a blast :D.",
-        startIndex: 19,
+        startIndex: 20,
         heightDelta: -0.5
     },
     travel: {
         title: "Gallery -<br>Adventures & Travel",
         description: "This is slightly more of a <i>variety</i> collection, spanning everything from everyday travels to international expeditions. Despite the range, I hope that each photo remains striking, telling a unique story that stays true to the original moment.",
-        startIndex: 26,
+        startIndex: 33,
         heightDelta: -0.25
     }
   };
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let groupA = [];
     let groupB = [];
     let heightA = 0;
-    let heightB = category.heightDelta;
+    let heightB = 0; //category.heightDelta;
 
     images.forEach(image => {
         const imageHeight = 1 / image.aspect_ratio;
@@ -66,10 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    console.log(groupA);
-    console.log(groupB);
-    console.log(heightA);
-    console.log(heightB);
+    // console.log(groupA);
+    // console.log(groupB);
+    // console.log(heightA);
+    // console.log(heightB);
     
     return [...groupA, ...groupB];
     }
@@ -92,9 +92,21 @@ document.addEventListener("DOMContentLoaded", () => {
           orderedImages = SplitImages(images, headerContent)
           orderedImages.forEach(img => {
               const article = document.createElement("article");
+
+              const aspectRatio = img.aspect_ratio || (3 / 2);
+              const nominalWidth = 16;
+              const nominalHeight = nominalWidth / aspectRatio;
+
               article.innerHTML = `
                   <a class="thumbnail" href="images/${category}/full/${img.filename}" data-position="${img.position || 'center center'}">
-                      <img src="images/${category}/thumb/${img.filename}" alt="" />
+                      <img 
+                        src="images/${category}/thumb/${img.filename}" 
+                        alt="" 
+                        style="aspect-ratio: ${aspectRatio};" 
+                        loading="lazy" 
+                        width="${nominalWidth}" 
+                        height="${nominalHeight}" 
+                    />
                   </a>
                   <h2>${img.title}</h2>
                   <p>${img.desc || '© Alfie Kunz 2025 - All Rights Reserved'}</p>
@@ -104,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           main.initViewer();
           main.switchTo(headerContent.startIndex, true);
+          document.getElementById('main').scrollTop = 0;
       })
       .catch(error => {
           document.getElementById("thumbnails").innerHTML = "<p>&nbsp&nbspError Loading Photos: 'Gallery not found'.</p>";

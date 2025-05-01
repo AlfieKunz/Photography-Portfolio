@@ -1,11 +1,11 @@
 import os
 import json
 from datetime import datetime
-from PIL import Image
+from PIL import Image, ImageOps
 from PIL.ExifTags import TAGS
 
 # --- CONFIGURATION ---
-CATEGORY = "studioportrait"
+CATEGORY = "travel"
 DIREC = "C:/Users/alfie/Photography-Portfolio/photography/gallery"
 IMAGE_FOLDER = DIREC + "/images/" + CATEGORY + "/full/"
 JSON_OUTPUT_PATH = DIREC + "/data/" + CATEGORY + " - New.json"
@@ -46,9 +46,17 @@ def get_image_metadata(image_path):
     try:
         with Image.open(image_path) as img:
             exif = get_exif_data(img)
+            orientation = exif.get("Orientation", 1)
+
             width, height = img.size
+
+            # Adjust width/height based on EXIF orientation
+            if orientation in [6, 8]:  # 6 = rotate 270° CCW, 8 = rotate 90° CCW
+                width, height = height, width
+
             aspect_ratio = round(width / height, 3) if height != 0 else 0
             date_str, full_dt = extract_capture_datetime(exif)
+
     except Exception as e:
         print(f"Error processing {image_path}: {e}")
         aspect_ratio = 1
