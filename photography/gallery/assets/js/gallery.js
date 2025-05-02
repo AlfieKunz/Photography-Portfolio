@@ -83,14 +83,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // console.log(heightA);
     // console.log(heightB);
     
-    return [...groupA, ...groupB];
+    return {
+        orderedImages: [...groupA, ...groupB],
+        columnASize: groupA.length,
+        columnBSize: groupB.length
+    };
     }
 
 
 
     function renderThumbnails(imagesToRender) {
         thumbnailsContainer.innerHTML = "";
-        const orderedImages = SplitImages(imagesToRender, headerContent);
+        const splitResult = SplitImages(imagesToRender, headerContent);
+        const orderedImages = splitResult.orderedImages;
+
+        // --- Pass layout info to main.js ---
+        // Store it directly on the main object
+        main.layoutInfo = {
+            columnASize: splitResult.columnASize,
+            columnBSize: splitResult.columnBSize
+        };
 
         orderedImages.forEach(img => {
             const article = document.createElement("article");
@@ -179,9 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
         generateFilterButtons(allImages);
 
         // Initial render with all images
-        renderThumbnails(allImages); // Use the new render function
-
-        main.initViewer();
+        renderThumbnails(allImages);
         main.switchTo(headerContent.startIndex, true);
         document.getElementById('main').scrollTop = 0;
 

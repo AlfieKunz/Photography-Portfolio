@@ -30,6 +30,12 @@ var main = (function($) { var _ = {
 	},
 
 	/**
+     * Layout information provided by gallery.js.
+     * @var {object | null} { columnASize: number, totalImages: number }
+     */
+    layoutInfo: null, // Initialize placeholder
+
+	/**
 	 * Window.
 	 * @var {jQuery}
 	 */
@@ -500,6 +506,11 @@ var main = (function($) { var _ = {
 	 */
 	switchTo: function(index, noHide) {
 
+		if (_.slides.length === 0 || index < 0 || index >= _.slides.length) {
+            console.warn(`switchTo: Invalid index ${index} or no slides loaded.`);
+            return;
+        }
+
 		// Already at index and xsmall isn't active? Bail.
 			if (_.current == index
 			&&	!breakpoints.active('<=xsmall'))
@@ -621,81 +632,65 @@ var main = (function($) { var _ = {
 	 * Switches to the next slide.
 	 */
 	next: function() {
+		if (_.current === null || !_.layoutInfo || _.slides.length === 0) return;
 
-		// Calculate new index.
-			var i, c = _.current, l = _.slides.length;
-
-			if (c >= l - 1)
-				i = 0;
-			else
-				i = c + 1;
-
-		// Switch.
-			_.switchTo(i);
-
+		var i, c = _.current, l = _.slides.length;
+		if (c >= _.layoutInfo.columnASize) {
+			i = c - _.layoutInfo.columnASize + 1
+		} else {
+			i = c + _.layoutInfo.columnASize
+		}
+		if (i !== c) { // Only switch if index changed
+            _.switchTo(i);
+        }
 	},
 
 	/**
-	 * Switches to the previous slide.
+	 * Switches to the previous slide (respecting two-column layout).
 	 */
 	previous: function() {
-
-		// Calculate new index.
-			var i, c = _.current, l = _.slides.length;
-
-			if (c <= 0)
-				i = l - 1;
-			else
-				i = c - 1;
-
-		// Switch.
-			_.switchTo(i);
-
+        if (_.current === null || !_.layoutInfo || _.slides.length === 0) return;
+		
+		var i, c = _.current, l = _.slides.length;
+		if (c >= _.layoutInfo.columnASize) {
+			i = c - _.layoutInfo.columnASize
+		} else {
+			i = c + _.layoutInfo.columnASize - 1
+		}
+		if (i !== c) { // Only switch if index changed
+            _.switchTo(i);
+        }
 	},
 
 	/**
-	 * Switches to slide "above" current.
+	 * Switches to slide "above" current (moves up within its column).
 	 */
 	up: function() {
-
-		// Fullscreen? Bail.
-			if (_.$body.hasClass('fullscreen'))
-				return;
-
-		// Calculate new index.
-			var i, c = _.current, l = _.slides.length, tpr = _.settings.thumbnailsPerRow;
-
-			if (c <= (tpr - 1))
-				i = l - (tpr - 1 - c) - 1;
-			else
-				i = c - tpr;
-
-		// Switch.
-			_.switchTo(i);
-
+		if (_.$body.hasClass('fullscreen')) return;
+		if (_.current === null || !_.layoutInfo || _.slides.length === 0) return;
+		
+		var c = _.current, l = _.slides.length;
+		if (c === 0 || c === _.layoutInfo.columnASize) {
+			return;
+		}
+		_.switchTo(c - 1);
 	},
 
 	/**
-	 * Switches to slide "below" current.
+	 * Switches to slide "below" current (moves down within its column).
 	 */
 	down: function() {
-
-		// Fullscreen? Bail.
-			if (_.$body.hasClass('fullscreen'))
-				return;
-
-		// Calculate new index.
-			var i, c = _.current, l = _.slides.length, tpr = _.settings.thumbnailsPerRow;
-
-			if (c >= l - tpr)
-				i = c - l + tpr;
-			else
-				i = c + tpr;
-
-		// Switch.
-			_.switchTo(i);
-
+		if (_.$body.hasClass('fullscreen')) return;
+		if (_.current === null || !_.layoutInfo || _.slides.length === 0) return;
+		
+		var c = _.current, l = _.slides.length;
+		if (c === _.layoutInfo.columnASize - 1 || c === _.layoutInfo.columnASize + _.layoutInfo.columnBSize - 1) {
+			return;
+		}
+		_.switchTo(c + 1);
 	},
+
+	
 
 	/**
 	 * Shows the main wrapper.
