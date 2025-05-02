@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    function renderThumbnails(imagesToRender) {
+    function renderThumbnails(imagesToRender, firstTime) {
         thumbnailsContainer.innerHTML = "";
         const splitResult = SplitImages(imagesToRender, headerContent);
         const orderedImages = splitResult.orderedImages;
@@ -128,7 +128,13 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
             thumbnailsContainer.appendChild(article);
         });
+        main.clearSlide();
         main.initViewer();
+        if (firstTime) {
+            main.switchTo(headerContent.startIndex, true);
+        } else {
+            main.switchTo(0, true);
+        };
     }
 
 
@@ -168,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
             }
 
-            renderThumbnails(filteredImages);
+            renderThumbnails(filteredImages, (currentFilter == "All"));
         }
     });
 
@@ -191,8 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
         generateFilterButtons(allImages);
 
         // Initial render with all images
-        renderThumbnails(allImages);
-        main.switchTo(headerContent.startIndex, true);
+        renderThumbnails(allImages, true);
         document.getElementById('main').scrollTop = 0;
 
 

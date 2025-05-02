@@ -385,6 +385,9 @@ var main = (function($) { var _ = {
 	 */
 	initViewer: function() {
 
+		_.slides = []
+		_.current = null
+
 		// Bind thumbnail click event.
 			_.$thumbnails
 				.on('click', '.thumbnail', function(event) {
@@ -628,6 +631,25 @@ var main = (function($) { var _ = {
 
 	},
 
+
+	/**
+     * @param {function} callback
+     */
+	clearSlide: function(callback) {
+		if (_.$viewer) {
+			var $activeSlides = _.$viewer.find('.slide.active');
+			$activeSlides.removeClass('active');
+			setTimeout(function() {
+				$activeSlides.remove(); // Remove the element(s) from the DOM
+				// Execute the callback function now that clearing is done
+				if (typeof callback === 'function') {
+					callback();
+				}
+			}, _.settings.slideDuration); // Use the existing slide duration for timing
+		}
+    },
+
+
 	/**
 	 * Switches to the next slide.
 	 */
@@ -636,9 +658,15 @@ var main = (function($) { var _ = {
 
 		var i, c = _.current, l = _.slides.length;
 		if (c >= _.layoutInfo.columnASize) {
-			i = c - _.layoutInfo.columnASize + 1
+			if (c > (_.layoutInfo.columnASize + 0.5 * _.layoutInfo.columnBSize)) {
+				i = c - _.layoutInfo.columnBSize + 1
+			} else {
+			i = c - _.layoutInfo.columnASize + 1}
 		} else {
-			i = c + _.layoutInfo.columnASize
+			if (c > (0.5 * _.layoutInfo.columnASize)) {
+				i = c + _.layoutInfo.columnBSize
+			} else {
+				i = c + _.layoutInfo.columnASize}
 		}
 		if (i !== c) { // Only switch if index changed
             _.switchTo(i);
@@ -650,12 +678,18 @@ var main = (function($) { var _ = {
 	 */
 	previous: function() {
         if (_.current === null || !_.layoutInfo || _.slides.length === 0) return;
-		
+
 		var i, c = _.current, l = _.slides.length;
 		if (c >= _.layoutInfo.columnASize) {
-			i = c - _.layoutInfo.columnASize
+			if (c > (_.layoutInfo.columnASize + 0.5 * _.layoutInfo.columnBSize)) {
+				i = c - _.layoutInfo.columnBSize 
+			} else {
+			i = c - _.layoutInfo.columnASize}
 		} else {
-			i = c + _.layoutInfo.columnASize - 1
+			if (c > (0.5 * _.layoutInfo.columnASize)) {
+				i = c + _.layoutInfo.columnBSize - 1
+			} else {
+				i = c + _.layoutInfo.columnASize - 1}
 		}
 		if (i !== c) { // Only switch if index changed
             _.switchTo(i);
