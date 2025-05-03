@@ -10834,6 +10834,14 @@ body {
 .page-section {
   padding: 4rem 0 3.5rem 0;
 }
+.page-section.intro {
+  padding: 3rem 0 1rem 0;
+}
+.page-section.intro p {
+  font-size: 15px;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
 .page-section.call p {
   font-size: 15px;
   margin-top: -1rem;

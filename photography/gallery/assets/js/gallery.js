@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "Studying physics at university, and having a knack for long exposure photography, has given me a huge appreciation for the stars & sky. Countless blissful nights were spent taking these photos, nights have now become some of the happiest of my life.",
         startIndex: 14,
         heightDelta: 0,
-        tags: []
+        tags: ["Signature", "Moon", "Stars"]
     },
     ball: {
         title: "Gallery -<br>Balls & Formals",
@@ -29,28 +29,28 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "Powerful, raw, sublime, whatever you want to call it - there's a reason why landscapes move us so deeply. Here, I try to capture some of that feeling, aiming to preserve a place or moment in the beauty it deserves.",
         startIndex: 7,
         heightDelta: 0.5,
-        tags: []
+        tags: ["Signature", "City", "Water & Ocean", "Mountains & Hills"]
     },
     nature: {
         title: "Gallery -<br>Animals & Nature",
         description: "<b>Eutierria</b> (noun): 'a pleasing feeling of oneness with the earth and life'. Okay, <i>perhaps</i> that's a little pretentious, but there's a reason why the majority of my photos are of nature! :) I'm really lucky to live where I do, to be surrounded by so much life. Photography helps me explore that 'oneness' through curiosity and mindfulness; I hope to share a piece of that feeling here - hope you enjoy! 😌",
         startIndex: 5,
         heightDelta: 0.5,
-        tags: []
+        tags: ["Signature", "Animals", "Insects", "Plants & Greenery"]
     },
     studioportrait: {
         title: "Gallery -<br>Studio Work & Portraits",
         description: "This might just be my favourite kind of photography - getting together with a friend or two, spending hours brainstorming and planning every detail, then jumping up and down with childlike joy when unveiling the results. It's always a blast :D.",
         startIndex: 20,
         heightDelta: -0.5,
-        tags: []
+        tags: ["Signature", "Studio", "Portraits"]
     },
     travel: {
         title: "Gallery -<br>Adventures & Travel",
         description: "This is slightly more of a <i>variety</i> collection, spanning everything from everyday travels to international expeditions. Despite the range, I hope that each photo remains striking, telling a unique story that stays true to the original moment.",
         startIndex: 33,
         heightDelta: -0.25,
-        tags: []
+        tags: ["Signature", "Street & Buildings", "Greenery", "Water"]
     }
   };
 
@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             main.switchTo(0, true);
         };
+        document.getElementById('main').scrollTop = 0;
     }
 
 
@@ -198,12 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Initial render with all images
         renderThumbnails(allImages, true);
-        document.getElementById('main').scrollTop = 0;
 
-
-        // Scroll to top after initial load and switch
-         window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-         // document.getElementById('main').scrollTop = 0; // Or this if needed
       })
       .catch(error => {
           document.getElementById("thumbnails").innerHTML = "<p>&nbsp&nbspError Loading Photos: 'Gallery not found'.</p>";

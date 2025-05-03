@@ -981,6 +981,7 @@ input, select, textarea {
     position: relative;
     background: #101010;
     outline: 0;
+	touch-action: manipulation;
 }
 
 

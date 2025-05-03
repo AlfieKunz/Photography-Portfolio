@@ -3,119 +3,119 @@
     "filename": "DSR_0352_1.jpg",
     "title": "",
     "datetime": "2025-04-30T00:00:00",
-    "type": "",
+    "type": ["Signature", "Moon"],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC-1341_1.JPG",
     "title": "",
     "datetime": "2025-04-11T21:56:23",
-    "type": "",
+    "type": ["Moon"],
     "aspect_ratio": 1.499
   },
   {
     "filename": "DSR_0202_1.jpg",
     "title": "",
     "datetime": "2024-10-11T00:23:48",
-    "type": "",
+    "type": [],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0200_1.jpg",
     "title": "",
     "datetime": "2024-10-11T00:20:16",
-    "type": "",
+    "type": ["Signature"],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0012_1.jpg",
     "title": "Criccieth - Wales",
     "datetime": "2024-08-30T22:59:19",
-    "type": "",
+    "type": ["Signature", "Stars"],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0011_1.jpg",
     "title": "Criccieth - Wales",
     "datetime": "2024-08-30T22:55:27",
-    "type": "",
+    "type": ["Signature", "Stars"],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0010_1.jpg",
     "title": "Criccieth - Wales",
     "datetime": "2024-08-30T22:50:30",
-    "type": "",
+    "type": ["Stars"],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0008_1.jpg",
     "title": "Criccieth - Wales",
     "datetime": "2024-08-30T22:42:46",
-    "type": "",
+    "type": ["Signature", "Stars"],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10192_1.jpg",
     "title": "",
     "datetime": "2024-03-24T21:26:45",
-    "type": "",
+    "type": ["Stars"],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_8247_1.jpg",
     "title": "",
     "datetime": "2023-04-06T22:30:57",
-    "type": "",
+    "type": ["Signature", "Stars"],
     "aspect_ratio": 1.333
   },
   {
     "filename": "DSC_5782_1.jpg",
     "title": "",
     "datetime": "2022-10-22T07:32:41",
-    "type": "",
+    "type": ["Moon"],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_5244_1.jpg",
     "title": "Low Newton - Northumberland",
     "datetime": "2022-09-01T22:18:45",
-    "type": "",
+    "type": ["Signature", "Stars"],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_5034_1.jpg",
     "title": "",
     "datetime": "2022-08-31T23:12:31",
-    "type": "",
+    "type": ["Stars"],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_4170_1.jpg",
     "title": "",
     "datetime": "2022-08-10T21:17:43",
-    "type": "",
+    "type": ["Moon"],
     "aspect_ratio": 1.576
   },
   {
     "filename": "DSC_0301_1.jpg",
     "title": "",
     "datetime": "2021-07-19T22:21:43",
-    "type": "",
+    "type": ["Moon"],
     "aspect_ratio": 1.501
   },
   {
     "filename": "DSC_0183 (1).jpg",
     "title": "",
     "datetime": "2021-07-16T21:19:59",
-    "type": "",
+    "type": ["Signature", "Moon"],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_0180_2.JPG",
     "title": "",
     "datetime": "2021-07-15T21:22:42",
-    "type": "",
+    "type": ["Moon"],
     "aspect_ratio": 1.779
   }
 ]
