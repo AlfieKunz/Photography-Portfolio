@@ -24,7 +24,6 @@ window.addEventListener('DOMContentLoaded', event => {
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
-        console.log(HamburgerActive);
     };
 
     // Shrink the navbar 
@@ -63,7 +62,6 @@ window.addEventListener('DOMContentLoaded', event => {
                 HamburgerActive = true;
                 navbarCollapsible.classList.add('navbar-shrink');
             }
-            console.log(HamburgerActive);
         });
     }
 

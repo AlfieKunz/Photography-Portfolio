@@ -32,16 +32,19 @@ def save_thumbnail(img, output_path):
     img.save(output_path, "JPEG", quality=95, subsampling=0, optimize=True)
 
 
-direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/images/ball"
+direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/images/studioportrait"
 input_folder = direc + "/full"
 output_folder = direc + "/thumb"
 os.makedirs(output_folder, exist_ok=True)
 
 for filename in os.listdir(input_folder):
     if filename.lower().endswith(".jpg") or filename.lower().endswith(".jpeg") or filename.lower().endswith(".png"):
-        print(filename)
         input_path = os.path.join(input_folder, filename)
         output_path = os.path.join(output_folder, filename)
+        
+        if os.path.exists(output_path):
+            continue
+        print(filename)
         
         img = load_with_icc(input_path)
         thumb = create_thumbnail(img)

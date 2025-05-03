@@ -5,10 +5,10 @@ from PIL import Image, ImageOps
 from PIL.ExifTags import TAGS
 
 # --- CONFIGURATION ---
-CATEGORY = "travel"
+CATEGORY = "landscape"
 DIREC = "C:/Users/alfie/Photography-Portfolio/photography/gallery"
 IMAGE_FOLDER = DIREC + "/images/" + CATEGORY + "/full/"
-JSON_OUTPUT_PATH = DIREC + "/data/" + CATEGORY + " - New.json"
+JSON_OUTPUT_PATH = DIREC + "/data/" + CATEGORY + ".json"
 DEFAULT_TITLE = ""
 DEFAULT_TYPE = ""
 DEFAULT_DATE = "30/04/25"

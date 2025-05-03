@@ -3,7 +3,9 @@
     "filename": "DSR_0399_1.jpg",
     "title": "Barnard Castle - County Durham",
     "datetime": "2025-04-13T19:44:58",
-    "type": ["Signature"],
+    "type": [
+      "Signature"
+    ],
     "aspect_ratio": 1.5
   },
   {
@@ -24,357 +26,499 @@
     "filename": "DSR_0390_1.jpg",
     "title": "Barnard Castle - County Durham",
     "datetime": "2025-04-13T19:22:33",
-    "type": ["Signature", "Mountains & Hills"],
+    "type": [
+      "Signature",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0153_1.jpg",
     "title": "Haworth - West Yorkshire",
     "datetime": "2024-09-12T17:13:16",
-    "type": ["Signature", "Water & Ocean"],
+    "type": [
+      "Signature",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0112.JPG",
     "title": "Snowdonia - Watkin Path",
     "datetime": "2024-09-06T13:17:16",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0108.JPG",
     "title": "Snowdonia - Watkin Path",
     "datetime": "2024-09-06T12:16:47",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0099_1.jpg",
     "title": "Snowdonia - Watkin Path",
     "datetime": "2024-09-06T11:41:00",
-    "type": ["Signature", "Mountains & Hills"],
+    "type": [
+      "Signature",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0074.JPG",
     "title": "Snowdonia - Watkin Path",
     "datetime": "2024-09-06T09:52:42",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0065.JPG",
     "title": "Snowdonia - Watkin Path",
     "datetime": "2024-09-06T09:28:50",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0063.JPG",
     "title": "Snowdonia - Watkin Path",
     "datetime": "2024-09-06T09:22:56",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0051_2.jpg",
     "title": "Criccieth - Wales",
     "datetime": "2024-09-04T21:01:03",
-    "type": ["Signature"],
+    "type": [
+      "Signature"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0045.JPG",
     "title": "Criccieth - Wales",
     "datetime": "2024-09-04T17:57:39",
-    "type": ["Signature"],
+    "type": [
+      "Signature"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0029.JPG",
     "title": "Criccieth - Wales",
     "datetime": "2024-09-03T17:26:22",
-    "type": ["Water & Ocean"],
+    "type": [
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0020_1.jpg",
     "title": "Criccieth - Wales",
     "datetime": "2024-08-31T19:57:37",
-    "type": ["Signature", "Water & Ocean"],
+    "type": [
+      "Signature",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 0.666
   },
   {
     "filename": "DSR_0019_1.jpg",
     "title": "Criccieth - Wales",
     "datetime": "2024-08-31T19:51:52",
-    "type": ["Signature", "Water & Ocean"],
+    "type": [
+      "Signature",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0008_1.jpg",
     "title": "Criccieth - Wales",
     "datetime": "2024-08-30T22:42:46",
-    "type": ["Signature", "Mountains & Hills"],
+    "type": [
+      "Signature",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0006.JPG",
+    "title": "",
+    "datetime": "2024-08-30T19:33:31",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10901_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-19T16:02:33",
-    "type": ["City"],
+    "type": [
+      "City"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10858_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-18T12:00:10",
-    "type": ["Signature", "City", "Water & Ocean"],
+    "type": [
+      "Signature",
+      "City",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10849_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-18T10:02:11",
-    "type": ["Water & Ocean"],
+    "type": [
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10828_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-17T15:12:09",
-    "type": ["City", "Water & Ocean"],
+    "type": [
+      "City",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10826_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-17T15:03:34",
-    "type": ["Signature", "City"],
+    "type": [
+      "Signature",
+      "City"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10806_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-16T11:28:49",
-    "type": ["Signature", "Mountains & Hills"],
+    "type": [
+      "Signature",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10805_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-16T11:06:05",
-    "type": ["Water & Ocean", "Mountains & Hills"],
+    "type": [
+      "Water & Ocean",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10798_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-16T09:22:21",
-    "type": ["Water & Ocean", "Mountains & Hills"],
+    "type": [
+      "Water & Ocean",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10794_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-16T08:53:32",
-    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "type": [
+      "Signature",
+      "Water & Ocean",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10791_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-16T08:48:56",
-    "type": ["Water & Ocean", "Mountains & Hills"],
+    "type": [
+      "Water & Ocean",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10772_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T21:16:57",
-    "type": ["City", "Water & Ocean"],
+    "type": [
+      "City",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10771_1.jpg",
     "title": "",
     "datetime": "2024-07-14T18:53:17",
-    "type": ["Water & Ocean"],
+    "type": [
+      "Water & Ocean"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10768_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T16:49:45",
-    "type": ["City"],
+    "type": [
+      "City"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10743_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T11:11:43",
-    "type": ["Signature", "City"],
+    "type": [
+      "Signature",
+      "City"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10723_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T09:42:28",
-    "type": ["Signature", "City", "Water & Ocean"],
+    "type": [
+      "Signature",
+      "City",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10715_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-13T18:43:22",
-    "type": ["City"],
+    "type": [
+      "City"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10581_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-09T12:34:14",
-    "type": ["Signature", "City", "Water & Ocean"],
+    "type": [
+      "Signature",
+      "City",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10522_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-08T09:04:47",
-    "type": ["City", "Water & Ocean"],
+    "type": [
+      "City",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10497_1.jpg",
     "title": "",
     "datetime": "2024-07-03T20:03:29",
-    "type": ["Water & Ocean"],
+    "type": [
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10470_1.jpg",
     "title": "",
     "datetime": "2024-07-01T12:08:56",
-    "type": ["Signature", "Water & Ocean"],
+    "type": [
+      "Signature",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10099.JPG",
     "title": "Yorkshire Three Peaks",
     "datetime": "2023-09-13T15:06:09",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10076.JPG",
     "title": "Yorkshire Three Peaks",
     "datetime": "2023-09-13T14:06:48",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10055.JPG",
     "title": "Yorkshire Three Peaks",
     "datetime": "2023-09-13T13:35:30",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10027.JPG",
     "title": "Yorkshire Three Peaks",
     "datetime": "2023-09-13T12:43:21",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_9412_1.jpg",
     "title": "",
     "datetime": "2023-07-05T19:41:08",
-    "type": ["Water & Ocean", "Mountains & Hills"],
+    "type": [
+      "Water & Ocean",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_9353_1.jpg",
     "title": "",
     "datetime": "2023-07-05T16:07:55",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_9292_1.jpg",
     "title": "",
     "datetime": "2023-07-05T15:37:14",
-    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "type": [
+      "Signature",
+      "Water & Ocean",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_9277_1~2.jpg",
     "title": "",
     "datetime": "2023-07-05T15:30:42",
-    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "type": [
+      "Signature",
+      "Water & Ocean",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_9267_1.jpg",
     "title": "",
     "datetime": "2023-07-05T15:27:29",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_8847_1.jpg",
     "title": "",
     "datetime": "2023-07-02T17:57:43",
-    "type": ["Water & Ocean"],
+    "type": [
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.499
   },
   {
     "filename": "DSC_8801_1.jpg",
     "title": "",
     "datetime": "2023-07-02T17:55:11",
-    "type": ["Water & Ocean"],
+    "type": [
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_8692_1.jpg",
     "title": "",
     "datetime": "2023-07-02T13:08:26",
-    "type": ["Signature", "Mountains & Hills"],
+    "type": [
+      "Signature",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_5437_1.jpg",
     "title": "Low Newton - Northumberland",
     "datetime": "2022-09-02T06:26:10",
-    "type": ["Signature", "Water & Ocean"],
+    "type": [
+      "Signature",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_5375.JPG",
     "title": "Low Newton - Northumberland",
     "datetime": "2022-09-02T06:22:26",
-    "type": ["Water & Ocean"],
+    "type": [
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_5283.JPG",
     "title": "Low Newton - Northumberland",
     "datetime": "2022-09-02T06:05:06",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "AIMG_20220809_210058.jpg",
     "title": "",
     "datetime": "2022-08-09T21:01:06",
-    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "type": [
+      "Signature",
+      "Water & Ocean",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_4078.JPG",
     "title": "",
     "datetime": "2022-08-09T16:24:20",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
@@ -395,28 +539,39 @@
     "filename": "DSC_1399.JPG",
     "title": "",
     "datetime": "2021-10-10T15:27:34",
-    "type": ["Signature"],
+    "type": [
+      "Signature"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "CSC_0272.JPG",
     "title": "",
     "datetime": "2021-07-19T18:44:05",
-    "type": ["Signature", "Water & Ocean"],
+    "type": [
+      "Signature",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_0170_2.JPG",
     "title": "",
     "datetime": "2021-07-14T19:15:44",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "AIMG_20200728_123258_1.jpg",
     "title": "",
     "datetime": "2020-07-28T12:33:01",
-    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "type": [
+      "Signature",
+      "Water & Ocean",
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.333
   }
 ]
