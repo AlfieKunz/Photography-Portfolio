@@ -15,49 +15,49 @@ document.addEventListener("DOMContentLoaded", () => {
     astro: {
         title: "Gallery -<br>Astrophotography",
         description: "Studying physics at university, and having a knack for long exposure photography, has given me a huge appreciation for the stars & sky. Countless blissful nights were spent taking these photos, nights have now become some of the happiest of my life.",
-        NegStartIndex: 3,
+        NegStartIndex: 6,
         heightDelta: 0,
         tags: ["Signature", "Moon", "Stars"]
     },
     ball: {
         title: "Gallery -<br>Balls & Formals",
         description: "Whether it be photos of groups, candids, awards, speeches or the venue, I strive to showcase the excitement and atmosphere of an event to remember. I excel in busy situations and when meeting new people, and pride myself on building a friendly and charismatic rapport with guests while maintaining professionalism and strong directorial skills.",
-        NegStartIndex: 62,
+        NegStartIndex: 14,
         heightDelta: 0.5,
         tags: ["Signature", "Groups", "Candids", "Personal & Couples", "Venue", "Awards"]
     },
     landscape: {
         title: "Gallery -<br>Landscapes",
         description: "Powerful, raw, sublime, whatever you want to call it - there's a reason why landscapes move us so deeply. Here, I try to capture some of that feeling, aiming to preserve a place or moment in the beauty it deserves.",
-        NegStartIndex: 54,
+        NegStartIndex: 26,
         heightDelta: 0.5,
         tags: ["Signature", "City", "Water & Ocean", "Mountains & Hills"]
     },
     nature: {
         title: "Gallery -<br>Animals & Nature",
         description: "<b>Eutierria</b> (noun): 'a pleasing feeling of oneness with the earth and life'. Okay, <i>perhaps</i> that's a little pretentious, but there's a reason why the majority of my photos are of nature! :) I'm really lucky to live where I do, to be surrounded by so much life. Photography helps me explore that 'oneness' through curiosity and mindfulness; I hope to share a piece of that feeling here - hope you enjoy! 😌",
-        NegStartIndex: 67,
+        NegStartIndex: 27,
         heightDelta: 0.5,
         tags: ["Signature", "Animals", "Insects", "Plants & Greenery"]
     },
     studioportrait: {
         title: "Gallery -<br>Studio Work & Portraits",
         description: "This might just be my favourite kind of photography - getting together with a friend or two, spending hours brainstorming and planning every detail, then jumping up and down with childlike joy when unveiling the results. It's always a blast :D.",
-        NegStartIndex: 51,
+        NegStartIndex: 20,
         heightDelta: -0.5,
         tags: ["Signature", "Studio", "Portraits"]
     },
     travel: {
         title: "Gallery -<br>Adventures & Travel",
         description: "This is slightly more of a <i>variety</i> collection, spanning everything from everyday travels to international expeditions. Despite the range, I hope that each photo remains striking, telling a unique story that stays true to the original moment.",
-        NegStartIndex: 10,
+        NegStartIndex: 18,
         heightDelta: -0.25,
         tags: ["Signature", "Street & Buildings", "Greenery", "Water"]
     }
   };
 
   let allImages = [];
-    let currentFilter = "All";
+    let currentFilter = "Signature";
     const headerContent = categoryHeader[category];
     const thumbnailsContainer = document.getElementById("thumbnails");
     const filterButtonsContainer = document.getElementById("filter-buttons");
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     />
                 </a>
                 <h2>${img.title || ''}</h2>
-                <p>${img.desc || '© Alfie Kunz Photography'}</p> <!-- Changed year -->
+                <p>© Alfie Kunz Photography - 2025</p>
             `;
             thumbnailsContainer.appendChild(article);
         });
@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             main.clearSlide();
             main.slides = [];
+            viewerInitialized = false;
         }
         document.getElementById('main').scrollTop = 0;
     }
@@ -157,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 button.classList.add("filter-button");
                 button.dataset.filter = tag;
                 button.textContent = tag;
-                if (tag === "All") {
+                if (tag === "Signature") {
                     button.classList.add("active");
                 }
                 filterButtonsContainer.appendChild(button);
@@ -207,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
             }
 
-            renderThumbnails(filteredImages, (currentFilter == "All"));
+            renderThumbnails(filteredImages, (currentFilter == "Signature"));
         }
     });
 
@@ -223,8 +224,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#header h1").innerHTML = headerContent.title;
         document.querySelector("#header p").innerHTML = headerContent.description;
 
-        generateFilterButtons(allImages);
-        renderThumbnails(allImages, true);
+        filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter))
+        generateFilterButtons(filteredImages);
+        renderThumbnails(filteredImages, true);
+        console.log(filteredImages.length)
 
       })
       .catch(error => {

@@ -55,7 +55,7 @@
     "filename": "DSR_0108.JPG",
     "title": "Snowdonia - Watkin Path",
     "datetime": "2024-09-06T12:16:47",
-    "type": [
+    "type": [ 
       "Mountains & Hills"
     ],
     "aspect_ratio": 1.5
@@ -119,7 +119,7 @@
     "filename": "DSR_0029.JPG",
     "title": "Criccieth - Wales",
     "datetime": "2024-09-03T17:26:22",
-    "type": [
+    "type": ["Signature", 
       "Water & Ocean"
     ],
     "aspect_ratio": 1.5
@@ -372,7 +372,7 @@
     "filename": "DSC_10076.JPG",
     "title": "Yorkshire Three Peaks",
     "datetime": "2023-09-13T14:06:48",
-    "type": [
+    "type": ["Signature", 
       "Mountains & Hills"
     ],
     "aspect_ratio": 1.5
@@ -399,7 +399,7 @@
     "filename": "DSC_9412_1.jpg",
     "title": "Gower Peninsula - Wales",
     "datetime": "2023-07-05T19:41:08",
-    "type": [
+    "type": ["Signature", 
       "Water & Ocean",
       "Mountains & Hills"
     ],

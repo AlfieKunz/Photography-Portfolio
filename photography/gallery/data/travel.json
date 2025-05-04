@@ -21,7 +21,7 @@
     "aspect_ratio": 0.667
   },
   {
-    "filename": "DSR_0404.jpg",
+    "filename": "20250222_160247_1.jpg",
     "title": "Kenilworth - Warwickshire",
     "datetime": "2025-02-22T16:02:47",
     "type": ["Signature", "Greenery"],
@@ -157,7 +157,7 @@
     "filename": "DSC_10741_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T11:03:53",
-    "type": ["Street & Buildings", "Greenery"],
+    "type": ["Signature", "Street & Buildings", "Greenery"],
     "aspect_ratio": 0.667
   },
   {
@@ -227,7 +227,7 @@
     "filename": "DSC_10494.JPG",
     "title": "Gower Peninsula - Wales",
     "datetime": "2024-07-02T17:47:12",
-    "type": ["Greenery", "Water"],
+    "type": ["Signature", "Greenery", "Water"],
     "aspect_ratio": 1.5
   },
   {
@@ -262,7 +262,7 @@
     "filename": "DSC_8566_1.jpg",
     "title": "Gower Peninsula - Wales",
     "datetime": "2023-07-01T19:29:54",
-    "type": [],
+    "type": ["Signature"],
     "aspect_ratio": 1.5
   },
   {
