@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const category = params.get("category");
+  let viewerInitialized = false;
+  let lastOrderedImages = [];
 
   if (!category) {
       document.getElementById("thumbnails").innerHTML = "<p>Error Loading Photos: 'No category specified'.</p>";
@@ -96,24 +98,22 @@ document.addEventListener("DOMContentLoaded", () => {
         thumbnailsContainer.innerHTML = "";
         const splitResult = SplitImages(imagesToRender, headerContent);
         const orderedImages = splitResult.orderedImages;
+        lastOrderedImages = orderedImages;
 
-        // --- Pass layout info to main.js ---
-        // Store it directly on the main object
         main.layoutInfo = {
             columnASize: splitResult.columnASize,
             columnBSize: splitResult.columnBSize
         };
 
-        orderedImages.forEach(img => {
+        orderedImages.forEach((img, index) => {
             const article = document.createElement("article");
             const aspectRatio = img.aspect_ratio || (3 / 2);
             const nominalWidth = 16;
             const nominalHeight = nominalWidth / aspectRatio;
-
             const tagsAttribute = img.type ? `data-tags="${img.type.join(',')}"` : '';
 
             article.innerHTML = `
-                <a class="thumbnail" href="images/${category}/full/${img.filename}" data-position="${img.position || 'center center'}" ${tagsAttribute}>
+                <a class="thumbnail" href="images/${category}/full/${img.filename}" data-position="${img.position || 'center center'}" ${tagsAttribute} data-index="${index}">
                     <img
                         src="images/${category}/thumb/${img.filename}"
                         alt="${img.title || ''}"
@@ -123,18 +123,27 @@ document.addEventListener("DOMContentLoaded", () => {
                         height="${nominalHeight}"
                     />
                 </a>
-                <h2>${img.title}</h2>
-                <p>${img.desc || '© Alfie Kunz 2025 - All Rights Reserved'}</p>
+                <h2>${img.title || ''}</h2>
+                <p>${img.desc || '© Alfie Kunz Photography'}</p> <!-- Changed year -->
             `;
             thumbnailsContainer.appendChild(article);
         });
-        main.clearSlide();
-        main.initViewer();
-        if (firstTime) {
-            main.switchTo(orderedImages.length - headerContent.NegStartIndex, true);
+
+
+        const isMobile = breakpoints.active('<=medium');
+        if (!isMobile) {
+            // --- Desktop Behavior (Initialize immediately) ---
+            main.initViewer(orderedImages);
+            if (firstTime) {
+                main.switchTo(orderedImages.length - headerContent.NegStartIndex, true);
+             } else {
+                main.switchTo(0, true);
+             };
+             viewerInitialized = true;
         } else {
-            main.switchTo(0, true);
-        };
+            main.clearSlide();
+            main.slides = [];
+        }
         document.getElementById('main').scrollTop = 0;
     }
 
@@ -154,6 +163,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 filterButtonsContainer.appendChild(button);
             });
         }
+    }
+
+
+    if (!thumbnailsContainer.dataset.listenerAttached) {
+        thumbnailsContainer.addEventListener('click', function(event) {
+            const thumbnailLink = event.target.closest('a.thumbnail');
+            if (!thumbnailLink) return;
+    
+            event.preventDefault();
+            event.stopPropagation();
+    
+            const indexAttr = thumbnailLink.getAttribute('data-index');
+            const indexToSwitch = parseInt(indexAttr, 10);
+    
+    
+            const isMobile = breakpoints.active('<=medium');
+            if (isMobile && !viewerInitialized) {
+                main.initViewer(lastOrderedImages); // Pass the correctly ordered data
+                viewerInitialized = true;
+            }
+            main.switchTo(indexToSwitch);
+        });
+        thumbnailsContainer.dataset.listenerAttached = 'true';
     }
 
 
@@ -187,17 +219,11 @@ document.addEventListener("DOMContentLoaded", () => {
           return response.json();
       })
       .then(images => {
-
-        allImages = images; // Store the full list
-
-        // Set up title and description (only needs to happen once)
+        allImages = images;
         document.querySelector("#header h1").innerHTML = headerContent.title;
         document.querySelector("#header p").innerHTML = headerContent.description;
 
-        // Generate filter buttons based on the loaded images
         generateFilterButtons(allImages);
-
-        // Initial render with all images
         renderThumbnails(allImages, true);
 
       })

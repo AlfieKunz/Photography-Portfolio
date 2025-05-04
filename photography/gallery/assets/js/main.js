@@ -380,99 +380,44 @@ var main = (function($) { var _ = {
 
 	},
 
-	/**
-	 * Initialize viewer.
-	 */
-	initViewer: function() {
 
-		_.slides = []
-		_.current = null
+/**
+ * @param {array} imagesData
+ */
+initViewer: function(imagesData) {
 
-		// Bind thumbnail click event.
-			_.$thumbnails
-				.on('click', '.thumbnail', function(event) {
+    // Clear previous state
+    _.$viewer.find('.slide').remove();
+    _.slides = [];
+    _.current = null;
 
-					var $this = $(this);
+    var $articles = _.$thumbnails.children('article');
 
-					// Stop other events.
-						event.preventDefault();
-						event.stopPropagation();
+    imagesData.forEach(function(imgData, index) {
+        var $parentArticle = $articles.eq(index);
+		var $thumbnail = $parentArticle.children('a.thumbnail');
+		var fullImageUrl = $thumbnail.attr('href');
+        var s = {
+            $parent: $parentArticle,
+            $slide: null,
+            $slideImage: null,
+            $slideCaption: null,
+            url: fullImageUrl,
+            loaded: false
+        };
 
-					// Locked? Blur.
-						if (_.locked)
-							$this.blur();
+        s.$slide = $('<div class="slide"><div class="caption"></div><div class="image"></div></div>');
+        s.$slideImage = s.$slide.children('.image');
+        s.$slideImage
+            .css('background-image', '')
+            .css('background-position', (imgData.position || $thumbnail.data('position') || 'center'));
 
-					// Switch to this thumbnail's slide.
-						_.switchTo($this.data('index'));
-
-				});
-
-		// Create slides from thumbnails.
-			_.$thumbnails.children()
-				.each(function() {
-
-					var	$this = $(this),
-						$thumbnail = $this.children('.thumbnail'),
-						s;
-
-					// Slide object.
-						s = {
-							$parent: $this,
-							$slide: null,
-							$slideImage: null,
-							$slideCaption: null,
-							url: $thumbnail.attr('href'),
-							loaded: false
-						};
-
-					// Parent.
-						$this.attr('tabIndex', '-1');
-
-					// Slide.
-
-						// Create elements.
-	 						s.$slide = $('<div class="slide"><div class="caption"></div><div class="image"></div></div>');
-
-	 					// Image.
- 							s.$slideImage = s.$slide.children('.image');
-
- 							// Set background stuff.
-	 							s.$slideImage
-		 							.css('background-image', '')
-		 							.css('background-position', ($thumbnail.data('position') || 'center'));
-
-						// Caption.
-							s.$slideCaption = s.$slide.find('.caption');
-
-							// Move everything *except* the thumbnail itself to the caption.
-								$this.children().not($thumbnail)
-									.appendTo(s.$slideCaption);
-
-					// Preload?
-						if (_.settings.preload) {
-
-							// Force image to download.
-								var $img = $('<img src="' + s.url + '" />');
-
-							// Set slide's background image to it.
-								s.$slideImage
-									.css('background-image', 'url(' + s.url + ')');
-
-							// Mark slide as loaded.
-								s.$slide.addClass('loaded');
-								s.loaded = true;
-
-						}
-
-					// Add to slides array.
-						_.slides.push(s);
-
-					// Set thumbnail's index.
-						$thumbnail.data('index', _.slides.length - 1);
-
-				});
-
-	},
+        s.$slideCaption = s.$slide.find('.caption');
+        $parentArticle.children('h2, p').appendTo(s.$slideCaption);
+        $parentArticle.attr('tabIndex', '-1');
+        _.slides.push(s);
+    });
+},
 
 	/**
 	 * Initialize stuff.
@@ -490,7 +435,7 @@ var main = (function($) { var _ = {
 
 		// Everything else.
 			_.initProperties();
-			_.initViewer();
+			//_.initViewer();
 			_.initEvents();
 
 		// // Show first slide if xsmall isn't active.
@@ -510,125 +455,119 @@ var main = (function($) { var _ = {
 	switchTo: function(index, noHide) {
 
 		if (_.slides.length === 0 || index < 0 || index >= _.slides.length) {
-            console.warn(`switchTo: Invalid index ${index} or no slides loaded.`);
-            return;
-        }
+			console.warn(`switchTo: Invalid index ${index} or no slides loaded.`);
+			return;
+		}
 
 		// Already at index and xsmall isn't active? Bail.
-			if (_.current == index
-			&&	!breakpoints.active('<=xsmall'))
-				return;
+		if (_.current == index && !breakpoints.active('<=xsmall') && _.$body.hasClass('fullscreen') === false) {return;}
 
-		// Locked? Bail.
-			if (_.locked)
-				return;
 
-		// Lock.
-			_.locked = true;
+	// Locked? Bail.
+	if (_.locked)
+		return;
 
-		// Hide main wrapper if medium is active.
-			if (!noHide
-			&&	breakpoints.active('<=medium'))
-				_.hide();
+	// Lock.
+	_.locked = true;
 
-		// Get slides.
-			var	oldSlide = (_.current !== null ? _.slides[_.current] : null),
-				newSlide = _.slides[index];
+	if (!noHide && breakpoints.active('<=medium')) {
+		_.hide();
+	}
 
-		// Update current.
-			_.current = index;
 
-		// Deactivate old slide (if there is one).
-			if (oldSlide) {
+	// Get slides.
+	var	oldSlide = (_.current !== null && _.slides[_.current]) ? _.slides[_.current] : null,
+		newSlide = _.slides[index];
 
-				// Thumbnail.
-					oldSlide.$parent
-						.removeClass('active');
 
-				// Slide.
-					oldSlide.$slide.removeClass('active');
+	// Update current.
+	_.current = index;
 
-			}
+	// Deactivate old slide (if there is one).
+	if (oldSlide) {
+		oldSlide.$parent.removeClass('active');
+		oldSlide.$slide.removeClass('active');
+	}
 
-		// Activate new slide.
+	// Activate new slide.
 
-			// Thumbnail.
-				newSlide.$parent
-					.addClass('active')
-					.focus();
+	// Thumbnail.
+	newSlide.$parent
+				.addClass('active')
+				.focus();
 
-			// Slide.
-				var f = function() {
 
-					// Old slide exists? Detach it.
-						if (oldSlide)
-							oldSlide.$slide.detach();
+	// Slide.
+	var f = function() {
 
-					// Attach new slide.
-						newSlide.$slide.appendTo(_.$viewer);
+		// Old slide exists? Detach it.
+		if (oldSlide && oldSlide.$slide)
+			oldSlide.$slide.detach();
 
-					// New slide not yet loaded?
-						if (!newSlide.loaded) {
 
-							window.setTimeout(function() {
+		// Attach new slide.
+		newSlide.$slide.appendTo(_.$viewer);
 
-								// Mark as loading.
-									newSlide.$slide.addClass('loading');
+		// New slide not yet loaded?
+		if (!newSlide.loaded) {
 
-								// Wait for it to load.
-									$('<img src="' + newSlide.url + '" />').on('load', function() {
-									//window.setTimeout(function() {
+			window.setTimeout(function() {
 
-										// Set background image.
-											newSlide.$slideImage
-												.css('background-image', 'url(' + newSlide.url + ')');
+				// Mark as loading.
+				newSlide.$slide.addClass('loading');
 
-										// Mark as loaded.
-											newSlide.loaded = true;
-											newSlide.$slide.removeClass('loading');
+				// Wait for it to load.
+				$('<img src="' + newSlide.url + '" />').on('load', function() {
+				//window.setTimeout(function() { // Keep original artificial delay if desired, remove for speed
 
-										// Mark as active.
-											newSlide.$slide.addClass('active');
+					// Set background image.
+					newSlide.$slideImage
+						.css('background-image', 'url(' + newSlide.url + ')');
 
-										// Unlock.
-											window.setTimeout(function() {
-												_.locked = false;
-											}, 100);
+					// Mark as loaded.
+					newSlide.loaded = true;
+					newSlide.$slide.removeClass('loading');
 
-									//}, 1000);
-									});
+					// Mark as active.
+					newSlide.$slide.addClass('active');
 
-							}, 100);
+					// Unlock.
+					window.setTimeout(function() {
+						_.locked = false;
+					}, 100);
 
-						}
+				//}, 1000); // End of artificial delay
+				});
 
-					// Otherwise ...
-						else {
+			}, 100); // Keep initial loading delay
 
-							window.setTimeout(function() {
+		}
 
-								// Mark as active.
-									newSlide.$slide.addClass('active');
+		// Otherwise ... (already loaded)
+		else {
 
-								// Unlock.
-									window.setTimeout(function() {
-										_.locked = false;
-									}, 100);
+			window.setTimeout(function() {
 
-							}, 100);
+				// Mark as active.
+					newSlide.$slide.addClass('active');
 
-						}
+				// Unlock.
+					window.setTimeout(function() {
+						_.locked = false;
+					}, 100);
 
-				};
+			}, 100);
 
-				// No old slide? Switch immediately.
-					if (!oldSlide)
-						(f)();
+		}
 
-				// Otherwise, wait for old slide to disappear first.
-					else
-						window.setTimeout(f, _.settings.slideDuration);
+};
 
+	// No old slide? Switch immediately.
+	if (!oldSlide)
+		(f)();
+	// Otherwise, wait for old slide to disappear first.
+	else
+		window.setTimeout(f, _.settings.slideDuration);
 	},
 
 
@@ -638,16 +577,29 @@ var main = (function($) { var _ = {
 	clearSlide: function(callback) {
 		if (_.$viewer) {
 			var $activeSlides = _.$viewer.find('.slide.active');
-			$activeSlides.removeClass('active');
-			setTimeout(function() {
-				$activeSlides.remove(); // Remove the element(s) from the DOM
-				// Execute the callback function now that clearing is done
-				if (typeof callback === 'function') {
-					callback();
-				}
-			}, _.settings.slideDuration); // Use the existing slide duration for timing
+			if ($activeSlides.length > 0) { // Check if there are active slides
+				$activeSlides.removeClass('active');
+				setTimeout(function() {
+					$activeSlides.remove(); // Remove the element(s) from the DOM
+					// Execute the callback function now that clearing is done
+					if (typeof callback === 'function') {
+						callback();
+					}
+				}, _.settings.slideDuration); // Use the existing slide duration for timing
+			} else {
+				 // No active slide to clear, just run callback if provided
+				 if (typeof callback === 'function') {
+					 // Run callback immediately or with a minimal timeout if needed
+					 setTimeout(callback, 0);
+				 }
+			}
+		} else {
+			// Viewer doesn't exist yet, run callback if provided
+			if (typeof callback === 'function') {
+				 setTimeout(callback, 0);
+			 }
 		}
-    },
+	},
 
 
 	/**
