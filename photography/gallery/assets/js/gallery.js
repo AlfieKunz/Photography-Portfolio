@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const category = params.get("category");
+
   let viewerInitialized = false;
   let lastOrderedImages = [];
 
@@ -227,7 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
         filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter))
         generateFilterButtons(filteredImages);
         renderThumbnails(filteredImages, true);
-        console.log(filteredImages.length)
 
       })
       .catch(error => {

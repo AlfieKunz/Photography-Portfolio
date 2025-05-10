@@ -1285,8 +1285,8 @@ input, select, textarea {
 					transform-origin: center center;
 				}
 			body.fullscreen #viewer .slide .image {
-					transform: scale(1.2);
-				}
+						transform: scale(1.2);
+					}
 
 			#viewer .slide:before {
 				-moz-animation: spinner 1s linear infinite;

@@ -227,9 +227,29 @@ var main = (function($) { var _ = {
 				_.$viewer
 					.on('touchstart', function(event) {
 
-						// Record start position.
 							_.$viewer.touchPosX = event.originalEvent.touches[0].pageX;
 							_.$viewer.touchPosY = event.originalEvent.touches[0].pageY;
+							_.$viewer.isPinching = false; // Flag for pinching
+							
+							if (event.originalEvent.touches.length === 2) {
+								//scroll mode :D
+								let t1 = event.originalEvent.touches[0];
+								let t2 = event.originalEvent.touches[1];
+								_.$viewer.initialPinchDistance = Math.sqrt(
+									Math.pow(t2.pageX - t1.pageX, 2) +
+									Math.pow(t2.pageY - t1.pageY, 2)
+								);
+								if (_.current !== null && _.slides[_.current] && _.slides[_.current].$slideImage) {
+									 _.$viewer.currentZoomImage = _.slides[_.current].$slideImage;
+									 _.$viewer.currentImageScale = parseFloat(_.$viewer.currentZoomImage.css('transform').split('(')[1]) || 1;
+									 if (_.$viewer.currentZoomImage) {
+										_.$viewer.currentZoomImage.css('transition', 'none'); //No animation during pinch.
+									}
+								}
+							} else {
+								_.$viewer.initialPinchDistance = null;
+								_.$viewer.currentZoomImage = null;
+							}
 
 					})
 					.on('touchmove', function(event) {
@@ -239,33 +259,61 @@ var main = (function($) { var _ = {
 							||	_.$viewer.touchPosY === null)
 								return;
 
-						// Calculate stuff.
-							var	diffX = _.$viewer.touchPosX - event.originalEvent.touches[0].pageX,
-								diffY = _.$viewer.touchPosY - event.originalEvent.touches[0].pageY;
-								boundary = 20,
-								delta = 50;
-
-						// Swipe left (next).
-							if ( (diffY < boundary && diffY > (-1 * boundary)) && (diffX > delta) )
-								_.next();
-
-						// Swipe right (previous).
-							else if ( (diffY < boundary && diffY > (-1 * boundary)) && (diffX < (-1 * delta)) )
-								_.previous();
-
-						// Overscroll fix.
-							var	th = _.$viewer.outerHeight(),
-								ts = (_.$viewer.get(0).scrollHeight - _.$viewer.scrollTop());
-
-							if ((_.$viewer.scrollTop() <= 0 && diffY < 0)
-							|| (ts > (th - 2) && ts < (th + 2) && diffY > 0)) {
-
-								event.preventDefault();
+							if (event.originalEvent.touches.length === 2 && _.$viewer.initialPinchDistance && _.$viewer.currentZoomImage) {
+								event.preventDefault(); // Prevent default browser zoom/scroll during our custom pinch
 								event.stopPropagation();
-
+					
+								let t1 = event.originalEvent.touches[0];
+								let t2 = event.originalEvent.touches[1];
+								let currentPinchDistance = Math.sqrt(
+									Math.pow(t2.pageX - t1.pageX, 2) +
+									Math.pow(t2.pageY - t1.pageY, 2)
+								);
+					
+								let scaleFactor = currentPinchDistance / _.$viewer.initialPinchDistance;
+								let newScale = _.$viewer.currentImageScale * scaleFactor;
+								newScale = Math.max(1, Math.min(newScale, 5));
+					
+								_.$viewer.currentZoomImage.css('transform', 'scale(' + newScale + ')');
+								return;
+							}
+					
+							if (event.originalEvent.touches.length === 1) {
+								var diffX = _.$viewer.touchPosX - event.originalEvent.touches[0].pageX,
+									diffY = _.$viewer.touchPosY - event.originalEvent.touches[0].pageY;
+								var boundary = 20,
+									delta = 50;
+					
+								// Swipe left (next).
+								if ( (diffY < boundary && diffY > (-1 * boundary)) && (diffX > delta) )
+									_.next();
+					
+								// Swipe right (previous).
+								else if ( (diffY < boundary && diffY > (-1 * boundary)) && (diffX < (-1 * delta)) )
+									_.previous();
+					
+								// Overscroll fix.
+								var th = _.$viewer.outerHeight(),
+									ts = (_.$viewer.get(0).scrollHeight - _.$viewer.scrollTop());
+					
+								if ((_.$viewer.scrollTop() <= 0 && diffY < 0) ||
+									(ts > (th - 2) && ts < (th + 2) && diffY > 0)) {
+					
+									event.preventDefault();
+									event.stopPropagation();
+								}
 							}
 
-					});
+						})
+						.on('touchend', function(event) {
+							_.$viewer.initialPinchDistance = null;
+							if (_.$viewer.currentZoomImage && event.originalEvent.touches.length < 2) {
+								let currentTransform = _.$viewer.currentZoomImage.css('transform');
+								const matrix = currentTransform.match(/matrix\((.+)\)/);
+								const values = matrix[1].split(', ');
+								_.$viewer.currentImageScale = parseFloat(values[0]);
+							}
+						});
 
 		// Main.
 
@@ -463,104 +511,112 @@ initViewer: function(imagesData) {
 		if (_.current == index && !breakpoints.active('<=xsmall') && _.$body.hasClass('fullscreen') === false) {return;}
 
 
-	// Locked? Bail.
-	if (_.locked)
-		return;
+		// Locked? Bail.
+		if (_.locked)
+			return;
 
-	// Lock.
-	_.locked = true;
+		// Lock.
+		_.locked = true;
 
-	if (!noHide && breakpoints.active('<=medium')) {
-		_.hide();
-	}
-
-
-	// Get slides.
-	var	oldSlide = (_.current !== null && _.slides[_.current]) ? _.slides[_.current] : null,
-		newSlide = _.slides[index];
+		if (!noHide && breakpoints.active('<=medium')) {
+			_.hide();
+		}
 
 
-	// Update current.
-	_.current = index;
-
-	// Deactivate old slide (if there is one).
-	if (oldSlide) {
-		oldSlide.$parent.removeClass('active');
-		oldSlide.$slide.removeClass('active');
-	}
-
-	// Activate new slide.
-
-	// Thumbnail.
-	newSlide.$parent
-				.addClass('active')
-				.focus();
+		// Get slides.
+		var	oldSlide = (_.current !== null && _.slides[_.current]) ? _.slides[_.current] : null,
+			newSlide = _.slides[index];
 
 
-	// Slide.
-	var f = function() {
+		// Update current.
+		_.current = index;
 
-		// Old slide exists? Detach it.
-		if (oldSlide && oldSlide.$slide)
-			oldSlide.$slide.detach();
+		// Deactivate old slide (if there is one).
+		if (oldSlide) {
+			oldSlide.$parent.removeClass('active');
+			if (oldSlide.$slideImage && breakpoints.active('<=medium')) {
+				// If the image has been scaled, animate it back to its original size.
+				oldSlide.$slideImage.css({
+					'transform': 'scale(1.2)',
+					'transform-origin': 'center center',
+					'transition': 'opacity 0.5s ease-in-out, transform 0.75s ease'
+				});
+			}
+			oldSlide.$slide.removeClass('active');
+		}
+
+		// Activate new slide.
+
+		// Thumbnail.
+		newSlide.$parent
+					.addClass('active')
+					.focus();
 
 
-		// Attach new slide.
-		newSlide.$slide.appendTo(_.$viewer);
+		// Slide.
+		var f = function() {
 
-		// New slide not yet loaded?
-		if (!newSlide.loaded) {
+			// Old slide exists? Detach it.
+			if (oldSlide && oldSlide.$slide)
+				oldSlide.$slide.detach();
 
-			window.setTimeout(function() {
 
-				// Mark as loading.
-				newSlide.$slide.addClass('loading');
+			// Attach new slide.
+			newSlide.$slide.appendTo(_.$viewer);
 
-				// Wait for it to load.
-				$('<img src="' + newSlide.url + '" />').on('load', function() {
-				//window.setTimeout(function() { // Keep original artificial delay if desired, remove for speed
+			// New slide not yet loaded?
+			if (!newSlide.loaded) {
 
-					// Set background image.
-					newSlide.$slideImage
-						.css('background-image', 'url(' + newSlide.url + ')');
+				window.setTimeout(function() {
 
-					// Mark as loaded.
-					newSlide.loaded = true;
-					newSlide.$slide.removeClass('loading');
+					// Mark as loading.
+					newSlide.$slide.addClass('loading');
+
+					// Wait for it to load.
+					$('<img src="' + newSlide.url + '" />').on('load', function() {
+					//window.setTimeout(function() { // Keep original artificial delay if desired, remove for speed
+
+						// Set background image.
+						newSlide.$slideImage
+							.css('background-image', 'url(' + newSlide.url + ')');
+
+						// Mark as loaded.
+						newSlide.loaded = true;
+						newSlide.$slide.removeClass('loading');
+
+						// Mark as active.
+						newSlide.$slide.addClass('active');
+
+						// Unlock.
+						window.setTimeout(function() {
+							_.locked = false;
+						}, 100);
+
+					//}, 1000); // End of artificial delay
+					});
+
+				}, 100); // Keep initial loading delay
+
+			}
+
+			// Otherwise ... (already loaded)
+			else {
+
+				window.setTimeout(function() {
 
 					// Mark as active.
-					newSlide.$slide.addClass('active');
+						newSlide.$slide.addClass('active');
 
 					// Unlock.
-					window.setTimeout(function() {
-						_.locked = false;
-					}, 100);
+						window.setTimeout(function() {
+							_.locked = false;
+						}, 100);
 
-				//}, 1000); // End of artificial delay
-				});
+				}, 100);
 
-			}, 100); // Keep initial loading delay
+			}
 
-		}
-
-		// Otherwise ... (already loaded)
-		else {
-
-			window.setTimeout(function() {
-
-				// Mark as active.
-					newSlide.$slide.addClass('active');
-
-				// Unlock.
-					window.setTimeout(function() {
-						_.locked = false;
-					}, 100);
-
-			}, 100);
-
-		}
-
-};
+	};
 
 	// No old slide? Switch immediately.
 	if (!oldSlide)
