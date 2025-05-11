@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     studioportrait: {
         title: "Gallery -<br>Studio Work & Portraits",
         description: "This might just be my favourite kind of photography - getting together with a friend or two, spending hours brainstorming and planning every detail, then jumping up and down with childlike joy when unveiling the results. It's always a blast :D.",
-        NegStartIndex: 20,
+        NegStartIndex: 16, //20
         heightDelta: -0.5,
         tags: ["Signature", "Studio", "Portraits"]
     },
@@ -216,22 +216,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   fetch(`data/${category}.json`)
-      .then(response => {
-          if (!response.ok) throw new Error("Error Loading Photos: 'Gallery not found'");
-          return response.json();
-      })
-      .then(images => {
+    .then(response => {
+        if (!response.ok) throw new Error("Error Loading Photos: 'Gallery not found'");
+        return response.json();
+    })
+    .then(async images => {
         allImages = images;
+        const verifiedImages = [];
+        //Only includes photos if we can find a valid .jpg file in thumbs.
+        for (const img of allImages) {
+            const thumbUrl = `images/${category}/thumb/${img.filename}`;
+            const thumbResponse = await fetch(thumbUrl, { method: 'HEAD' });
+            if (thumbResponse.ok) {
+            verifiedImages.push(img);
+            } else {
+            console.warn(`Error: Unable to Find Photo: ${img.filename}.`);
+            }
+        }
+        allImages = verifiedImages;
+
         document.querySelector("#header h1").innerHTML = headerContent.title;
         document.querySelector("#header p").innerHTML = headerContent.description;
 
-        filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter))
-        generateFilterButtons(filteredImages);
+        filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
+        generateFilterButtons(filteredImages); // Or pass allImages if you want buttons for all verifiable images
         renderThumbnails(filteredImages, true);
 
-      })
-      .catch(error => {
-          document.getElementById("thumbnails").innerHTML = "<p>&nbsp&nbspError Loading Photos: 'Gallery not found'.</p>";
-          console.error(error);
-      });
+    })
+    .catch(error => {
+        document.getElementById("thumbnails").innerHTML = "<p>&nbsp;&nbsp;Error Loading Photos: 'Gallery not found'.</p>";
+        console.error(error);
+    });
+
 });
