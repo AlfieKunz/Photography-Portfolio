@@ -222,21 +222,23 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(async images => {
         allImages = images;
-        const verifiedImages = [];
-        //Only includes photos if we can find a valid .jpg file in thumbs.
-        for (const img of allImages) {
-            const thumbUrl = `images/${category}/thumb/${img.filename}`;
-            const thumbResponse = await fetch(thumbUrl, { method: 'HEAD' });
-            if (thumbResponse.ok) {
-            verifiedImages.push(img);
-            } else {
-            console.warn(`Error: Unable to Find Photo: ${img.filename}.`);
-            }
-        }
-        allImages = verifiedImages;
+
+        // const verifiedImages = [];
+        // //Only includes photos if we can find a valid .jpg file in thumbs. Note this is a last-case scenario - makes the page take a while to load...
+        // for (const img of allImages) {
+        //     const thumbUrl = `images/${category}/thumb/${img.filename}`;
+        //     const thumbResponse = await fetch(thumbUrl, { method: 'HEAD' });
+        //     if (thumbResponse.ok) {
+        //     verifiedImages.push(img);
+        //     } else {
+        //     console.warn(`Error: Unable to Find Photo: ${img.filename}.`);
+        //     }
+        // }
+        // allImages = verifiedImages;
 
         document.querySelector("#header h1").innerHTML = headerContent.title;
         document.querySelector("#header p").innerHTML = headerContent.description;
+        console.log(`Found ${allImages.length} Photos - Displaying...`)
 
         filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
         generateFilterButtons(filteredImages); // Or pass allImages if you want buttons for all verifiable images
