@@ -1,0 +1,14 @@
+1) Create Fulls: Adobe Lightroom 90% quality, 2784px on long side.
+2) Create thumbs via thumbs_creator.py, making sure to change the target folder.
+3) Append the images to the json via json_creator.py, making sure to change the target folder (recommended to make a backup of the json!).
+
+- The json_format_copier.py program allows you to update all the fields of a json file from a database json file (fields in this database will be copied over to the json in question if there is a match in filename). old_json_path is the json in question, new_json_dir is the database json.
+
+- To create thumbs for main page, use Resize Image feature of the Windows Photos app, with 50% scaling and 80% quality.
+
+Git Commands:
+git add .
+git commit -m "Name"
+git push origin main
+
+git pull origin main

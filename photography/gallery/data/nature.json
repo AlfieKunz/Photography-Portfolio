@@ -1,27 +1,153 @@
 [
   {
+    "filename": "DSR_0597_1.jpg",
+    "title": "",
+    "datetime": "2025-08-06T13:35:36",
+    "type": ["Insects"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0517_1.jpg",
+    "title": "Appletreewick - West Yorkshire",
+    "datetime": "2025-07-30T16:04:35",
+    "type": ["Insects", "Plants & Greenery"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0514_1.jpg",
+    "title": "Appletreewick - West Yorkshire",
+    "datetime": "2025-07-30T15:55:41",
+    "type": ["Signature", "Insects"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0503_1.jpg",
+    "title": "Appletreewick - West Yorkshire",
+    "datetime": "2025-07-30T15:07:42",
+    "type": ["Plants & Greenery"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0227.jpg",
+    "title": "Wedding Reception & Party in Yorkshire",
+    "datetime": "2025-07-12T12:28:51",
+    "type": ["Signature", "Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0225.jpg",
+    "title": "Wedding Reception & Party in Yorkshire",
+    "datetime": "2025-07-12T12:28:09",
+    "type": ["Insects", "Plants & Greenery"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0172.jpg",
+    "title": "Wedding Reception & Party in Yorkshire",
+    "datetime": "2025-07-12T12:01:05",
+    "type": ["Animals"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0491_1.jpg",
+    "title": "Whitney - Oxfordshire",
+    "datetime": "2025-07-04T18:14:47",
+    "type": ["Signature", "Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0490_1.jpg",
+    "title": "Whitney - Oxfordshire",
+    "datetime": "2025-07-04T18:13:56",
+    "type": ["Signature", "Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0489_1.jpg",
+    "title": "Whitney - Oxfordshire",
+    "datetime": "2025-07-04T18:13:22",
+    "type": ["Signature", "Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0475_1.jpg",
+    "title": "",
+    "datetime": "2025-06-30T16:04:10",
+    "type": ["Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0470_1.jpg",
+    "title": "",
+    "datetime": "2025-06-30T15:58:25",
+    "type": ["Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0465_1.jpg",
+    "title": "",
+    "datetime": "2025-06-30T15:07:35",
+    "type": ["Signature", "Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0461_1.jpg",
+    "title": "University of Warwick - Coventry",
+    "datetime": "2025-06-18T16:51:04",
+    "type": ["Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0456_1.jpg",
+    "title": "University of Warwick - Coventry",
+    "datetime": "2025-06-18T16:06:55",
+    "type": ["Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0436_1.jpg",
+    "title": "University of Warwick - Coventry",
+    "datetime": "2025-05-13T17:23:47",
+    "type": ["Signature", "Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0433_1.jpg",
+    "title": "University of Warwick - Coventry",
+    "datetime": "2025-05-13T17:13:37",
+    "type": ["Plants & Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
     "filename": "DSR_0427_1.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-04-29T15:38:32",
-    "type": ["Plants & Greenery"],
+    "type": [
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0426_1.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-04-29T15:37:04",
-    "type": ["Signature", "Plants & Greenery"],
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.666
   },
   {
     "filename": "DSR_0413.JPG",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-04-29T14:37:38",
-    "type": ["Animals"],
+    "type": [
+      "Animals"
+    ],
     "aspect_ratio": 0.667
   },
   {
-    "filename": "DSR_0412.JPG",
+    "filename": "DSR_0412_1.JPG",
     "title": "",
     "datetime": "2025-04-20T15:53:54",
     "type": [
@@ -30,7 +156,7 @@
     "aspect_ratio": 0.667
   },
   {
-    "filename": "DSR_0410.JPG",
+    "filename": "DSR_0410_1.JPG",
     "title": "Barnard Castle - County Durham",
     "datetime": "2025-04-17T19:12:04",
     "type": [
@@ -97,7 +223,7 @@
     "aspect_ratio": 1.5
   },
   {
-    "filename": "DSR_0344.JPG",
+    "filename": "DSR_0344_1.JPG",
     "title": "",
     "datetime": "2025-04-07T17:48:03",
     "type": [
@@ -106,12 +232,19 @@
     "aspect_ratio": 0.667
   },
   {
-    "filename": "DSR_0341.JPG",
+    "filename": "DSR_0341_1.JPG",
     "title": "",
     "datetime": "2025-04-07T17:37:01",
     "type": [
       "Plants & Greenery"
     ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0339_1.jpg",
+    "title": "",
+    "datetime": "2025-04-07T17:31:06",
+    "type": ["Signature", "Plants & Greenery"],
     "aspect_ratio": 1.5
   },
   {
@@ -125,7 +258,7 @@
     "aspect_ratio": 1.5
   },
   {
-    "filename": "DSR_0303.JPG",
+    "filename": "DSR_0303_1.JPG",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-03-05T17:15:17",
     "type": [
@@ -380,7 +513,7 @@
     "aspect_ratio": 1.5
   },
   {
-    "filename": "DSC_10130_2.png",
+    "filename": "DSC_10130_2.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2024-03-29T15:06:00",
     "type": [

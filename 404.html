@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        const currentPath = window.location.pathname;
+        const pathSegments = currentPath.split('/').filter(segment => segment);
+        
+        async function pathExists(path) {
+            try {
+                const response = await fetch(path, { method: 'HEAD' });
+                return response.ok;
+            } catch {
+                return false;
+            }
+        }
+        
+        async function findValidParent() {
+            while (pathSegments.length > 0) {
+                pathSegments.pop();
+                const parentPath = '/' + pathSegments.join('/');
+                
+                if (await pathExists(parentPath) || pathSegments.length === 0) {
+                    window.location.replace(parentPath || '/');
+                    return;
+                }
+            }
+            window.location.replace('/');
+        }
+        
+        findValidParent();
+    </script>
+</head>
+</html>

@@ -20,44 +20,58 @@ document.addEventListener("DOMContentLoaded", () => {
         heightDelta: 0,
         tags: ["Signature", "Moon", "Stars"]
     },
-    ball: {
-        title: "Gallery -<br>Balls & Formals",
+    corporate: {
+        title: "Gallery -<br>Corporate",
+        description: "My newest avenue of photography! I've been fortunate enough to partner with industry-leading and promising new businesses, taking photos that promises to capture the very essense of a company: the talent of the team, what they have to offer, and the atmosphere of their workplace. From professional headshots and 'action' team shots to venue photograpy and candids at a launch party, I'll do whatever it takes to showcase your business at its absolute best.",
+        NegStartIndex: 9, //2 if LHS
+        heightDelta: 0,
+        tags: ["Signature", "Headshots", "Action & Staged", "Venue"]
+    },
+    event: {
+        title: "Gallery -<br>Formal Events & Celebrations",
         description: "Whether it be photos of groups, candids, awards, speeches or the venue, I strive to showcase the excitement and atmosphere of an event to remember. I excel in busy situations and when meeting new people, and pride myself on building a friendly and charismatic rapport with guests while maintaining professionalism and strong directorial skills.",
-        NegStartIndex: 14,
+        NegStartIndex: 34, //14 if RHS
         heightDelta: 0.5,
         tags: ["Signature", "Groups", "Candids", "Personal & Couples", "Venue", "Awards"]
     },
     landscape: {
         title: "Gallery -<br>Landscapes",
         description: "Powerful, raw, sublime, whatever you want to call it - there's a reason why landscapes move us so deeply. Here, I try to capture some of that feeling, aiming to preserve a place or moment in the beauty it deserves.",
-        NegStartIndex: 26,
+        NegStartIndex: 27,
         heightDelta: 0.5,
-        tags: ["Signature", "City", "Water & Ocean", "Mountains & Hills"]
+        tags: ["Signature", "City", "Water & Ocean", "Mountains & Hills", "Fields"]
     },
     nature: {
         title: "Gallery -<br>Animals & Nature",
         description: "<b>Eutierria</b> (noun): 'a pleasing feeling of oneness with the earth and life'. Okay, <i>perhaps</i> that's a little pretentious, but there's a reason why the majority of my photos are of nature! :) I'm really lucky to live where I do, to be surrounded by so much life. Photography helps me explore that 'oneness' through curiosity and mindfulness; I hope to share a piece of that feeling here - hope you enjoy! 😌",
-        NegStartIndex: 27,
+        NegStartIndex: 13, //27 if LHS
         heightDelta: 0.5,
         tags: ["Signature", "Animals", "Insects", "Plants & Greenery"]
     },
-    studioportrait: {
-        title: "Gallery -<br>Studio Work & Portraits",
-        description: "This might just be my favourite kind of photography - getting together with a friend or two, spending hours brainstorming and planning every detail, then jumping up and down with childlike joy when unveiling the results. It's always a blast :D.",
-        NegStartIndex: 16, //20
+    portrait: {
+        title: "Gallery -<br>Portraits",
+        description: "An absolutely essential part of my love for photography. A great portrait captures a deep range of emotion and wonder, and I love utilising this to its fullest (especially with friends!) to capture authentic moments that provoke awe and evocation.",
+        NegStartIndex: 4,
         heightDelta: -0.5,
-        tags: ["Signature", "Studio", "Portraits"]
+        tags: ["Signature", "Nature", "Studio", "Landscape", "Animals"]
+    },
+    studio: {
+        title: "Gallery -<br>Studio Work",
+        description: "This might just be my favourite kind of photography - getting together with a friend or two, spending hours brainstorming and planning every detail, then jumping up and down with childlike joy when unveiling the results. It's always a blast :D.",
+        NegStartIndex: 10, //20 if LHS
+        heightDelta: -0.5,
+        tags: ["Signature", "Light & Reflection", "Portrait", "Objects & Products", "Macro"]
     },
     travel: {
         title: "Gallery -<br>Adventures & Travel",
         description: "This is slightly more of a <i>variety</i> collection, spanning everything from everyday travels to international expeditions. Despite the range, I hope that each photo remains striking, telling a unique story that stays true to the original moment.",
-        NegStartIndex: 18,
+        NegStartIndex: 21, //8 if LHS
         heightDelta: -0.25,
         tags: ["Signature", "Street & Buildings", "Greenery", "Water"]
     }
   };
 
-  let allImages = [];
+    let allImages = [];
     let currentFilter = "Signature";
     const headerContent = categoryHeader[category];
     const thumbnailsContainer = document.getElementById("thumbnails");
@@ -112,6 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const nominalWidth = 16;
             const nominalHeight = nominalWidth / aspectRatio;
             const tagsAttribute = img.type ? `data-tags="${img.type.join(',')}"` : '';
+            const Credits = img.credits ? `Alfie Kunz + ${img.credits}` : 'Alfie Kunz'
+            const YearOfCapture = new Date(img.datetime).getFullYear();
 
             article.innerHTML = `
                 <a class="thumbnail" href="images/${category}/full/${img.filename}" data-position="${img.position || 'center center'}" ${tagsAttribute} data-index="${index}">
@@ -125,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     />
                 </a>
                 <h2>${img.title || ''}</h2>
-                <p>© Alfie Kunz Photography - 2025</p>
+                <p>© ${Credits} Photography - ${YearOfCapture}</p>
             `;
             thumbnailsContainer.appendChild(article);
         });
@@ -241,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(`Found ${allImages.length} Photos - Displaying...`)
 
         filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
-        generateFilterButtons(filteredImages); // Or pass allImages if you want buttons for all verifiable images
+        generateFilterButtons(filteredImages);
         renderThumbnails(filteredImages, true);
 
     })

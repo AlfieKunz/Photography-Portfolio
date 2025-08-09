@@ -1,5 +1,47 @@
 [
   {
+    "filename": "DSR_0604_1.jpg",
+    "title": "Hewenden Viaduct - Bradford",
+    "datetime": "2025-08-06T14:39:50",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0601_1.jpg",
+    "title": "Hewenden Viaduct - Bradford",
+    "datetime": "2025-08-06T14:16:36",
+    "type": ["Signature", "Water & Ocean"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0538_1.jpg",
+    "title": "Keighley - West Yorkshire",
+    "datetime": "2025-08-02T18:47:03",
+    "type": ["Fields"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0508_1.jpg",
+    "title": "Appletreewick - West Yorkshire",
+    "datetime": "2025-07-30T15:22:46",
+    "type": ["Mountains & Hills", "Fields"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0502_1.jpg",
+    "title": "Appletreewick - West Yorkshire",
+    "datetime": "2025-07-30T15:00:55",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0444_1.jpg",
+    "title": "Leamington Spa - West Midlands",
+    "datetime": "2025-05-13T20:15:07",
+    "type": ["Signature", "Fields"],
+    "aspect_ratio": 1.5
+  },
+  {
     "filename": "DSR_0399_1.jpg",
     "title": "Barnard Castle - County Durham",
     "datetime": "2025-04-13T19:44:58",
@@ -19,7 +61,7 @@
     "filename": "DSR_0392.JPG",
     "title": "Barnard Castle - County Durham",
     "datetime": "2025-04-13T19:30:08",
-    "type": [],
+    "type": ["Fields"],
     "aspect_ratio": 1.5
   },
   {
@@ -28,7 +70,7 @@
     "datetime": "2025-04-13T19:22:33",
     "type": [
       "Signature",
-      "Mountains & Hills"
+      "Mountains & Hills", "Fields"
     ],
     "aspect_ratio": 1.5
   },
@@ -55,7 +97,7 @@
     "filename": "DSR_0108.JPG",
     "title": "Snowdonia - Watkin Path",
     "datetime": "2024-09-06T12:16:47",
-    "type": [ 
+    "type": [
       "Mountains & Hills"
     ],
     "aspect_ratio": 1.5
@@ -119,7 +161,8 @@
     "filename": "DSR_0029.JPG",
     "title": "Criccieth - Wales",
     "datetime": "2024-09-03T17:26:22",
-    "type": ["Signature", 
+    "type": [
+      "Signature",
       "Water & Ocean"
     ],
     "aspect_ratio": 1.5
@@ -158,7 +201,9 @@
     "filename": "DSR_0006.JPG",
     "title": "Criccieth - Wales",
     "datetime": "2024-08-30T19:33:31",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
@@ -372,7 +417,8 @@
     "filename": "DSC_10076.JPG",
     "title": "Yorkshire Three Peaks",
     "datetime": "2023-09-13T14:06:48",
-    "type": ["Signature", 
+    "type": [
+      "Signature",
       "Mountains & Hills"
     ],
     "aspect_ratio": 1.5
@@ -399,7 +445,8 @@
     "filename": "DSC_9412_1.jpg",
     "title": "Gower Peninsula - Wales",
     "datetime": "2023-07-05T19:41:08",
-    "type": ["Signature", 
+    "type": [
+      "Signature",
       "Water & Ocean",
       "Mountains & Hills"
     ],
@@ -540,7 +587,7 @@
     "title": "",
     "datetime": "2021-10-10T15:27:34",
     "type": [
-      "Signature"
+      "Signature", "Fields"
     ],
     "aspect_ratio": 1.5
   },

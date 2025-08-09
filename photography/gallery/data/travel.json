@@ -1,20 +1,136 @@
 [
   {
-    "filename": "DSR_0380.JPG",
-    "title": "Barnard Castle - County Durham",
-    "datetime": "2025-04-12T14:16:08",
+    "filename": "DSR_0604_1.jpg",
+    "title": "Keighley - West Yorkshire",
+    "datetime": "2025-08-06T14:39:50",
+    "type": ["Greenery"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0542_1.jpg",
+    "title": "Keighley - West Yorkshire",
+    "datetime": "2025-08-02T18:55:48",
+    "type": ["Signature", "Greenery"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0540_1.jpg",
+    "title": "Keighley - West Yorkshire",
+    "datetime": "2025-08-02T18:51:14",
+    "type": ["Greenery"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0530_1.jpg",
+    "title": "Ilkley Moor - Bradford",
+    "datetime": "2025-08-01T14:20:51",
+    "type": "",
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0523_1.jpg",
+    "title": "Ilkley Moor - Bradford",
+    "datetime": "2025-08-01T13:54:51",
+    "type": ["Signature"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0515_1.jpg",
+    "title": "Appletreewick - West Yorkshire",
+    "datetime": "2025-07-30T15:56:48",
+    "type": [],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0479_1.jpg",
+    "title": "Whitney - Oxfordshire",
+    "datetime": "2025-07-04T17:51:00",
     "type": ["Greenery"],
     "aspect_ratio": 0.667
   },
   {
-    "filename": "DSR_0403.JPG",
-    "title": "Barnard Castle - County Durham",
-    "datetime": "2025-04-12T12:12:18",
-    "type": ["Water"],
+    "filename": "DSR_0462_1.jpg",
+    "title": "University of Warwick - Coventry",
+    "datetime": "2025-06-18T16:51:48",
+    "type": ["Greenery"],
     "aspect_ratio": 0.667
   },
   {
-    "filename": "DSR_0328.JPG",
+    "filename": "DSR_0456_1.jpg",
+    "title": "University of Warwick - Coventry",
+    "datetime": "2025-06-18T16:06:55",
+    "type": ["Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0453_1.jpg",
+    "title": "University of Warwick - Coventry",
+    "datetime": "2025-06-18T15:58:53",
+    "type": ["Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0449_1.jpg",
+    "title": "Leamington Spa - West Midlands",
+    "datetime": "2025-05-13T20:26:33",
+    "type": ["Signature", "Street & Buildings", "Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0444_1.jpg",
+    "title": "Leamington Spa - West Midlands",
+    "datetime": "2025-05-13T20:15:07",
+    "type": ["Signature", "Street & Buildings", "Greenery"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0443_1.jpg",
+    "title": "Leamington Spa - West Midlands",
+    "datetime": "2025-05-13T20:14:52",
+    "type": ["Street & Buildings", "Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0436_1.jpg",
+    "title": "Leamington Spa - West Midlands",
+    "datetime": "2025-05-13T17:23:47",
+    "type": ["Signature", "Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0403_1.JPG",
+    "title": "Barnard Castle - County Durham",
+    "datetime": "2025-04-12T12:12:18",
+    "type": [
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0401_1.jpg",
+    "title": "Barnard Castle - County Durham",
+    "datetime": "2025-04-13T19:48:12",
+    "type": ["Signature", "Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0380_1.JPG",
+    "title": "Barnard Castle - County Durham",
+    "datetime": "2025-04-12T14:16:08",
+    "type": [
+      "Greenery"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0358_1.jpg",
+    "title": "",
+    "datetime": "2025-04-12T12:06:59",
+    "type": ["Greenery"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0328_1.JPG",
     "title": "",
     "datetime": "2025-03-19T14:05:33",
     "type": [],
@@ -24,14 +140,20 @@
     "filename": "20250222_160247_1.jpg",
     "title": "Kenilworth - Warwickshire",
     "datetime": "2025-02-22T16:02:47",
-    "type": ["Signature", "Greenery"],
+    "type": [
+      "Signature",
+      "Greenery"
+    ],
     "aspect_ratio": 0.75
   },
   {
     "filename": "DSR_0153_1.jpg",
     "title": "Haworth - West Yorkshire",
     "datetime": "2024-09-12T17:13:16",
-    "type": ["Signature", "Water"],
+    "type": [
+      "Signature",
+      "Water"
+    ],
     "aspect_ratio": 0.667
   },
   {
@@ -59,210 +181,292 @@
     "filename": "DSC_10925_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-20T18:42:44",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10918_2.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-20T16:34:35",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10916_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-20T16:09:06",
-    "type": ["Street & Buildings"],
+    "type": [
+      "Street & Buildings"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10892_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-19T11:49:12",
-    "type": ["Street & Buildings"],
+    "type": [
+      "Street & Buildings"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10879_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-19T09:40:20",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10860_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-18T12:07:03",
-    "type": ["Signature", "Street & Buildings", "Water"],
+    "type": [
+      "Signature",
+      "Street & Buildings",
+      "Water"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10859_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-18T12:02:27",
-    "type": ["Signature", "Street & Buildings", "Greenery"],
+    "type": [
+      "Signature",
+      "Street & Buildings",
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10843_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-18T09:46:15",
-    "type": ["Water"],
+    "type": [
+      "Water"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10788_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-15T12:51:52",
-    "type": ["Signature", "Greenery"],
+    "type": [
+      "Signature",
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10781_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-15T10:21:17",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10771_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T18:53:17",
-    "type": ["Signature", "Water"],
+    "type": [
+      "Signature",
+      "Water"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10767_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T16:49:31",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10749_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T11:58:48",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10748_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T11:57:03",
-    "type": ["Street & Buildings"],
+    "type": [
+      "Street & Buildings"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10741_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T11:03:53",
-    "type": ["Signature", "Street & Buildings", "Greenery"],
+    "type": [
+      "Signature",
+      "Street & Buildings",
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10715_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-13T18:43:22",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10704_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-13T09:46:25",
-    "type": ["Street & Buildings"],
+    "type": [
+      "Street & Buildings"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10685_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-12T14:00:00",
-    "type": ["Signature"],
+    "type": [
+      "Signature"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10683_2.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-12T13:45:11",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10616_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-10T15:41:39",
-    "type": ["Street & Buildings"],
+    "type": [
+      "Street & Buildings"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10590_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-09T13:42:31",
-    "type": ["Street & Buildings"],
+    "type": [
+      "Street & Buildings"
+    ],
     "aspect_ratio": 0.666
   },
   {
     "filename": "DSC_10587_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-09T13:31:01",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10581_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-09T12:34:14",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10528_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-08T09:37:39",
-    "type": ["Street & Buildings", "Water"],
+    "type": [
+      "Street & Buildings",
+      "Water"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10494.JPG",
     "title": "Gower Peninsula - Wales",
     "datetime": "2024-07-02T17:47:12",
-    "type": ["Signature", "Greenery", "Water"],
+    "type": [
+      "Signature",
+      "Greenery",
+      "Water"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10370.JPG",
     "title": "",
     "datetime": "2024-04-14T18:21:06",
-    "type": ["Greenery"],
+    "type": [
+      "Greenery"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_10213_1.jpg",
     "title": "Barnard Castle - County Durham",
     "datetime": "2024-03-27T17:26:10",
-    "type": ["Greenery"],
+    "type": [
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_8847_1.jpg",
     "title": "Gower Peninsula - Wales",
     "datetime": "2023-07-02T17:57:43",
-    "type": ["Water"],
+    "type": [
+      "Water"
+    ],
     "aspect_ratio": 1.499
   },
   {
     "filename": "DSC_8787_1.jpg",
     "title": "Gower Peninsula - Wales",
     "datetime": "2023-07-02T17:49:26",
-    "type": ["Signature", "Greenery"],
+    "type": [
+      "Signature",
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_8566_1.jpg",
     "title": "Gower Peninsula - Wales",
     "datetime": "2023-07-01T19:29:54",
-    "type": ["Signature"],
+    "type": [
+      "Signature"
+    ],
     "aspect_ratio": 1.5
   },
   {
@@ -283,21 +487,29 @@
     "filename": "DSC_1472.JPG",
     "title": "Penrith - Cumbria",
     "datetime": "2021-10-30T13:16:49",
-    "type": ["Signature", "Street & Buildings"],
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_1268.JPG",
     "title": "Appleby Castle - Penrith",
     "datetime": "2021-09-03T12:19:27",
-    "type": ["Signature"],
+    "type": [
+      "Signature"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_0462.JPG",
     "title": "Barnard Castle - County Durham",
     "datetime": "2021-07-22T17:28:04",
-    "type": ["Greenery", "Water"],
+    "type": [
+      "Greenery",
+      "Water"
+    ],
     "aspect_ratio": 1.5
   }
 ]
