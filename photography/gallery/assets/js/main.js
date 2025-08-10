@@ -232,7 +232,7 @@ var main = (function($) { var _ = {
 							_.$viewer.isPinching = false; // Flag for pinching
 							
 							if (event.originalEvent.touches.length === 2) {
-								//scroll mode :D
+								//zoom mode :D
 								let t1 = event.originalEvent.touches[0];
 								let t2 = event.originalEvent.touches[1];
 								_.$viewer.initialPinchDistance = Math.sqrt(
@@ -314,6 +314,50 @@ var main = (function($) { var _ = {
 								_.$viewer.currentImageScale = parseFloat(values[0]);
 							}
 						});
+
+				_.$viewer.on('wheel', function(event) {
+					// Scroll time :D
+					// Bail if no slide is active or if we're on a smaller screen (which uses pinch zoom).
+					if (_.current === null || !_.slides[_.current] || !_.slides[_.current].$slideImage || breakpoints.active('<=medium')) {
+						return;
+					}
+			
+					// Stops the browser from accepting a 'scroll'.
+					event.preventDefault();
+					event.stopPropagation();
+			
+					const $image = _.slides[_.current].$slideImage;			
+					// Get the current scale using the current transform property of the image's css.
+					let currentZoom = 1;
+					const matrix = $image.css('transform').match(/matrix\((.+)\)/);
+					if (matrix && matrix[1]) {
+						const values = matrix[1].split(', ');
+						currentZoom = parseFloat(values[0]);
+					}
+			
+					// Adjust scale based on scroll direction (deltaY is negative for zooming in).
+					let NewZoom = currentZoom - (event.originalEvent.deltaY * 0.0015 * currentZoom);
+					NewZoom = Math.max(1, Math.min(NewZoom, 5));
+			
+					// Appies the zoom to the image's css.
+					$image.css({
+						'transition': 'transform 0.1s ease-out', // ZZooming animation.
+						'transform': 'scale(' + NewZoom + ')'
+					});
+				});
+				// Controls to reset the zoom if the user double-clicks on the image.
+				_.$viewer.on('dblclick', '.slide.active .image', function(event) {
+					if (_.current === null || !_.slides[_.current]) {return;}
+					event.preventDefault();
+					event.stopPropagation();
+					if (_.slides[_.current].$slideImage) {
+						_.slides[_.current].$slideImage.css({
+							'transition': 'transform 0.3s ease-out',
+							'transform': 'scale(1)',
+						});
+
+					}
+				});
 
 		// Main.
 
@@ -534,13 +578,21 @@ initViewer: function(imagesData) {
 		// Deactivate old slide (if there is one).
 		if (oldSlide) {
 			oldSlide.$parent.removeClass('active');
-			if (oldSlide.$slideImage && breakpoints.active('<=medium')) {
+			if (oldSlide.$slideImage) {
 				// If the image has been scaled, animate it back to its original size.
-				oldSlide.$slideImage.css({
-					'transform': 'scale(1.1)',
-					'transform-origin': 'center center',
-					'transition': 'opacity 0.5s ease-in-out, transform 0.75s ease'
-				});
+				if (breakpoints.active('<=medium')) {
+					oldSlide.$slideImage.css({
+						'transform': 'scale(1.1)',
+						'transform-origin': 'center center',
+						'transition': 'opacity 0.5s ease-in-out, transform 0.75s ease'
+					});
+				} else {
+					oldSlide.$slideImage.css({
+						'transform': 'scale(1)',
+						'transform-origin': 'center center',
+						'transition': 'opacity 0.5s ease-in-out, transform 0.75s ease'
+					});
+				}	
 			}
 			oldSlide.$slide.removeClass('active');
 		}
