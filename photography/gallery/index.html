@@ -29,7 +29,12 @@
 				<p style="font-size: 0.8em; color: #ccc; margin-top: -1.1em; margin-bottom: 2em">Please let me know if there are any issues!</p>
 				<input type="username" id="username-input" placeholder="Name" />
 				<input type="password" id="password-input" placeholder="Password" />
-				<button id="info-submit">Submit</button>
+				<div style="position: relative; display: flex; justify-content: center; margin-top: 1em;">
+					<button id="info-submit">Submit</button>
+					<a href="/photography#portfolio" class="icon solid fa-home" style="position: absolute; right: 0.6em; top: 50%; transform: translateY(-38%); font-size: 1.5em; color: #f69051; text-decoration: none;">
+						<span class="label" style="display: none;">Home</span>
+					</a>
+				</div>
 				<p id="error-message" style="color: red;"></p>
 			</div>
 		</div>
