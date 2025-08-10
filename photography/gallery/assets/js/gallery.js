@@ -503,19 +503,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             //Checks to see if the name is in the database of names.
             try {
-                const response1 = await fetch(`images/private/${username}/`, {
-                    method: 'HEAD',
-                    cache: 'no-store' // Uses 'no-store' to ensure a new check each time.
+                const response = await fetch(`data/private/${username}.json`, {
+                    cache: 'no-store'
                 });
-                //Fetches json.
-                if (response1.ok) {
-                    const response2 = await fetch(`data/private/${username}.json`)
-                    if (!response2.ok) {                  
-                        ErrorCounter += 1;
-                        errorMessage.innerHTML = `<br>(${ErrorCounter}) Please enter a valid username<br>(unable to retrieve JSON).`;
-                        return;
-                    }
-                } else {                  
+                if (!response.ok) {                  
                     ErrorCounter += 1;
                     errorMessage.innerHTML = `<br>(${ErrorCounter}) Please enter a valid username.`;
                     return;
