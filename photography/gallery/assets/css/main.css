@@ -1310,10 +1310,10 @@ input, select, textarea {
 				}
 
 			#viewer .slide .image {
-					-moz-transition: opacity 0.5s ease-in-out, transform 0.75s ease; /* Add transform, match main duration */
+					-moz-transition: opacity 0.5s ease-in-out, transform 0.75s ease;
 					-webkit-transition: opacity 0.5s ease-in-out, transform 0.75s ease;
 					-ms-transition: opacity 0.5s ease-in-out, transform 0.75s ease;
-					transition: opacity 0.5s ease-in-out, transform 0.75s ease; /* Add transform, match main duration */
+					transition: opacity 0.5s ease-in-out, transform 0.75s ease;
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -1323,14 +1323,18 @@ input, select, textarea {
 					background-size: contain;
 					background-position: center center;
 					opacity: 0;
-					/* Explicitly set the default scale */
 					transform: scale(1);
-					/* Ensure transform origin is center if needed (usually default) */
 					transform-origin: center center;
 				}
 			body.fullscreen #viewer .slide .image {
 						transform: scale(1.2);
 					}
+
+			@media (max-width: 980.98px) {
+				body.fullscreen #viewer .slide .image {
+					transform: scale(1.1);
+				}
+			}
 
 			#viewer .slide:before {
 				-moz-animation: spinner 1s linear infinite;

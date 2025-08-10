@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error(error);
         };
         
-        const isMobile = breakpoints.active('<=medium');
+        const isMobile = window.innerWidth < 651;
         if (!isMobile) {
             // Desktop Behavior (Initialize immediately)
             main.initViewer(orderedImages);
@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            const isMobile = breakpoints.active('<=medium');
+            const isMobile = window.innerWidth < 651;
             if (isMobile && !viewerInitialized) {
                 main.initViewer(lastOrderedImages); // Pass the correctly ordered data
                 viewerInitialized = true;

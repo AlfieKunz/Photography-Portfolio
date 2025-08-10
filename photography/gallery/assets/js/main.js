@@ -537,7 +537,7 @@ initViewer: function(imagesData) {
 			if (oldSlide.$slideImage && breakpoints.active('<=medium')) {
 				// If the image has been scaled, animate it back to its original size.
 				oldSlide.$slideImage.css({
-					'transform': 'scale(1.2)',
+					'transform': 'scale(1.1)',
 					'transform-origin': 'center center',
 					'transition': 'opacity 0.5s ease-in-out, transform 0.75s ease'
 				});
