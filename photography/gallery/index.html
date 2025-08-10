@@ -20,6 +20,19 @@
         <link rel="manifest" href="../assets/favicon/site.webmanifest">
 	</head>
 	<body class="is-preload-0 is-preload-1 is-preload-2">
+		
+		<!-- Private Gallery Unlock -->
+		<div id="private-popup" class="popup-overlay" style="display: none;">
+			<div class="popup-content">
+				<h7>Private Gallery</h7>
+				<p style="margin-top: 0.5em">This gallery is password protected.<br>Please enter the details given to you to unlock these photos.</p>
+				<p style="font-size: 0.8em; color: #ccc; margin-top: -1.1em; margin-bottom: 2em">Please let me know if there are any issues!</p>
+				<input type="username" id="username-input" placeholder="Name" />
+				<input type="password" id="password-input" placeholder="Password" />
+				<button id="info-submit">Submit</button>
+				<p id="error-message" style="color: red;"></p>
+			</div>
+		</div>
 
 		<!-- Main -->
 			<div id="main">

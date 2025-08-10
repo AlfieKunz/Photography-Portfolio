@@ -5,7 +5,10 @@
     "datetime": "2025-08-03T19:26:54",
     "type": ["Signature", "Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0584_1.jpg",
@@ -13,7 +16,10 @@
     "datetime": "2025-08-03T19:25:33",
     "type": ["Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0580_1.jpg",
@@ -21,7 +27,10 @@
     "datetime": "2025-08-03T19:17:17",
     "type": ["Signature", "Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0577_1.jpg",
@@ -29,7 +38,10 @@
     "datetime": "2025-08-03T18:14:20",
     "type": ["Signature", "Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0572_1.jpg",
@@ -37,7 +49,10 @@
     "datetime": "2025-08-03T18:08:27",
     "type": ["Signature", "Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0571_1.jpg",
@@ -45,7 +60,10 @@
     "datetime": "2025-08-03T18:05:42",
     "type": ["Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
 {
     "filename": "DSR_0570_2.jpg",
@@ -53,7 +71,10 @@
     "datetime": "2025-08-05T22:48:19",
     "type": ["Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0570_1.jpg",
@@ -61,7 +82,10 @@
     "datetime": "2025-08-03T18:02:35",
     "type": ["Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0567_1.jpg",
@@ -69,7 +93,10 @@
     "datetime": "2025-08-03T17:58:48",
     "type": ["Signature", "Nature"],
     "aspect_ratio": 1.5,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0562_1.jpg",
@@ -77,7 +104,10 @@
     "datetime": "2025-08-03T17:28:10",
     "type": ["Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0559_1.jpg",
@@ -85,7 +115,10 @@
     "datetime": "2025-08-03T17:22:26",
     "type": ["Signature", "Nature"],
     "aspect_ratio": 1.5,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0558_1.jpg",
@@ -93,7 +126,10 @@
     "datetime": "2025-08-03T17:21:53",
     "type": ["Signature", "Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0557_1.jpg",
@@ -101,7 +137,10 @@
     "datetime": "2025-08-03T17:17:26",
     "type": ["Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0550_1.jpg",
@@ -109,7 +148,10 @@
     "datetime": "2025-08-03T17:07:07",
     "type": ["Nature"],
     "aspect_ratio": 0.667,
-    "credits": "Beth Moore"
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
   },
   {
     "filename": "DSR_0523_1.jpg",
@@ -320,7 +362,10 @@
     "datetime": "2024-09-11T15:06:36",
     "type": ["Studio"],
     "aspect_ratio": 0.667,
-    "credits": "Rohith Senthilkumaran"
+    "credits": {
+      "name": "Rohith Senthilkumaran",
+      "url": "https://www.instagram.com/rsk245"
+    }
   },
   {
     "filename": "DSR_0134_1.jpg",
@@ -328,7 +373,10 @@
     "datetime": "2024-09-11T13:04:17",
     "type": ["Signature", "Studio"],
     "aspect_ratio": 0.667,
-    "credits": "Rohith Senthilkumaran"
+    "credits": {
+      "name": "Rohith Senthilkumaran",
+      "url": "https://www.instagram.com/rsk245"
+    }
   },
   {
     "filename": "DSR_0132.jpg",
@@ -336,7 +384,10 @@
     "datetime": "2024-09-11T12:46:38",
     "type": ["Studio"],
     "aspect_ratio": 0.667,
-    "credits": "Rohith Senthilkumaran"
+    "credits": {
+      "name": "Rohith Senthilkumaran",
+      "url": "https://www.instagram.com/rsk245"
+    }
   },
   {
     "filename": "DSR_0084.jpg",
@@ -354,7 +405,10 @@
     "datetime": "2024-08-14T15:04:30",
     "type": ["Studio"],
     "aspect_ratio": 0.561,
-    "credits": "Rohith Senthilkumaran"
+    "credits": {
+      "name": "Rohith Senthilkumaran",
+      "url": "https://www.instagram.com/rsk245"
+    }
   },
   {
     "filename": "DSC_10282.jpg",
@@ -362,7 +416,10 @@
     "datetime": "2024-08-14T14:37:31",
     "type": ["Studio"],
     "aspect_ratio": 0.561,
-    "credits": "Rohith Senthilkumaran"
+    "credits": {
+      "name": "Rohith Senthilkumaran",
+      "url": "https://www.instagram.com/rsk245"
+    }
   },
   {
     "filename": "DSC_10461.jpg",
@@ -397,7 +454,10 @@
     "datetime": "2024-06-25T16:35:56",
     "type": ["Studio"],
     "aspect_ratio": 1.5,
-    "credits": "Rohith Senthilkumaran"
+    "credits": {
+      "name": "Rohith Senthilkumaran",
+      "url": "https://www.instagram.com/rsk245"
+    }
   },
   {
     "filename": "DSC_10445.jpg",
@@ -405,7 +465,10 @@
     "datetime": "2024-06-25T16:16:08",
     "type": ["Studio"],
     "aspect_ratio": 1.5,
-    "credits": "Rohith Senthilkumaran"
+    "credits": {
+      "name": "Rohith Senthilkumaran",
+      "url": "https://www.instagram.com/rsk245"
+    }
   },
   {
     "filename": "DSC_10388_1.jpg",
@@ -416,7 +479,10 @@
       "Studio"
     ],
     "aspect_ratio": 0.667,
-    "credits": "Rohith Senthilkumaran"
+    "credits": {
+      "name": "Rohith Senthilkumaran",
+      "url": "https://www.instagram.com/rsk245"
+    }
   },
   {
     "filename": "DSC_10381.jpg",
@@ -424,7 +490,10 @@
     "datetime": "2024-04-17T12:57:03",
     "type": ["Studio"],
     "aspect_ratio": 0.667,
-    "credits": "Rohith Senthilkumaran"
+    "credits": {
+      "name": "Rohith Senthilkumaran",
+      "url": "https://www.instagram.com/rsk245"
+    }
   },
   {
     "filename": "DSC_10382.jpg",
@@ -432,7 +501,10 @@
     "datetime": "2024-04-16T14:50:39",
     "type": ["Studio"],
     "aspect_ratio": 0.561,
-    "credits": "Rohith Senthilkumaran"
+    "credits": {
+      "name": "Rohith Senthilkumaran",
+      "url": "https://www.instagram.com/rsk245"
+    }
   },
   {
     "filename": "DSC_10197_1.jpg",
