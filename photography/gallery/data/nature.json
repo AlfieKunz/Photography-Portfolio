@@ -1,121 +1,229 @@
 [
   {
+    "filename": "DSR_0921_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T12:55:40",
+    "type": [
+      "Signature",
+      "Animals"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0878_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T17:22:13",
+    "type": [
+      "Plants & Greenery"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0852_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-01T14:56:22",
+    "type": [
+      "Animals"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0823_1.jpg",
+    "title": "Yorkshire Dales National Park",
+    "datetime": "2025-08-21T15:15:38",
+    "type": [
+      "Animals"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0716_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-14T13:05:02",
+    "type": [
+      "Signature",
+      "Insects"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0698_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T17:42:23",
+    "type": [
+      "Plants & Greenery"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0627_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-12T15:44:22",
+    "type": [
+      "Plants & Greenery"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
     "filename": "DSR_0597_1.jpg",
     "title": "",
     "datetime": "2025-08-06T13:35:36",
-    "type": ["Insects"],
+    "type": [
+      "Insects"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0517_1.jpg",
     "title": "Appletreewick - West Yorkshire",
     "datetime": "2025-07-30T16:04:35",
-    "type": ["Insects", "Plants & Greenery"],
+    "type": [
+      "Insects",
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0514_1.jpg",
     "title": "Appletreewick - West Yorkshire",
     "datetime": "2025-07-30T15:55:41",
-    "type": ["Signature", "Insects"],
+    "type": [
+      "Signature",
+      "Insects"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0503_1.jpg",
     "title": "Appletreewick - West Yorkshire",
     "datetime": "2025-07-30T15:07:42",
-    "type": ["Plants & Greenery"],
+    "type": [
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0227.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T12:28:51",
-    "type": ["Signature", "Plants & Greenery"],
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0225.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T12:28:09",
-    "type": ["Insects", "Plants & Greenery"],
+    "type": [
+      "Insects",
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0172.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T12:01:05",
-    "type": ["Animals"],
+    "type": [
+      "Animals"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0491_1.jpg",
     "title": "Whitney - Oxfordshire",
     "datetime": "2025-07-04T18:14:47",
-    "type": ["Signature", "Plants & Greenery"],
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0490_1.jpg",
     "title": "Whitney - Oxfordshire",
     "datetime": "2025-07-04T18:13:56",
-    "type": ["Signature", "Plants & Greenery"],
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0489_1.jpg",
     "title": "Whitney - Oxfordshire",
     "datetime": "2025-07-04T18:13:22",
-    "type": ["Signature", "Plants & Greenery"],
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0475_1.jpg",
     "title": "",
     "datetime": "2025-06-30T16:04:10",
-    "type": ["Plants & Greenery"],
+    "type": [
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0470_1.jpg",
     "title": "",
     "datetime": "2025-06-30T15:58:25",
-    "type": ["Plants & Greenery"],
+    "type": [
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0465_1.jpg",
     "title": "",
     "datetime": "2025-06-30T15:07:35",
-    "type": ["Signature", "Plants & Greenery"],
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0461_1.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-06-18T16:51:04",
-    "type": ["Plants & Greenery"],
+    "type": [
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0456_1.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-06-18T16:06:55",
-    "type": ["Plants & Greenery"],
+    "type": [
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0436_1.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-05-13T17:23:47",
-    "type": ["Signature", "Plants & Greenery"],
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0433_1.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-05-13T17:13:37",
-    "type": ["Plants & Greenery"],
+    "type": [
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
@@ -244,7 +352,10 @@
     "filename": "DSR_0339_1.jpg",
     "title": "",
     "datetime": "2025-04-07T17:31:06",
-    "type": ["Signature", "Plants & Greenery"],
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
     "aspect_ratio": 1.5
   },
   {

@@ -1,23 +1,398 @@
 [
   {
+    "filename": "DSR_0929_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T13:16:52",
+    "type": [
+      "Signature"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0905_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T11:50:18",
+    "type": [
+      "Greenery"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0897_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T10:59:55",
+    "type": [
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0879_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T17:38:16",
+    "type": [
+      "Signature",
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0877_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T17:17:10",
+    "type": [
+      "Signature",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0875_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T17:14:58",
+    "type": [
+      "Signature",
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0867_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T14:51:02",
+    "type": [
+      "Signature",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0863_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T14:41:37",
+    "type": [
+      "Signature",
+      "Street & Buildings",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0862_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T14:39:03",
+    "type": [
+      "Signature",
+      "Street & Buildings"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0857_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T13:34:17",
+    "type": [
+      "Water"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0855_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T13:28:54",
+    "type": [
+      "Signature",
+      "Greenery"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0852_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-01T14:56:22",
+    "type": [
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0847_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-01T14:48:44",
+    "type": [
+      "Signature",
+      "Water"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0844_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-01T14:36:39",
+    "type": [
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0834_1.jpg",
+    "title": "Yorkshire Dales National Park",
+    "datetime": "2025-08-21T17:04:19",
+    "type": [
+      "Greenery"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0828_1.jpg",
+    "title": "Yorkshire Dales National Park",
+    "datetime": "2025-08-21T15:51:23",
+    "type": [
+      "Signature",
+      "Water"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0823_1.jpg",
+    "title": "Yorkshire Dales National Park",
+    "datetime": "2025-08-21T15:15:38",
+    "type": [
+      "Greenery"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0815_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-17T11:15:13",
+    "type": [
+      "Signature",
+      "Water"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0796_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-16T16:07:16",
+    "type": [
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0775_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-16T11:44:35",
+    "type": [
+      "Greenery"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0759_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T20:21:18",
+    "type": [
+      "Signature",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0757_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T20:18:57",
+    "type": [
+      "Signature",
+      "Water"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0741_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T17:20:30",
+    "type": [
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0740_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T17:19:40",
+    "type": [
+      "Signature",
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0730_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-14T18:21:39",
+    "type": [
+      "Signature",
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0721_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-14T13:46:52",
+    "type": [
+      "Signature",
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0720_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-14T13:14:44",
+    "type": [
+      "Signature",
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0713_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-14T12:02:29",
+    "type": [
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0712_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-14T11:59:10",
+    "type": [
+      "Signature",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0707_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T19:02:51",
+    "type": [
+      "Signature",
+      "Greenery"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0696_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T17:35:44",
+    "type": [
+      "Street & Buildings",
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0687_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T13:54:58",
+    "type": [
+      "Signature",
+      "Greenery"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0669_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T11:57:06",
+    "type": [
+      "Signature",
+      "Greenery"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0639_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-12T17:36:37",
+    "type": [
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0630_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-12T16:27:22",
+    "type": [
+      "Signature",
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0627_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-12T15:44:22",
+    "type": [
+      "Greenery",
+      "Water"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0620_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-12T15:06:02",
+    "type": [
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
     "filename": "DSR_0604_1.jpg",
     "title": "Keighley - West Yorkshire",
     "datetime": "2025-08-06T14:39:50",
-    "type": ["Greenery"],
+    "type": [
+      "Greenery"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0542_1.jpg",
     "title": "Keighley - West Yorkshire",
     "datetime": "2025-08-02T18:55:48",
-    "type": ["Signature", "Greenery"],
+    "type": [
+      "Signature",
+      "Greenery"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0540_1.jpg",
     "title": "Keighley - West Yorkshire",
     "datetime": "2025-08-02T18:51:14",
-    "type": ["Greenery"],
+    "type": [
+      "Greenery"
+    ],
     "aspect_ratio": 1.5
   },
   {
@@ -31,7 +406,9 @@
     "filename": "DSR_0523_1.jpg",
     "title": "Ilkley Moor - Bradford",
     "datetime": "2025-08-01T13:54:51",
-    "type": ["Signature"],
+    "type": [
+      "Signature"
+    ],
     "aspect_ratio": 0.667
   },
   {
@@ -45,64 +422,77 @@
     "filename": "DSR_0479_1.jpg",
     "title": "Whitney - Oxfordshire",
     "datetime": "2025-07-04T17:51:00",
-    "type": ["Greenery"],
+    "type": [
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0462_1.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-06-18T16:51:48",
-    "type": ["Greenery"],
+    "type": [
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0456_1.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-06-18T16:06:55",
-    "type": ["Greenery"],
+    "type": [
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0453_1.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2025-06-18T15:58:53",
-    "type": ["Greenery"],
+    "type": [
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0449_1.jpg",
     "title": "Leamington Spa - West Midlands",
     "datetime": "2025-05-13T20:26:33",
-    "type": ["Signature", "Street & Buildings", "Greenery"],
+    "type": [
+      "Signature",
+      "Street & Buildings",
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0444_1.jpg",
     "title": "Leamington Spa - West Midlands",
     "datetime": "2025-05-13T20:15:07",
-    "type": ["Signature", "Street & Buildings", "Greenery"],
+    "type": [
+      "Signature",
+      "Street & Buildings",
+      "Greenery"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0443_1.jpg",
     "title": "Leamington Spa - West Midlands",
     "datetime": "2025-05-13T20:14:52",
-    "type": ["Street & Buildings", "Greenery"],
+    "type": [
+      "Street & Buildings",
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0436_1.jpg",
     "title": "Leamington Spa - West Midlands",
     "datetime": "2025-05-13T17:23:47",
-    "type": ["Signature", "Greenery"],
-    "aspect_ratio": 0.667
-  },
-  {
-    "filename": "DSR_0403_1.JPG",
-    "title": "Barnard Castle - County Durham",
-    "datetime": "2025-04-12T12:12:18",
     "type": [
-      "Water"
+      "Signature",
+      "Greenery"
     ],
     "aspect_ratio": 0.667
   },
@@ -110,7 +500,10 @@
     "filename": "DSR_0401_1.jpg",
     "title": "Barnard Castle - County Durham",
     "datetime": "2025-04-13T19:48:12",
-    "type": ["Signature", "Greenery"],
+    "type": [
+      "Signature",
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {
@@ -123,10 +516,21 @@
     "aspect_ratio": 0.667
   },
   {
+    "filename": "DSR_0403_1.JPG",
+    "title": "Barnard Castle - County Durham",
+    "datetime": "2025-04-12T12:12:18",
+    "type": [
+      "Water"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
     "filename": "DSR_0358_1.jpg",
     "title": "",
     "datetime": "2025-04-12T12:06:59",
-    "type": ["Greenery"],
+    "type": [
+      "Greenery"
+    ],
     "aspect_ratio": 0.667
   },
   {

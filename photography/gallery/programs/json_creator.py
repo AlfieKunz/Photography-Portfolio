@@ -5,7 +5,7 @@ from PIL import Image, ImageOps
 from PIL.ExifTags import TAGS
 
 # --- CONFIGURATION ---
-CATEGORY = "private/roryharriet"
+CATEGORY = "travel"
 DIREC = "C:/Users/alfie/Photography-Portfolio/photography/gallery"
 IMAGE_FOLDER = DIREC + "/images/" + CATEGORY + "/full/"
 JSON_OUTPUT_PATH = DIREC + "/data/" + CATEGORY + ".json"
@@ -13,6 +13,28 @@ DEFAULT_TITLE = ""
 DEFAULT_TYPE = ""
 DEFAULT_DATE = "20/07/25"
 # ---------------------
+
+
+# Loads default tags based on the category:
+match CATEGORY:
+    case "astro":
+        DEFAULT_TYPE = ["Signature", "Moon", "Stars"]
+    case "corporate":
+        DEFAULT_TYPE = ["Signature", "Headshots", "Action & Staged", "Venue"]
+    case "event":
+        DEFAULT_TYPE = ["Signature", "Groups", "Candids", "Personal & Couples", "Venue", "Awards"]
+    case "landscape":
+        DEFAULT_TYPE = ["Signature", "City", "Water & Ocean", "Mountains & Hills", "Fields"]
+    case "nature":
+        DEFAULT_TYPE = ["Signature", "Animals", "Insects", "Plants & Greenery"]
+    case "portrait":
+        DEFAULT_TYPE = ["Signature", "Nature", "Studio", "Landscape", "Animals"]
+    case "studio":
+        DEFAULT_TYPE = ["Signature", "Light & Reflection", "Portrait", "Objects & Products", "Macro"]
+    case "travel":
+        DEFAULT_TYPE = ["Signature", "Street & Buildings", "Greenery", "Water"]
+    case _: # Base case.
+        DEFAULT_TYPE = ["Signature"]
 
 def get_exif_data(image):
     """Extract EXIF data dictionary from a PIL image."""

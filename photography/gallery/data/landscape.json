@@ -1,44 +1,388 @@
 [
   {
+    "filename": "DSR_0946_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T15:09:11",
+    "type": ["Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0942_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T14:42:18",
+    "type": ["Signature", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0924_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T13:04:06",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0918_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T12:30:55",
+    "type": ["Signature", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0914_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T12:01:55",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0899_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T11:11:50",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0890_1.jpg",
+    "title": "Snowdonia - Wales",
+    "datetime": "2025-09-05T10:27:58",
+    "type": ["Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0880_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-04T18:20:50",
+    "type": ["Water & Ocean"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0868_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T14:53:19",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0859_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T13:37:10",
+    "type": ["Signature", "Water & Ocean"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0856_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-03T13:31:24",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0842_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-09-01T14:30:24",
+    "type": ["Mountains & Hills", "Fields"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0838_1.jpg",
+    "title": "Angleysey - Wales",
+    "datetime": "2025-08-30T18:23:17",
+    "type": ["Fields"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0825_1.jpg",
+    "title": "Yorkshire Dales National Park",
+    "datetime": "2025-08-21T15:35:02",
+    "type": ["Mountains & Hills", "Fields"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0809_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-17T07:30:21",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0807_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-17T07:25:03",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0805_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-17T07:17:19",
+    "type": ["Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0797_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-16T20:24:44",
+    "type": ["Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0788_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-16T15:18:55",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0783_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-16T14:28:45",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0776_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-16T12:01:51",
+    "type": ["Signature", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0765_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-16T09:40:09",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0763_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-16T09:34:41",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0761_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T20:40:24",
+    "type": ["Signature", "Water & Ocean"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0759_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T20:21:18",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0755_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T20:17:42",
+    "type": ["Signature", "Water & Ocean"],
+    "aspect_ratio": 1.778
+  },
+  {
+    "filename": "DSR_0754.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T20:17:01",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0752_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T20:14:16",
+    "type": ["Signature", "Water & Ocean"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0744_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T18:53:53",
+    "type": ["Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0739_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-15T17:17:40",
+    "type": ["Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0732_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-14T18:32:48",
+    "type": ["Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0729_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-14T18:18:36",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0727_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-14T18:05:21",
+    "type": ["Signature", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0707_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T19:02:51",
+    "type": ["Signature", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0705_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T18:19:13",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0704_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T18:15:19",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0701_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T18:02:50",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0693_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T17:30:07",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0688_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T14:02:29",
+    "type": ["Signature", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0662_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T11:41:02",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0658_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T11:12:10",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0656_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-13T10:37:22",
+    "type": ["Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0642_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-12T18:39:31",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0637_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-12T17:14:08",
+    "type": ["Mountains & Hills", "Fields"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0634_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-12T17:06:54",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0633_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-12T16:54:40",
+    "type": ["Signature", "Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0624_1.jpg",
+    "title": "Lake District Expedition - Summer 2025",
+    "datetime": "2025-08-12T15:28:36",
+    "type": ["Water & Ocean", "Mountains & Hills"],
+    "aspect_ratio": 1.5
+  },
+  {
     "filename": "DSR_0604_1.jpg",
     "title": "Hewenden Viaduct - Bradford",
     "datetime": "2025-08-06T14:39:50",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0601_1.jpg",
     "title": "Hewenden Viaduct - Bradford",
     "datetime": "2025-08-06T14:16:36",
-    "type": ["Signature", "Water & Ocean"],
+    "type": [
+      "Signature",
+      "Water & Ocean"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0538_1.jpg",
     "title": "Keighley - West Yorkshire",
     "datetime": "2025-08-02T18:47:03",
-    "type": ["Fields"],
+    "type": [
+      "Fields"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0508_1.jpg",
     "title": "Appletreewick - West Yorkshire",
     "datetime": "2025-07-30T15:22:46",
-    "type": ["Mountains & Hills", "Fields"],
+    "type": [
+      "Mountains & Hills",
+      "Fields"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0502_1.jpg",
     "title": "Appletreewick - West Yorkshire",
     "datetime": "2025-07-30T15:00:55",
-    "type": ["Mountains & Hills"],
+    "type": [
+      "Mountains & Hills"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0444_1.jpg",
     "title": "Leamington Spa - West Midlands",
     "datetime": "2025-05-13T20:15:07",
-    "type": ["Signature", "Fields"],
+    "type": [
+      "Signature",
+      "Fields"
+    ],
     "aspect_ratio": 1.5
   },
   {
@@ -61,7 +405,9 @@
     "filename": "DSR_0392.JPG",
     "title": "Barnard Castle - County Durham",
     "datetime": "2025-04-13T19:30:08",
-    "type": ["Fields"],
+    "type": [
+      "Fields"
+    ],
     "aspect_ratio": 1.5
   },
   {
@@ -70,7 +416,8 @@
     "datetime": "2025-04-13T19:22:33",
     "type": [
       "Signature",
-      "Mountains & Hills", "Fields"
+      "Mountains & Hills",
+      "Fields"
     ],
     "aspect_ratio": 1.5
   },
@@ -587,7 +934,8 @@
     "title": "",
     "datetime": "2021-10-10T15:27:34",
     "type": [
-      "Signature", "Fields"
+      "Signature",
+      "Fields"
     ],
     "aspect_ratio": 1.5
   },

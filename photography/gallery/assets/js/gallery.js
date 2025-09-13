@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     landscape: {
         title: "Gallery -<br>Landscapes",
         description: "Powerful, raw, sublime, whatever you want to call it - there's a reason why landscapes move us so deeply. Here, I try to capture some of that feeling, aiming to preserve a place or moment in the beauty it deserves.",
-        NegStartIndex: 27,
+        NegStartIndex: 47,
         heightDelta: 0,
         tags: ["Signature", "City", "Water & Ocean", "Mountains & Hills", "Fields"]
     },
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     travel: {
         title: "Gallery -<br>Adventures & Travel",
         description: "This is slightly more of a <i>variety</i> collection, spanning everything from everyday travels to international expeditions. Despite the range, I hope that each photo remains striking, telling a unique story that stays true to the original moment.",
-        NegStartIndex: 21, //8 if LHS
+        NegStartIndex: 8, //8 if LHS
         heightDelta: 0,
         tags: ["Signature", "Street & Buildings", "Greenery", "Water"]
     },
