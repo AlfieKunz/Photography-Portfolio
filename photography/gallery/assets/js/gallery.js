@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 //For some reason, github doesn't like photos being saved under DSC_0000_1.JPG - we need to lowercase this.
                 var imgfilename = img.filename
-                if (img.filename.includes("_")) {
+                if (img.filename.substring(4).includes("_")) {
                     imgfilename = imgfilename.replace(/\.[a-zA-Z]+$/g, (match) => match.toLowerCase());
                 }
                 
