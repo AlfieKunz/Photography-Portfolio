@@ -10849,7 +10849,13 @@ body {
 }
 
 .text-white-75 {
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: rgba(255, 255, 255, 0.75);
+}
+@media (max-width: 991.98px) { /* Adds subtle shadow for portrait headmast, which is a little harder to read text on */
+  .text-white-75 {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  }
 }
 
 .btn-xl {
