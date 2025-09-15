@@ -242,12 +242,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 const Credits = img.credits ? ('Alfie Kunz + ' + (img.credits.url ? `<a href="${img.credits.url}" target="_blank">${img.credits.name}</a>` : img.credits.name)) : 'Alfie Kunz'
                 const YearOfCapture = new Date(img.datetime).getFullYear();
                 
+                //For some reason, github doesn't like photos being saved under DSC_0000_1.JPG - we need to lowercase this.
+                const imgfilename = img.filename.toLowerCase();
                 //The gif here represents a black image, used rather than the default "no image" symbol - a better replacement of the default lazy animation (or if something goes wrong with SwitchTo())
-                const dirFull = category == "private" ? 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' : `images/${categoryName}/full/${img.filename}` //CHANGE TO DECRYPTED FILE UPON CLICK!?!?!?
-                const dirThumb = category == "private" ? 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' : `images/${categoryName}/thumb/${img.filename}`;
-                
+                const dirFull = category == "private" ? 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' : `images/${categoryName}/full/${imgfilename}` //CHANGE TO DECRYPTED FILE UPON CLICK!?!?!?
+                const dirThumb = category == "private" ? 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' : `images/${categoryName}/thumb/${imgfilename}`;
+
                 article.innerHTML = `
-                    <a class="thumbnail" href="${dirFull}" data-position="${img.position || 'center center'}" ${tagsAttribute} data-index="${index}" data-filename="${img.filename}">
+                    <a class="thumbnail" href="${dirFull}" data-position="${img.position || 'center center'}" ${tagsAttribute} data-index="${index}" data-filename="${imgfilename}">
                         <img
                             src="${dirThumb}"
                             alt="${img.title || ''}"
