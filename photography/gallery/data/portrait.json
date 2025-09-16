@@ -3,7 +3,10 @@
     "filename": "DSR_0588_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T19:26:54",
-    "type": ["Signature", "Nature"],
+    "type": [
+      "Signature",
+      "Nature"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
@@ -14,7 +17,9 @@
     "filename": "DSR_0584_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T19:25:33",
-    "type": ["Nature"],
+    "type": [
+      "Nature"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
@@ -25,7 +30,9 @@
     "filename": "DSR_0580_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T19:17:17",
-    "type": ["Signature", "Nature"],
+    "type": [
+      "Nature"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
@@ -36,7 +43,10 @@
     "filename": "DSR_0577_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T18:14:20",
-    "type": ["Signature", "Nature"],
+    "type": [
+      "Signature",
+      "Nature"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
@@ -47,7 +57,9 @@
     "filename": "DSR_0572_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T18:08:27",
-    "type": ["Signature", "Nature"],
+    "type": [
+      "Nature"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
@@ -58,18 +70,9 @@
     "filename": "DSR_0571_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T18:05:42",
-    "type": ["Nature"],
-    "aspect_ratio": 0.667,
-    "credits": {
-      "name": "Beth Moore",
-      "url": "https://www.instagram.com/what.happenedart"
-    }
-  },
-{
-    "filename": "DSR_0570_2.jpg",
-    "title": "'A Whimsical Summer' - With Beth Moore",
-    "datetime": "2025-08-05T22:48:19",
-    "type": ["Nature"],
+    "type": [
+      "Nature"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
@@ -80,7 +83,9 @@
     "filename": "DSR_0570_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T18:02:35",
-    "type": ["Nature"],
+    "type": [
+      "Nature"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
@@ -91,8 +96,25 @@
     "filename": "DSR_0567_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T17:58:48",
-    "type": ["Signature", "Nature"],
+    "type": [
+      "Signature",
+      "Nature"
+    ],
     "aspect_ratio": 1.5,
+    "credits": {
+      "name": "Beth Moore",
+      "url": "https://www.instagram.com/what.happenedart"
+    }
+  },
+  {
+    "filename": "DSR_0563_1.jpg",
+    "title": "'A Whimsical Summer' - With Beth Moore",
+    "datetime": "2025-08-03T17:58:48",
+    "type": [
+      "Signature",
+      "Nature"
+    ],
+    "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
       "url": "https://www.instagram.com/what.happenedart"
@@ -102,8 +124,10 @@
     "filename": "DSR_0562_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T17:28:10",
-    "type": ["Nature"],
-    "aspect_ratio": 0.667,
+    "type": [
+      "Nature"
+    ],
+    "aspect_ratio": 1.5,
     "credits": {
       "name": "Beth Moore",
       "url": "https://www.instagram.com/what.happenedart"
@@ -113,7 +137,10 @@
     "filename": "DSR_0559_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T17:22:26",
-    "type": ["Signature", "Nature"],
+    "type": [
+      "Signature",
+      "Nature"
+    ],
     "aspect_ratio": 1.5,
     "credits": {
       "name": "Beth Moore",
@@ -124,7 +151,10 @@
     "filename": "DSR_0558_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T17:21:53",
-    "type": ["Signature", "Nature"],
+    "type": [
+      "Signature",
+      "Nature"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
@@ -135,7 +165,9 @@
     "filename": "DSR_0557_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T17:17:26",
-    "type": ["Nature"],
+    "type": [
+      "Nature"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
@@ -146,7 +178,9 @@
     "filename": "DSR_0550_1.jpg",
     "title": "'A Whimsical Summer' - With Beth Moore",
     "datetime": "2025-08-03T17:07:07",
-    "type": ["Nature"],
+    "type": [
+      "Nature"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Beth Moore",
@@ -157,42 +191,56 @@
     "filename": "DSR_0523_1.jpg",
     "title": "Ilkley Moor - Bradford",
     "datetime": "2025-08-01T13:54:51",
-    "type": ["Landscape"],
+    "type": [
+      "Landscape"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "Img0146.jpg",
     "title": "GHS Clinics Business Launch, Cheltenham",
     "datetime": "2025-07-10T11:11:50",
-    "type": ["Signature", "Studio"],
+    "type": [
+      "Signature",
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0006.jpg",
     "title": "GHS Clinics Business Launch, Cheltenham",
     "datetime": "2025-07-09T17:23:47",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0005.jpg",
     "title": "GHS Clinics Business Launch, Cheltenham",
     "datetime": "2025-07-09T17:23:11",
-    "type": ["Signature", "Studio"],
+    "type": [
+      "Signature",
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0573.jpg",
     "title": "GHS Clinics Business Launch, Cheltenham",
     "datetime": "2025-07-09T15:01:13",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0955.jpg",
     "title": "GHS Clinics Business Launch, Cheltenham",
     "datetime": "2025-07-09T11:56:06",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
@@ -291,21 +339,27 @@
     "filename": "DSR_0217.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2024-11-23T18:14:16",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0215.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2024-11-23T18:13:44",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0194_1.jpg",
     "title": "University of Warwick - Coventry",
     "datetime": "2024-10-10T21:11:01",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 1.0
   },
   {
@@ -351,7 +405,6 @@
     "title": "Howarth - Bradford",
     "datetime": "2024-09-12T16:08:05",
     "type": [
-      "Signature",
       "Nature"
     ],
     "aspect_ratio": 0.667
@@ -360,7 +413,9 @@
     "filename": "DSR_0140.jpg",
     "title": "'Emotions' - A collaboration with Rohith S",
     "datetime": "2024-09-11T15:06:36",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Rohith Senthilkumaran",
@@ -371,7 +426,10 @@
     "filename": "DSR_0134_1.jpg",
     "title": "'Emotions' - A collaboration with Rohith S",
     "datetime": "2024-09-11T13:04:17",
-    "type": ["Signature", "Studio"],
+    "type": [
+      "Signature",
+      "Studio"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Rohith Senthilkumaran",
@@ -382,7 +440,9 @@
     "filename": "DSR_0132.jpg",
     "title": "'Emotions' - A collaboration with Rohith S",
     "datetime": "2024-09-11T12:46:38",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Rohith Senthilkumaran",
@@ -394,7 +454,6 @@
     "title": "Watkin Path - Snowdonia",
     "datetime": "2024-09-06T10:47:08",
     "type": [
-      "Signature",
       "Landscape"
     ],
     "aspect_ratio": 0.667
@@ -403,7 +462,9 @@
     "filename": "DSC_10283.jpg",
     "title": "'Blur' - Long Exposure Photography",
     "datetime": "2024-08-14T15:04:30",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.561,
     "credits": {
       "name": "Rohith Senthilkumaran",
@@ -414,7 +475,9 @@
     "filename": "DSC_10282.jpg",
     "title": "",
     "datetime": "2024-08-14T14:37:31",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.561,
     "credits": {
       "name": "Rohith Senthilkumaran",
@@ -452,7 +515,9 @@
     "filename": "DSC_10448.jpg",
     "title": "'Blur' - Long Exposure Photography",
     "datetime": "2024-06-25T16:35:56",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 1.5,
     "credits": {
       "name": "Rohith Senthilkumaran",
@@ -463,7 +528,9 @@
     "filename": "DSC_10445.jpg",
     "title": "'Blur' - Long Exposure Photography",
     "datetime": "2024-06-25T16:16:08",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 1.5,
     "credits": {
       "name": "Rohith Senthilkumaran",
@@ -488,7 +555,9 @@
     "filename": "DSC_10381.jpg",
     "title": "'Blur' - Long Exposure Photography",
     "datetime": "2024-04-17T12:57:03",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667,
     "credits": {
       "name": "Rohith Senthilkumaran",
@@ -499,7 +568,9 @@
     "filename": "DSC_10382.jpg",
     "title": "'Blur' - Long Exposure Photography",
     "datetime": "2024-04-16T14:50:39",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.561,
     "credits": {
       "name": "Rohith Senthilkumaran",
@@ -538,35 +609,47 @@
     "filename": "DSC_9805_1.jpg",
     "title": "An Experiment in Fire Photography",
     "datetime": "2023-08-15T21:58:29",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_9804_1.jpg",
     "title": "An Experiment in Fire Photography",
     "datetime": "2023-08-15T21:57:59",
-    "type": ["Signature", "Studio"],
+    "type": [
+      "Signature",
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_9801_1.jpg",
     "title": "An Experiment in Fire Photography",
     "datetime": "2023-08-15T21:46:26",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_9796_1.jpg",
     "title": "An Experiment in Fire Photography",
     "datetime": "2023-08-15T21:13:06",
-    "type": ["Signature", "Studio"],
+    "type": [
+      "Signature",
+      "Studio"
+    ],
     "aspect_ratio": 0.666
   },
   {
     "filename": "DSC_9718_2.jpg",
     "title": "An Experiment in Fire Photography",
     "datetime": "2023-08-08T17:28:44",
-    "type": ["Studio"],
+    "type": [
+      "Studio"
+    ],
     "aspect_ratio": 0.667
   },
   {
@@ -611,49 +694,66 @@
     "filename": "DSC_7852.jpg",
     "title": "Barnard Castle - County Durham",
     "datetime": "2023-04-03T16:33:05",
-    "type": ["Nature"],
+    "type": [
+      "Nature"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_7834.jpg",
     "title": "Barnard Castle - County Durham",
     "datetime": "2023-04-03T16:31:51",
-    "type": ["Nature"],
+    "type": [
+      "Nature"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_7814.jpg",
     "title": "Barnard Castle - County Durham",
     "datetime": "2023-04-03T16:25:09",
-    "type": ["Signature", "Nature"],
+    "type": [
+      "Signature",
+      "Nature"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_5829.jpg",
     "title": "",
     "datetime": "2022-10-24T12:53:27",
-    "type": ["Animals"],
+    "type": [
+      "Animals"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_5820.jpg",
     "title": "",
     "datetime": "2022-10-24T12:53:25",
-    "type": ["Signature", "Animals"],
+    "type": [
+      "Signature",
+      "Animals"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_5775.jpg",
     "title": "",
     "datetime": "2022-10-17T16:59:35",
-    "type": ["Animals"],
+    "type": [
+      "Animals"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSC_1523.jpg",
     "title": "",
     "datetime": "2021-11-21T13:12:33",
-    "type": ["Signature", "Animals"],
+    "type": [
+      "Signature",
+      "Animals"
+    ],
     "aspect_ratio": 1.5
   }
 ]

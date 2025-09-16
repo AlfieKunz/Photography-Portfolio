@@ -3,7 +3,7 @@
     "filename": "DSR_0929_1.jpg",
     "title": "Snowdonia - Wales",
     "datetime": "2025-09-05T13:16:52",
-    "type": [
+    "type": ["Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   },
@@ -12,7 +12,7 @@
     "title": "Snowdonia - Wales",
     "datetime": "2025-09-05T11:50:18",
     "type": [
-      "Greenery"
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   },
@@ -21,55 +21,53 @@
     "title": "Snowdonia - Wales",
     "datetime": "2025-09-05T10:59:55",
     "type": [
-      "Greenery",
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0879_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-03T17:38:16",
     "type": [
-      "Signature",
       "Greenery",
-      "Water"
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0877_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-03T17:17:10",
     "type": [
       "Signature",
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0875_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-03T17:14:58",
     "type": [
       "Greenery",
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0867_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-03T14:51:02",
     "type": [
       "Signature",
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0863_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-03T14:41:37",
     "type": [
       "Signature",
@@ -80,7 +78,7 @@
   },
   {
     "filename": "DSR_0862_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-03T14:39:03",
     "type": [
       "Signature",
@@ -90,7 +88,7 @@
   },
   {
     "filename": "DSR_0857_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-03T13:34:17",
     "type": [
       "Water"
@@ -99,7 +97,7 @@
   },
   {
     "filename": "DSR_0855_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-03T13:28:54",
     "type": [
       "Greenery"
@@ -108,7 +106,7 @@
   },
   {
     "filename": "DSR_0852_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-01T14:56:22",
     "type": [
     ],
@@ -116,17 +114,16 @@
   },
   {
     "filename": "DSR_0847_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-01T14:48:44",
     "type": [
-      "Signature",
       "Water"
     ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0844_1.jpg",
-    "title": "Angleysey - Wales",
+    "title": "Anglesey - Wales",
     "datetime": "2025-09-01T14:36:39",
     "type": [
       "Greenery",
@@ -139,7 +136,7 @@
     "title": "Yorkshire Dales National Park",
     "datetime": "2025-08-21T17:04:19",
     "type": [
-      "Greenery"
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -178,7 +175,7 @@
     "datetime": "2025-08-16T16:07:16",
     "type": [
       "Greenery",
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -187,7 +184,7 @@
     "title": "Lake District Expedition - Summer 2025",
     "datetime": "2025-08-16T11:44:35",
     "type": [
-      "Greenery"
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -239,7 +236,7 @@
     "type": [
       "Signature",
       "Greenery",
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -260,7 +257,7 @@
     "type": [
       "Signature",
       "Greenery",
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -269,7 +266,7 @@
     "title": "Lake District Expedition - Summer 2025",
     "datetime": "2025-08-14T12:02:29",
     "type": [
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -279,7 +276,7 @@
     "datetime": "2025-08-14T11:59:10",
     "type": [
       "Signature",
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -289,7 +286,7 @@
     "datetime": "2025-08-13T19:02:51",
     "type": [
       "Signature",
-      "Greenery"
+      "Greenery", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -299,7 +296,6 @@
     "datetime": "2025-08-13T17:35:44",
     "type": [
       "Street & Buildings",
-      "Greenery",
       "Water"
     ],
     "aspect_ratio": 0.667
@@ -309,7 +305,7 @@
     "title": "Lake District Expedition - Summer 2025",
     "datetime": "2025-08-13T13:54:58",
     "type": [
-      "Greenery"
+      "Greenery", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -318,8 +314,7 @@
     "title": "Lake District Expedition - Summer 2025",
     "datetime": "2025-08-13T11:57:06",
     "type": [
-      "Signature",
-      "Greenery"
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   },
@@ -328,7 +323,7 @@
     "title": "Lake District Expedition - Summer 2025",
     "datetime": "2025-08-12T17:36:37",
     "type": [
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -337,8 +332,6 @@
     "title": "Lake District Expedition - Summer 2025",
     "datetime": "2025-08-12T16:27:22",
     "type": [
-      "Signature",
-      "Greenery",
       "Water"
     ],
     "aspect_ratio": 0.667
@@ -367,7 +360,7 @@
     "title": "Keighley - West Yorkshire",
     "datetime": "2025-08-06T14:39:50",
     "type": [
-      "Greenery"
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   },
@@ -377,7 +370,7 @@
     "datetime": "2025-08-02T18:55:48",
     "type": [
       "Signature",
-      "Greenery"
+      "Greenery", "Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   },
@@ -394,7 +387,7 @@
     "filename": "DSR_0530_1.jpg",
     "title": "Ilkley Moor - Bradford",
     "datetime": "2025-08-01T14:20:51",
-    "type": "",
+    "type": ["Rocks & Mountains"],
     "aspect_ratio": 0.667
   },
   {
@@ -402,7 +395,7 @@
     "title": "Ilkley Moor - Bradford",
     "datetime": "2025-08-01T13:54:51",
     "type": [
-      "Signature"
+      "Signature", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -436,7 +429,7 @@
     "title": "University of Warwick - Coventry",
     "datetime": "2025-06-18T16:06:55",
     "type": [
-      "Greenery"
+      "Greenery", "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -496,8 +489,7 @@
     "title": "Barnard Castle - County Durham",
     "datetime": "2025-04-13T19:48:12",
     "type": [
-      "Signature",
-      "Greenery"
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -550,7 +542,6 @@
     "title": "Haworth - West Yorkshire",
     "datetime": "2024-09-12T17:13:16",
     "type": [
-      "Signature",
       "Water"
     ],
     "aspect_ratio": 0.667
@@ -566,14 +557,14 @@
     "filename": "DSR_0065.JPG",
     "title": "Snowdonia - Watkin Path",
     "datetime": "2024-09-06T09:28:50",
-    "type": [],
+    "type": ["Rocks & Mountains"],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0002.JPG",
     "title": "",
     "datetime": "2024-08-30T18:34:12",
-    "type": [],
+    "type": ["Rocks & Mountains"],
     "aspect_ratio": 1.5
   },
   {
@@ -591,7 +582,6 @@
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-20T16:34:35",
     "type": [
-      "Signature",
       "Street & Buildings"
     ],
     "aspect_ratio": 1.5
@@ -641,8 +631,7 @@
     "datetime": "2024-07-18T12:02:27",
     "type": [
       "Signature",
-      "Street & Buildings",
-      "Greenery"
+      "Street & Buildings"
     ],
     "aspect_ratio": 0.667
   },
@@ -719,7 +708,6 @@
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-14T11:03:53",
     "type": [
-      "Signature",
       "Street & Buildings",
       "Greenery"
     ],
@@ -749,7 +737,6 @@
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-12T14:00:00",
     "type": [
-      "Signature"
     ],
     "aspect_ratio": 0.667
   },
@@ -816,8 +803,6 @@
     "title": "Gower Peninsula - Wales",
     "datetime": "2024-07-02T17:47:12",
     "type": [
-      "Signature",
-      "Greenery",
       "Water"
     ],
     "aspect_ratio": 1.5
@@ -827,7 +812,6 @@
     "title": "",
     "datetime": "2024-04-14T18:21:06",
     "type": [
-      "Greenery"
     ],
     "aspect_ratio": 1.5
   },
@@ -845,7 +829,7 @@
     "title": "Gower Peninsula - Wales",
     "datetime": "2023-07-02T17:57:43",
     "type": [
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 1.499
   },
@@ -896,8 +880,7 @@
     "filename": "DSC_1268.JPG",
     "title": "Appleby Castle - Penrith",
     "datetime": "2021-09-03T12:19:27",
-    "type": [
-      "Signature"
+    "type": ["Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   },
@@ -906,8 +889,7 @@
     "title": "Barnard Castle - County Durham",
     "datetime": "2021-07-22T17:28:04",
     "type": [
-      "Greenery",
-      "Water"
+      "Water", "Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   }

@@ -10,7 +10,7 @@
     "filename": "DSR_0117.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T19:57:50",
-    "type": ["Signature", "Venue"],
+    "type": ["Venue"],
     "aspect_ratio": 1.5
   },
   {
@@ -220,7 +220,7 @@
     "filename": "DSR_0686.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T16:18:14",
-    "type": ["Signature", "Candids"],
+    "type": ["Candids"],
     "aspect_ratio": 1.5
   },
   {
@@ -367,7 +367,6 @@
     "title": "Warwick University Tennis Club Charity Ball",
     "datetime": "2025-03-08T21:16:53",
     "type": [
-      "Signature",
       "Awards"
     ],
     "aspect_ratio": 0.667
@@ -377,7 +376,6 @@
     "title": "Warwick University Tennis Club Charity Ball",
     "datetime": "2025-03-08T21:13:26",
     "type": [
-      "Signature",
       "Personal & Couples"
     ],
     "aspect_ratio": 1.5
@@ -502,7 +500,6 @@
     "title": "Warwick University Swimming & Waterpolo Society Ball",
     "datetime": "2025-02-23T00:25:33",
     "type": [
-      "Signature",
       "Personal & Couples"
     ],
     "aspect_ratio": 0.667
@@ -799,7 +796,6 @@
     "title": "60th Wedding Anniversary Celebration",
     "datetime": "2024-08-10T16:50:31",
     "type": [
-      "Signature",
       "Venue"
     ],
     "aspect_ratio": 0.667
