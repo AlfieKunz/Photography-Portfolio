@@ -29,9 +29,6 @@ window.addEventListener('DOMContentLoaded', event => {
     // Shrink the navbar 
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
-
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
@@ -80,10 +77,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
     // controls for making picture captions show on mobile devices.
-    const lacksHoverSupport = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+    const isMobileDevice = window.matchMedia('(hover: none), (pointer: coarse)').matches;
     const onePictureMode = window.matchMedia('(max-width: 575px)').matches;
 
-    if (lacksHoverSupport) {
+    if (isMobileDevice) {
         const portfolioBoxes = document.querySelectorAll('#portfolio .portfolio-box');
         let currentlyVisibleCaption = null; // Track the currently shown caption element
 
@@ -128,5 +125,26 @@ window.addEventListener('DOMContentLoaded', event => {
             });
         }
     }
+
+    document.addEventListener('scroll', () => {
+        // Shrink the navbar when page is scrolled.
+        navbarShrink();
+
+        // Removes focus from the hamburger, if able.
+        const FocussedElement = document.activeElement;
+        if (FocussedElement && FocussedElement.tagName !== 'BODY' && FocussedElement.tagName !== 'INPUT' && typeof FocussedElement.blur === 'function') {
+            // Hamburger focussed.
+            FocussedElement.blur();
+        }
+    });
+
+    const PortfolioBoxes = document.querySelectorAll('#portfolio .container-fluid .portfolio-box');
+    // Reveals the caption of the portfolio box if it is clicked.
+    PortfolioBoxes.forEach(link => {
+        link.addEventListener('click', () => {
+            const caption = link.querySelector('.portfolio-box-caption');
+            if (caption) caption.classList.add('is-visible');
+        });
+    });
 
 });

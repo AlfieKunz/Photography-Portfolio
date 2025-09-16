@@ -10848,13 +10848,17 @@ body {
   margin-bottom: 2rem;
 }
 
-.text-white-75 {
-  color: rgba(255, 255, 255, 0.75);
+.text-white-80 {
+  color: rgba(255, 255, 255, 0.8);
 }
-@media (max-width: 991.98px) { /* Adds subtle shadow for portrait headmast, which is a little harder to read text on */
-  .text-white-75 {
-    color: rgba(255, 255, 255, 0.85);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+
+.text-white-75-shadow {
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* Adds subtle shadow for portrait headmast, which is a little harder to read text on */
+}
+@media (max-width: 991.98px) {
+  .text-white-75-shadow {
+    color: rgba(255, 255, 255, 0.85); /* Easier to read */
   }
 }
 
@@ -11025,6 +11029,7 @@ header.masthead p.about-text {
 #portfolio .container-fluid .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box, #portfolio .container-xxl .portfolio-box {
   position: relative;
   display: block;
+  margin: -1px; /* Removes 1px white border between cells */
 }
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption, #portfolio .container-sm .portfolio-box .portfolio-box-caption, #portfolio .container-md .portfolio-box .portfolio-box-caption, #portfolio .container-lg .portfolio-box .portfolio-box-caption, #portfolio .container-xl .portfolio-box .portfolio-box-caption, #portfolio .container-xxl .portfolio-box .portfolio-box-caption {
   display: flex;
@@ -11054,9 +11059,6 @@ header.masthead p.about-text {
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-name {
   font-size: 1.2rem;
 }
-#portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
-  opacity: 1;
-}
 
 @media (hover: hover) and (pointer: fine) {
   #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
@@ -11067,8 +11069,8 @@ header.masthead p.about-text {
 
 /* --- Mobile/Touch Visibility Effect (controlled by JS) --- */
 #portfolio .portfolio-box .portfolio-box-caption.is-visible {
-   opacity: 1;
-   pointer-events: auto;
+   opacity: 1 !important;
+   pointer-events: auto !important;
 }
 
 
