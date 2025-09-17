@@ -126,13 +126,14 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     }
 
+    const UnobservedScrollObjects = ['BODY', 'INPUT', 'TEXTAREA'];
     document.addEventListener('scroll', () => {
         // Shrink the navbar when page is scrolled.
         navbarShrink();
 
         // Removes focus from the hamburger, if able.
         const FocussedElement = document.activeElement;
-        if (FocussedElement && FocussedElement.tagName !== 'BODY' && FocussedElement.tagName !== 'INPUT' && typeof FocussedElement.blur === 'function') {
+        if (FocussedElement && !UnobservedScrollObjects.includes(FocussedElement.tagName) && typeof FocussedElement.blur === 'function') {
             // Hamburger focussed.
             FocussedElement.blur();
         }
@@ -145,6 +146,91 @@ window.addEventListener('DOMContentLoaded', event => {
             const caption = link.querySelector('.portfolio-box-caption');
             if (caption) caption.classList.add('is-visible');
         });
+    });
+
+
+
+    const UserForm = document.getElementById('contactForm');
+    UserForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Stop the form from submitting normally
+        // Resets previous error messages, if there are any.
+        document.querySelectorAll('.is-invalid').forEach(Field => Field.classList.remove('is-invalid'));
+
+        const SuccessMsg = document.getElementById('submitSuccessMessage');
+        const ErrorMsg = document.getElementById('submitErrorMessage');
+        SuccessMsg.classList.add('d-none');
+        ErrorMsg.classList.add('d-none');
+
+        var FormValid = true;
+
+        const InputName = document.getElementById('name');
+        const InputEmail = document.getElementById('email');
+        const InputNumber = document.getElementById('phone');
+        const InputMessage = document.getElementById('message');
+        // If the user has not interacted with the form at all, we don't show an error message.
+        if (!(InputName.value || InputEmail.value || InputNumber.value || InputMessage.value)) { return; }
+
+        // Checks if user has entered a name.
+        if (!InputName.value) {
+            InputName.classList.add('is-invalid');
+            FormValid = false;
+        }
+
+        // Checks if user has entered an email OR phone number.
+        const PhoneErrorDiv = document.querySelector('[data-sb-feedback="phone:error"]');
+        if (!InputEmail.value && !InputNumber.value) {
+            PhoneErrorDiv.textContent = 'An email or phone number is required.';
+            InputEmail.classList.add('is-invalid');
+            InputNumber.classList.add('is-invalid');
+            FormValid = false;
+        } else if (InputNumber.value) {
+            // If a phone number has been entered, check that it is valid.
+            // Thanks "https://stackoverflow.com/questions/11518035/regular-expression-for-gb-based-and-only-numeric-phone-number" for the Regex!
+            const GBPhoneRegex = /^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/;
+            if (!GBPhoneRegex.test(InputNumber.value)) {
+                // Phone number invalid.
+                PhoneErrorDiv.textContent = 'Please enter a valid phone number.';
+                InputNumber.classList.add('is-invalid');
+                FormValid = false;
+            }
+        }
+
+        // Checks if user has entered a message.
+        if (!InputMessage.value) {
+            InputMessage.classList.add('is-invalid');
+            FormValid = false;
+        }
+
+        if (FormValid) {
+            // Submits the form.
+            const SubmitBtn = document.getElementById('submitButton');
+            SubmitBtn.disabled = true;
+            SubmitBtn.textContent = 'Submitting...';
+
+            fetch(UserForm.action, {
+                method: 'POST',
+                body: new FormData(UserForm),
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Form is valid.
+                    SuccessMsg.classList.remove('d-none');
+                } else {
+                    ErrorMsg.querySelector('div').textContent = 'Error Sending Form: Field(s) Invalid.';
+                    ErrorMsg.classList.remove('d-none');
+                }
+            })
+            .catch(error => {
+                ErrorMsg.querySelector('div').textContent = 'Error Sending Form: Bad Connection.';
+                ErrorMsg.classList.remove('d-none');
+            })
+            .finally(() => {
+                SubmitBtn.disabled = false;
+                SubmitBtn.textContent = 'Submit';
+            });
+
+        }
     });
 
 });
