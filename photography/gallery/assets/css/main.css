@@ -946,10 +946,27 @@ input, select, textarea {
 		padding: 2em 1.4em 1.5em 1.2em ;
 	}
 
-		#header h1 {
-			font-size: 2.25em;
-			font-weight: 700;
-		}
+	#header h1 {
+		font-size: 2.25em;
+		font-weight: 700;
+	}
+
+	#header p.license {
+		text-align: center;
+		font-size: 0.8em;
+		color: #888;
+		font-style: italic;
+		margin: 2em 0 -1em 0;
+		padding: 0.75em 0;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	}
+
+	#header p.license a {
+		color: #f69051;
+		font-style: italic;
+		font-weight: 400;
+	}
 
 /* Footer */
 

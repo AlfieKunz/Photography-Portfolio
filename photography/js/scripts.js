@@ -234,3 +234,47 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+window.addEventListener('load', () => {
+    if (window.location.hash) {
+        const hash = window.location.hash;
+        const targetElement = document.querySelector(hash);
+        
+        if (targetElement) {
+            // Wait for lazy images to load before scrolling.
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            let loadedCount = 0;
+            const totalImages = lazyImages.length;
+            
+            if (totalImages === 0) {
+                // No lazy images - scroll immediately.
+                setTimeout(() => {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }, 50);
+            } else {
+                // Wait for all lazy images to load.
+                lazyImages.forEach(img => {
+                    if (img.complete) {
+                        loadedCount++;
+                    } else {
+                        img.addEventListener('load', () => {
+                            loadedCount++;
+                            if (loadedCount === totalImages) {
+                                setTimeout(() => {
+                                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                                }, 50);
+                            }
+                        });
+                    }
+                });
+                
+                // If all images were already loaded
+                if (loadedCount === totalImages) {
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }, 50);
+                }
+            }
+        }
+    }
+});

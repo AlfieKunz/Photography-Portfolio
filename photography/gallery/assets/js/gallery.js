@@ -326,6 +326,41 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function updateImageSchema(images, categoryName) {
+    const schemaImages = images.map(img => {
+        const imgfilename = img.filename.substring(4).includes("_") 
+            ? img.filename.replace(/\.[a-zA-Z]+$/g, (match) => match.toLowerCase())
+            : img.filename;
+        
+        const credits = img.credits 
+            ? `Alfie Kunz + ${img.credits.name}`
+            : 'Alfie Kunz';
+        
+        return {
+            "@type": "ImageObject",
+            "contentUrl": `https://alfiekunz.co.uk/photography/images/${categoryName}/full/${imgfilename}`,
+            "name": img.title || '',
+            "creator": {
+                "@type": "Person",
+                "name": credits
+            },
+            "copyrightHolder": {
+                "@type": "Person",
+                "name": "Alfie Kunz"
+            },
+            "copyrightYear": new Date(img.datetime).getFullYear().toString()
+        };
+    });
+
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "image": schemaImages
+    };
+
+    document.getElementById('image-schema').textContent = JSON.stringify(schema);
+}
+
 
     if (!thumbnailsContainer.dataset.listenerAttached) {
         thumbnailsContainer.addEventListener('click', async function(event) {
@@ -459,10 +494,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelector("#header h1").innerHTML = headerContent.title;
         document.querySelector("#header p").innerHTML = headerContent.description;
-        console.log(`Found ${allImages.length} Photos - Displaying...`)
+        document.querySelector("#header p.license").innerHTML = "If you want to license or purchase any photos seen below, please <a href='/photography/#contact'>contact me!</a>";
+        console.log(`Found ${allImages.length} Photos - Displaying...`);
 
         filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
         generateFilterButtons(filteredImages);
+        updateImageSchema(filteredImages, category);
         renderThumbnails(filteredImages, category, true);
 
     })
