@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     event: {
         title: "Gallery -<br>Formal Events & Celebrations",
         description: "Whether it be photos of groups, candids, awards, speeches or the venue, I strive to showcase the excitement and atmosphere of an event to remember. I excel in busy situations and when meeting new people, and pride myself on building a friendly and charismatic rapport with guests while maintaining professionalism and strong directorial skills.",
-        NegStartIndex: 10,
-        heightDelta: 0,
+        NegStartIndex: 31,
+        heightDelta: -0.25,
         tags: ["Signature", "Groups", "Candids", "Personal & Couples", "Venue", "Awards"]
     },
     landscape: {
@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Links between the files (stored in the jsons) and the a local link to the decrypted images.
     let DecryptedFulls = new Map();
     let DecryptedThumbs = new Map();
+    let ballFilterCheckbox = null;
 
 
     async function Decrypt(dir, password) {
@@ -222,6 +223,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function renderThumbnails(imagesToRender, categoryName, firstTime) {
+
+        //Only show the Ball Photos, if needed.
+        if (category === "event" && ballFilterCheckbox && ballFilterCheckbox.checked) {
+            imagesToRender = imagesToRender.filter(img => img.title && img.title.toLowerCase().includes("ball"));
+        }
+
         thumbnailsContainer.innerHTML = "";
         const splitResult = SplitImages(imagesToRender, headerContent);
         const orderedImages = splitResult.orderedImages;
@@ -499,6 +506,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
         generateFilterButtons(filteredImages);
+
+        //Adds 'Only Show Ball Photos' button, that filters the photos in each category.
+        if (category === "event") {
+            const checkboxContainer = document.createElement('div');
+            checkboxContainer.id = 'ball-filter-container';
+            checkboxContainer.style.marginTop = '1em'; 
+            checkboxContainer.style.textAlign = 'center'; 
+            
+            checkboxContainer.innerHTML = `
+                <input type="checkbox" id="ball-filter-checkbox" name="ball-filter">
+                <label for="ball-filter-checkbox">Show Only Society Ball Photos</label>
+            `;
+            filterButtonsContainer.parentNode.insertBefore(checkboxContainer, filterButtonsContainer.nextSibling);
+            ballFilterCheckbox = document.getElementById('ball-filter-checkbox');
+            ballFilterCheckbox.addEventListener('change', () => {
+                let currentButtonFilteredImages;
+                if (currentFilter === "All") {
+                    currentButtonFilteredImages = allImages;
+                } else {
+                    currentButtonFilteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
+                }
+                renderThumbnails(currentButtonFilteredImages, category, false);
+            });
+        }
+
         updateImageSchema(filteredImages, category);
         renderThumbnails(filteredImages, category, true);
 

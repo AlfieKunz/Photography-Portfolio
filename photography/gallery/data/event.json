@@ -1,233 +1,407 @@
 [
   {
+    "filename": "DSR_0295_1.jpg",
+    "title": "Pre-Wedding Bride & Groom Photoshoot: Josh & Alice",
+    "datetime": "2025-10-08T18:22:55",
+    "type": [
+      "Personal & Couples"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0266_1.jpg",
+    "title": "Pre-Wedding Bride & Groom Photoshoot: Josh & Alice",
+    "datetime": "2025-10-08T18:19:54",
+    "type": [
+      "Candids",
+      "Personal & Couples"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0212_1.jpg",
+    "title": "Pre-Wedding Bride & Groom Photoshoot: Josh & Alice",
+    "datetime": "2025-10-08T18:17:36",
+    "type": [
+      "Personal & Couples"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0195_1.jpg",
+    "title": "Pre-Wedding Bride & Groom Photoshoot: Josh & Alice",
+    "datetime": "2025-10-08T18:15:08",
+    "type": [
+      "Signature",
+      "Candids",
+      "Personal & Couples"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0187_1.jpg",
+    "title": "Pre-Wedding Bride & Groom Photoshoot: Josh & Alice",
+    "datetime": "2025-10-08T18:15:00",
+    "type": [
+      "Personal & Couples"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0159_1.jpg",
+    "title": "Pre-Wedding Bride & Groom Photoshoot: Josh & Alice",
+    "datetime": "2025-10-08T18:13:14",
+    "type": [
+      "Signature",
+      "Personal & Couples"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0082_1.jpg",
+    "title": "Pre-Wedding Bride & Groom Photoshoot: Josh & Alice",
+    "datetime": "2025-10-08T18:10:15",
+    "type": [
+      "Personal & Couples"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0051_1.jpg",
+    "title": "Pre-Wedding Bride & Groom Photoshoot: Josh & Alice",
+    "datetime": "2025-10-08T18:05:49",
+    "type": [
+      "Personal & Couples"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0382.jpg",
+    "title": "Wedding Reception & Party in Yorkshire",
+    "datetime": "2025-07-12T13:58:01",
+    "type": ["Signature", "Candids"],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0499.jpg",
+    "title": "Wedding Reception & Party in Yorkshire",
+    "datetime": "2025-07-12T14:28:54",
+    "type": ["Signature", "Candids"],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0966.jpg",
+    "title": "Wedding Reception & Party in Yorkshire",
+    "datetime": "2025-07-12T17:16:15",
+    "type": ["Signature", "Candids"],
+    "aspect_ratio": 1.5
+  },
+  {
     "filename": "DSR_0122.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T19:58:25",
-    "type": ["Signature", "Candids"],
+    "type": [
+      "Signature",
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0117.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T19:57:50",
-    "type": ["Venue"],
+    "type": [
+      "Venue"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0074.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T19:03:50",
-    "type": ["Personal & Couples"],
+    "type": [
+      "Personal & Couples"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0030-2.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T17:54:31",
-    "type": ["Signature", "Candids"],
+    "type": [
+      "Signature",
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0989.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T17:30:08",
-    "type": ["Venue"],
+    "type": [
+      "Venue"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0915.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T16:46:44",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0663.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T16:04:42",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0656.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T16:01:52",
-    "type": ["Awards"],
+    "type": [
+      "Awards"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0599.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T15:47:24",
-    "type": ["Signature", "Candids"],
+    "type": [
+      "Signature",
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0523.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T14:30:58",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0512.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T14:30:14",
-    "type": ["Signature", "Candids"],
+    "type": [
+      "Signature",
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0475.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T14:20:58",
-    "type": ["Signature", "Candids"],
+    "type": [
+      "Signature",
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0468.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T14:20:22",
-    "type": ["Signature", "Candids"],
+    "type": [
+      "Signature",
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0425.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T14:14:52",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0395.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T13:59:27",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0237.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T12:30:41",
-    "type": ["Venue"],
+    "type": [
+      "Venue"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0227.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T12:28:51",
-    "type": ["Venue"],
+    "type": [
+      "Venue"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0191.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T12:08:11",
-    "type": ["Venue"],
+    "type": [
+      "Venue"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0060.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T11:50:19",
-    "type": ["Venue"],
+    "type": [
+      "Venue"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0045.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T11:44:16",
-    "type": ["Venue"],
+    "type": [
+      "Venue"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0020.jpg",
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T11:40:49",
-    "type": ["Venue"],
+    "type": [
+      "Venue"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0030.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T17:47:10",
-    "type": ["Signature", "Candids"],
+    "type": [
+      "Signature",
+      "Candids"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0012.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T17:44:46",
-    "type": ["Signature", "Candids"],
+    "type": [
+      "Signature",
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0981.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T17:22:58",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0972.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T17:21:04",
-    "type": ["Venue"],
+    "type": [
+      "Venue"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0959.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T17:18:58",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0876.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T16:56:36",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0872.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T16:56:04",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0849.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T16:50:29",
-    "type": ["Signature", "Candids"],
+    "type": [
+      "Signature",
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0806.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T16:43:08",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0750.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T16:29:48",
-    "type": ["Signature", "Candids", "Venue"],
+    "type": [
+      "Signature",
+      "Candids",
+      "Venue"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0686.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-10T16:18:14",
-    "type": ["Candids"],
+    "type": [
+      "Candids"
+    ],
     "aspect_ratio": 1.5
   },
   {
     "filename": "DSR_0091.jpg",
     "title": "Business Launch Party for GHS Clinics, Cheltenham",
     "datetime": "2025-07-09T17:34:44",
-    "type": ["Venue"],
+    "type": [
+      "Venue"
+    ],
     "aspect_ratio": 1.5
   },
   {

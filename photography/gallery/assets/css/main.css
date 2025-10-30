@@ -376,6 +376,43 @@ input, select, textarea {
 			opacity: 0.25;
 		}
 
+
+
+#ball-filter-container {
+	margin-top: 1em;
+	text-align: center;
+	padding: 0 0.75em;
+	touch-action: manipulation;
+}
+#ball-filter-container input[type="checkbox"] + label {
+	color: #bebebe;
+	font-size: 0.9em;
+	font-weight: 400;
+	user-select: none;
+	padding-left: 2em;
+}
+#ball-filter-container input[type="checkbox"] + label:before {
+	width: 1.5em;
+	height: 1.5em;
+	line-height: 1.35em;
+	font-size: 1em;
+	top: 0.1em;
+	border: 1px solid #aca9a6;
+	background: transparent;
+	border-radius: 4px;
+}
+#ball-filter-container input[type="checkbox"]:checked + label:before {
+	background-color: #f69051;
+	border-color: #f69051;
+	color: #101010;
+	font-weight: 900;
+	content: '\f00c';
+}
+#ball-filter-container input[type="checkbox"]:focus + label:before {
+	border-color: #f69051;
+}
+
+
 /* Form */
 
 	form {
@@ -1491,3 +1528,4 @@ input, select, textarea {
 				}
 
 		}
+

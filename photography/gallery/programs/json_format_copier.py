@@ -2,7 +2,7 @@ import os
 import json
 
 # Define paths
-CATEGORY = "studio"
+CATEGORY = "event"
 DIREC = "C:/Users/alfie/Photography-Portfolio/photography/gallery/data/" + CATEGORY
 old_json_path = DIREC + '.json'
 new_json_dir = DIREC + ' - New.json'
