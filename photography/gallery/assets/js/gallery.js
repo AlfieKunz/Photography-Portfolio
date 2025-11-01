@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Links between the files (stored in the jsons) and the a local link to the decrypted images.
     let DecryptedFulls = new Map();
     let DecryptedThumbs = new Map();
-    let ballFilterCheckbox = null;
+    let OnlyBallPhotosCheckbox = null;
 
 
     async function Decrypt(dir, password) {
@@ -221,11 +221,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    function CheckBallFilterChecked() {
+        return (category === "event" && OnlyBallPhotosCheckbox && OnlyBallPhotosCheckbox.checked)
+    }
+
 
     function renderThumbnails(imagesToRender, categoryName, firstTime) {
-
-        //Only show the Ball Photos, if needed.
-        if (category === "event" && ballFilterCheckbox && ballFilterCheckbox.checked) {
+        
+        // Only show the Ball Photos, if needed.
+        if (CheckBallFilterChecked()) {
             imagesToRender = imagesToRender.filter(img => img.title && img.title.toLowerCase().includes("ball"));
         }
 
@@ -249,14 +253,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 const Credits = img.credits ? ('Alfie Kunz + ' + (img.credits.url ? `<a href="${img.credits.url}" target="_blank">${img.credits.name}</a>` : img.credits.name)) : 'Alfie Kunz'
                 const YearOfCapture = new Date(img.datetime).getFullYear();
                 
-                //For some reason, github doesn't like photos being saved under DSC_0000_1.JPG - we need to lowercase this.
+                // For some reason, github doesn't like photos being saved under DSC_0000_1.JPG - we need to lowercase this.
                 var imgfilename = img.filename
                 if (img.filename.substring(4).includes("_")) {
                     imgfilename = imgfilename.replace(/\.[a-zA-Z]+$/g, (match) => match.toLowerCase());
                 }
                 
-                //The gif here represents a black image, used rather than the default "no image" symbol - a better replacement of the default lazy animation (or if something goes wrong with SwitchTo())
-                const dirFull = category == "private" ? 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' : `images/${categoryName}/full/${imgfilename}` //CHANGE TO DECRYPTED FILE UPON CLICK!?!?!?
+                // The gif here represents a black image, used rather than the default "no image" symbol
+                const dirFull = category == "private" ? 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' : `images/${categoryName}/full/${imgfilename}`
                 const dirThumb = category == "private" ? 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' : `images/${categoryName}/thumb/${imgfilename}`;
 
                 article.innerHTML = `
@@ -275,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
                 thumbnailsContainer.appendChild(article);
                 
-                //Decrypts the thumbs that are in view immediately, s.t we can save the decrypted url.
+                // Decrypts the thumbs that are in view immediately, s.t we can save the decrypted url.
                 if (category == "private") {
                     const observer = new IntersectionObserver(async (entries) => {
                         entries.forEach(async (entry) => {
@@ -288,7 +292,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             }
                         });
                     });
-                    //Observes the newly rendered image, so that it can be loaded when it is in view.
                     const imgElement = article.querySelector('img');
                     observer.observe(imgElement);
                 }
@@ -303,16 +306,15 @@ document.addEventListener("DOMContentLoaded", () => {
             main.initViewer(orderedImages);
             if (firstTime) {
                 main.switchTo(category == "private" ? 0 : orderedImages.length - headerContent.NegStartIndex, true);
-             } else {
+            } else {
                 main.switchTo(0, true);
-             };
-             viewerInitialized = true;
+            };
+            viewerInitialized = true;
         } else {
             main.clearSlide();
             main.slides = [];
             viewerInitialized = false;
         }
-        document.getElementById('main').scrollTop = 0;
     }
 
 
@@ -334,39 +336,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function updateImageSchema(images, categoryName) {
-    const schemaImages = images.map(img => {
-        const imgfilename = img.filename.substring(4).includes("_") 
-            ? img.filename.replace(/\.[a-zA-Z]+$/g, (match) => match.toLowerCase())
-            : img.filename;
-        
-        const credits = img.credits 
-            ? `Alfie Kunz + ${img.credits.name}`
-            : 'Alfie Kunz';
-        
-        return {
-            "@type": "ImageObject",
-            "contentUrl": `https://alfiekunz.co.uk/photography/images/${categoryName}/full/${imgfilename}`,
-            "name": img.title || '',
-            "creator": {
-                "@type": "Person",
-                "name": credits
-            },
-            "copyrightHolder": {
-                "@type": "Person",
-                "name": "Alfie Kunz"
-            },
-            "copyrightYear": new Date(img.datetime).getFullYear().toString()
+        const schemaImages = images.map(img => {
+            const imgfilename = img.filename.substring(4).includes("_") 
+                ? img.filename.replace(/\.[a-zA-Z]+$/g, (match) => match.toLowerCase())
+                : img.filename;
+            
+            const credits = img.credits 
+                ? `Alfie Kunz + ${img.credits.name}`
+                : 'Alfie Kunz';
+            
+            return {
+                "@type": "ImageObject",
+                "contentUrl": `https://alfiekunz.co.uk/photography/images/${categoryName}/full/${imgfilename}`,
+                "name": img.title || '',
+                "creator": {
+                    "@type": "Person",
+                    "name": credits
+                },
+                "copyrightHolder": {
+                    "@type": "Person",
+                    "name": "Alfie Kunz"
+                },
+                "copyrightYear": new Date(img.datetime).getFullYear().toString()
+            };
+        });
+
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "image": schemaImages
         };
-    });
 
-    const schema = {
-        "@context": "https://schema.org",
-        "@type": "ImageGallery",
-        "image": schemaImages
-    };
-
-    document.getElementById('image-schema').textContent = JSON.stringify(schema);
-}
+        document.getElementById('image-schema').textContent = JSON.stringify(schema);
+    }
 
 
     if (!thumbnailsContainer.dataset.listenerAttached) {
@@ -453,11 +455,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    function FilterUpdateGallery(filteredImages) {
+        const FirstTime = (currentFilter === "Signature" && !CheckBallFilterChecked());
+
+        const Render = function() {
+            renderThumbnails(filteredImages, category, FirstTime);
+        };
+
+        const isMobile = window.innerWidth < 651;
+        if (!isMobile && viewerInitialized) {
+            
+            // 1. Get the data for the *currently* displayed image
+            const CurrentIndex = main.getCurrentIndex(); // Uses the function we added to main.js
+            let CurrentImg = null, NewImg = null;
+            if (CurrentIndex !== null && CurrentIndex < lastOrderedImages.length) {
+                CurrentImg = lastOrderedImages[CurrentIndex];
+            }
+
+            // We must account for the ball filter to correctly predict the *actual* next image
+            if (CheckBallFilterChecked()) {
+                filteredImages = filteredImages.filter(img => img.title && img.title.toLowerCase().includes("ball"));
+            }
+
+            if (filteredImages.length > 0) {
+                const OrderedImages = SplitImages(filteredImages, headerContent).orderedImages;
+                
+                let NewIndex = 0;
+                if (FirstTime) {
+                    NewIndex = (category === "private") ? 0 : OrderedImages.length - headerContent.NegStartIndex;
+                }                
+                NewImg = OrderedImages[NewIndex];
+            }
+            if (CurrentImg && NewImg && CurrentImg.filename === NewImg.filename) {
+                // The images are the same - skip fade-out.
+                Render();
+            } else {
+                // The images are different - load fade-out.
+                main.clearSlide(Render);
+            }
+            
+        } else {
+            Render();
+        }
+    }
+
+
 
     filterButtonsContainer.addEventListener('click', (event) => {
         if (event.target.classList.contains('filter-button')) {
             const selectedFilter = event.target.dataset.filter;
             if (selectedFilter === currentFilter) {return;}
+            
+            const previousFilter = currentFilter;
             currentFilter = selectedFilter;
 
             filterButtonsContainer.querySelectorAll('.filter-button').forEach(btn => {
@@ -471,8 +520,8 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
             }
-
-            renderThumbnails(filteredImages, category, (currentFilter == "Signature"), category === "private");
+            
+            FilterUpdateGallery(filteredImages);
         }
     });
 
@@ -518,16 +567,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 <input type="checkbox" id="ball-filter-checkbox" name="ball-filter">
                 <label for="ball-filter-checkbox">Show Only Society Ball Photos</label>
             `;
+
             filterButtonsContainer.parentNode.insertBefore(checkboxContainer, filterButtonsContainer.nextSibling);
-            ballFilterCheckbox = document.getElementById('ball-filter-checkbox');
-            ballFilterCheckbox.addEventListener('change', () => {
-                let currentButtonFilteredImages;
+            OnlyBallPhotosCheckbox = document.getElementById('ball-filter-checkbox');
+            OnlyBallPhotosCheckbox.addEventListener('change', () => {
+                let filteredImages;
                 if (currentFilter === "All") {
-                    currentButtonFilteredImages = allImages;
+                    filteredImages = allImages;
                 } else {
-                    currentButtonFilteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
+                    filteredImages = allImages.filter(img => img.type && img.type.includes(currentFilter));
                 }
-                renderThumbnails(currentButtonFilteredImages, category, false);
+                FilterUpdateGallery(filteredImages);
             });
         }
 

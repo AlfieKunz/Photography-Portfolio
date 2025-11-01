@@ -96,6 +96,12 @@ var main = (function($) { var _ = {
 	current: null,
 
 	/**
+	 * Current Photo URL.
+	 * @var {string}
+	 */
+	URL: null,
+
+	/**
 	 * Lock state.
 	 * @var {bool}
 	 */
@@ -541,142 +547,154 @@ initViewer: function(imagesData) {
 	},
 
 	/**
-	 * Switch to a specific slide.
-	 * @param {integer} index Index.
-	 */
-	switchTo: function(index, noHide) {
+     * Switch to a specific slide.
+     * @param {integer} index Index.
+     * @param {boolean} noHide Whether to skip hiding on mobile
+     */
+    switchTo: function(index, noHide) {
+        if (_.slides.length === 0 || index < 0 || index >= _.slides.length) {
+            console.warn(`switchTo: Invalid index ${index} or no slides loaded.`);
+            return;
+        }
 
-		if (_.slides.length === 0 || index < 0 || index >= _.slides.length) {
-			console.warn(`switchTo: Invalid index ${index} or no slides loaded.`);
-			return;
-		}
+        const newSlideUrl = _.slides[index].url;
+        var IsSameImage = false;
 
-		// Already at index and xsmall isn't active? Bail.
-		if (_.current == index && !breakpoints.active('<=xsmall') && _.$body.hasClass('fullscreen') === false) {return;}
+        // Already at the same photo URL, and xsmall isn't active? Bail.
+        if (!breakpoints.active('<=xsmall') && _.$body.hasClass('fullscreen') === false) {
+            if (_.current !== null && _.URL !== null && _.URL === newSlideUrl) {
+                return;
+            } else if (_.URL !== null && _.URL === newSlideUrl) {
+                IsSameImage = true;
+            }
+        }
 
+        // Locked? Bail.
+        if (_.locked)
+            return;
 
-		// Locked? Bail.
-		if (_.locked)
-			return;
+        // Lock.
+        _.locked = true;
 
-		// Lock.
-		_.locked = true;
+        if (!noHide && breakpoints.active('<=medium')) {
+            _.hide();
+        }
 
-		if (!noHide && breakpoints.active('<=medium')) {
-			_.hide();
-		}
+        // Get slides.
+        var oldSlide = (_.current !== null && _.slides[_.current]) ? _.slides[_.current] : null,
+            newSlide = _.slides[index];
 
+        // Update current.
+        _.current = index;
+        _.URL = newSlideUrl;
 
-		// Get slides.
-		var	oldSlide = (_.current !== null && _.slides[_.current]) ? _.slides[_.current] : null,
-			newSlide = _.slides[index];
+        // Deactivate old slide (if there is one).
+        if (oldSlide) {
+            oldSlide.$parent.removeClass('active');
+            if (oldSlide.$slideImage) {
+                // If IsSameImage is true, skip animations entirely
+                if (IsSameImage) {
+                    oldSlide.$slideImage.css({
+                        'transform': 'scale(1)',
+                        'transition': 'none'
+                    });
+                } else if (breakpoints.active('<=medium')) {
+                    oldSlide.$slideImage.css({
+                        'transform': 'scale(1.1)',
+                        'transform-origin': 'center center',
+                        'transition': 'opacity 0.5s ease-in-out, transform 0.75s ease'
+                    });
+                } else {
+                    oldSlide.$slideImage.css({
+                        'transform': 'scale(1)',
+                        'transform-origin': 'center center',
+                        'transition': 'opacity 0.5s ease-in-out, transform 0.75s ease'
+                    });
+                }
+            }
+            oldSlide.$slide.removeClass('active');
+        }
 
+        // Activate new slide.
+        newSlide.$parent
+            .addClass('active')
+            .focus({ preventScroll: true });
 
-		// Update current.
-		_.current = index;
+        // Slide activation function
+        var f = function() {
 
-		// Deactivate old slide (if there is one).
-		if (oldSlide) {
-			oldSlide.$parent.removeClass('active');
-			if (oldSlide.$slideImage) {
-				// If the image has been scaled, animate it back to its original size.
-				if (breakpoints.active('<=medium')) {
-					oldSlide.$slideImage.css({
-						'transform': 'scale(1.1)',
-						'transform-origin': 'center center',
-						'transition': 'opacity 0.5s ease-in-out, transform 0.75s ease'
-					});
-				} else {
-					oldSlide.$slideImage.css({
-						'transform': 'scale(1)',
-						'transform-origin': 'center center',
-						'transition': 'opacity 0.5s ease-in-out, transform 0.75s ease'
-					});
-				}	
-			}
-			oldSlide.$slide.removeClass('active');
-		}
+            // Old slide exists? Detach it.
+            if (oldSlide && oldSlide.$slide)
+                oldSlide.$slide.detach();
 
-		// Activate new slide.
+            if (IsSameImage && newSlide.$slideImage) {
+                newSlide.$slideImage.css('transition', 'none');
+            }
 
-		// Thumbnail.
-		newSlide.$parent
-					.addClass('active')
-					.focus();
+            // Attach new slide.
+            newSlide.$slide.appendTo(_.$viewer);
 
+            // New slide not yet loaded?
+            if (!newSlide.loaded) {
 
-		// Slide.
-		var f = function() {
+                window.setTimeout(function() {
 
-			// Old slide exists? Detach it.
-			if (oldSlide && oldSlide.$slide)
-				oldSlide.$slide.detach();
+                    // Mark as loading.
+                    newSlide.$slide.addClass('loading');
 
+                    // Wait for it to load.
+                    $('<img src="' + newSlide.url + '" />').on('load', function() {
 
-			// Attach new slide.
-			newSlide.$slide.appendTo(_.$viewer);
+                        // Set background image.
+                        newSlide.$slideImage
+                            .css('background-image', 'url(' + newSlide.url + ')');
 
-			// New slide not yet loaded?
-			if (!newSlide.loaded) {
+                        // Mark as loaded.
+                        newSlide.loaded = true;
+                        newSlide.$slide.removeClass('loading');
 
-				window.setTimeout(function() {
+                        // Mark as active.
+                        newSlide.$slide.addClass('active');
 
-					// Mark as loading.
-					newSlide.$slide.addClass('loading');
+                        // Unlock.
+                        window.setTimeout(function() {
+                            if (IsSameImage && newSlide.$slideImage) {
+                                newSlide.$slideImage.css('transition', ''); // Resets to CSS default
+                            }
+                            _.locked = false;
+                        }, 100);
 
-					// Wait for it to load.
-					$('<img src="' + newSlide.url + '" />').on('load', function() {
-					//window.setTimeout(function() { // Keep original artificial delay if desired, remove for speed
+                    });
 
-						// Set background image.
-						newSlide.$slideImage
-							.css('background-image', 'url(' + newSlide.url + ')');
+                }, IsSameImage ? 0 : 100);
 
-						// Mark as loaded.
-						newSlide.loaded = true;
-						newSlide.$slide.removeClass('loading');
+            } else {
+                // Already loaded
+                window.setTimeout(function() {
 
-						// Mark as active.
-						newSlide.$slide.addClass('active');
+                    // Mark as active.
+                    newSlide.$slide.addClass('active'); // This will also be instant
 
-						// Unlock.
-						window.setTimeout(function() {
-							_.locked = false;
-						}, 100);
+                    // Unlock.
+                    window.setTimeout(function() {
+                        if (IsSameImage && newSlide.$slideImage) {
+                            newSlide.$slideImage.css('transition', ''); // Resets to CSS default
+                        }
+                        _.locked = false;
+                    }, 100);
 
-					//}, 1000); // End of artificial delay
-					});
+                }, IsSameImage ? 0 : 100);
 
-				}, 100); // Keep initial loading delay
+            }
+        };
 
-			}
-
-			// Otherwise ... (already loaded)
-			else {
-
-				window.setTimeout(function() {
-
-					// Mark as active.
-						newSlide.$slide.addClass('active');
-
-					// Unlock.
-						window.setTimeout(function() {
-							_.locked = false;
-						}, 100);
-
-				}, 100);
-
-			}
-
-	};
-
-	// No old slide? Switch immediately.
-	if (!oldSlide)
-		(f)();
-	// Otherwise, wait for old slide to disappear first.
-	else
-		window.setTimeout(f, _.settings.slideDuration);
-	},
+        // No old slide OR IsSameImage? Switch immediately.
+        if (!oldSlide || IsSameImage)
+            (f)();
+        // Otherwise, wait for old slide to disappear first.
+        else
+            window.setTimeout(f, _.settings.slideDuration);
+    },
 
 
 	/**
@@ -707,6 +725,14 @@ initViewer: function(imagesData) {
 				 setTimeout(callback, 0);
 			 }
 		}
+	},
+
+	/**
+	 * Get the index of the currently active slide.
+	 * @returns {integer|null} The index or null.
+	 */
+	getCurrentIndex: function() {
+		return _.current;
 	},
 
 
