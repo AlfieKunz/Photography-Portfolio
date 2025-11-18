@@ -692,14 +692,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 DownloadButton.innerHTML = '<span class="icon solid fa-arrow-down"></span>';
                 
                 // Downloads photo upon click.
-                DownloadButton.addEventListener('click', (e) => {
+                DownloadButton.addEventListener('click', async (e) => {
                     e.stopPropagation(); 
                     e.preventDefault();
                     
                     const CurrentIndex = main.getCurrentIndex();
                     if (main.slides && main.slides[CurrentIndex] && main.slides[CurrentIndex].url) {
+                        // Mobile devices struggle to find the URL - find a blob to make this easier.
+                        const DownloadImgFetch = await fetch(main.slides[CurrentIndex].url);
+                        const DownloadImgBlob = await DownloadImgFetch.blob();
+                        const DownloadImgBlobURL = URL.createObjectURL(DownloadImgBlob);
+
                         const a = document.createElement('a');
-                        a.href = main.slides[CurrentIndex].url;
+                        a.href = DownloadImgBlobURL;
                         a.download = "AlfieKunz_" + allImages[CurrentIndex].filename;
                         document.body.appendChild(a);
                         a.click();
