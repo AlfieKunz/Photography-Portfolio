@@ -597,7 +597,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentFilter = "All"
         document.querySelector("#header h1").innerHTML = headerContent.title;
         document.querySelector("#header p").innerHTML = headerContent.description;
-        document.querySelector("#header p.license").innerHTML = "To save any of these photos, open the photo in full-screen and click the 'Download' button in the top-left corner."
+        document.querySelector("#header p.license").innerHTML = "To save any of these photos, open the photo in full-screen and click the 'Download' button in the top-left corner. If you require any full-size copies, please <a href='/photography/#contact'>contact me!"
         // Prompts the viewer for a username and password. The username will be used to access the gallery in question; the password will be used to decrypt the images.
         const modal = document.getElementById('private-popup');
         const nameInput = document.getElementById('username-input');
