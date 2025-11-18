@@ -597,6 +597,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentFilter = "All"
         document.querySelector("#header h1").innerHTML = headerContent.title;
         document.querySelector("#header p").innerHTML = headerContent.description;
+        document.querySelector("#header p.license").innerHTML = "To save any of these photos, open the photo in full-screen and click the 'Download' button in the top-left corner."
         // Prompts the viewer for a username and password. The username will be used to access the gallery in question; the password will be used to decrypt the images.
         const modal = document.getElementById('private-popup');
         const nameInput = document.getElementById('username-input');
@@ -676,10 +677,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 privatePassword = passwordInput.value;
                 allImages = images;
 
+                if (allImages.length > 0 && allImages[0].GalleryTitle) {
+                    document.querySelector("#header h1").innerHTML = `Gallery -<br>${allImages[0].GalleryTitle}`;
+                }
+
                 modal.style.display = 'none';
                 console.log(`Found ${images.length} Photos - Displaying...`);
                 generateFilterButtons(images);
                 renderThumbnails(images, `private/${username}`, true, true);
+
+                // Adds download button to private gallery.
+                const DownloadButton = document.createElement('div');
+                DownloadButton.className = 'download-toggle'; 
+                DownloadButton.innerHTML = '<span class="icon solid fa-arrow-down"></span>';
+                
+                // Downloads photo upon click.
+                DownloadButton.addEventListener('click', (e) => {
+                    e.stopPropagation(); 
+                    e.preventDefault();
+                    
+                    const CurrentIndex = main.getCurrentIndex();
+                    if (main.slides && main.slides[CurrentIndex] && main.slides[CurrentIndex].url) {
+                        const a = document.createElement('a');
+                        a.href = main.slides[CurrentIndex].url;
+                        a.download = "AlfieKunz_" + allImages[CurrentIndex].filename;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                    }
+                });
+                document.querySelector('#viewer .inner').appendChild(DownloadButton);
+
 
             } catch (error) {
                 console.log(error);

@@ -17,3 +17,4 @@ git pull origin main
 1) Create fulls, thumbs, and json as normal, noting the new folder structure date/private/XYZ.json and images/private/XYZ/full/... XYZ represents the username.
 2) Use encrypt.py to create .enc files of all the fulls and thumbs, making sure to change USERNAME to XYZ and PASSKEY to the password login for the website.
 3) Delete the original fulls and thumbs from the images/private/XYZ folder.
+4) Add "GalleryTitle": "NAME", to the first photo's JSON.
