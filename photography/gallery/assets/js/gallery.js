@@ -701,7 +701,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         // Mobile devices struggle to find the URL - find a blob to make this easier.
                         const DownloadImgFetch = await fetch(main.slides[CurrentIndex].url);
                         const DownloadImgBlob = await DownloadImgFetch.blob();
-                        const DownloadImgBlobURL = URL.createObjectURL(DownloadImgBlob);
+                        const DownloadImgBlobURL = URL.createObjectURL([DownloadImgBlob], { type: mimeType });
 
                         const a = document.createElement('a');
                         a.href = DownloadImgBlobURL;
