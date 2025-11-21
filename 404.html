@@ -4,32 +4,22 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-        // 1. DEFINITION: Add your specific list items here
-        const privateList = ['private', 'client', 'clientphotos', 'societyball', 'gallery', 'onlinegallery'];
+        const PrivateRedirectList = ['private', 'client', 'clientphotos', 'clientshots', 'societyball',
+        'warwickball', 'gallery', 'onlinegallery', 'privategallery', 'secure', 'securegallery', 'secureshots'];
         
-        const currentPath = window.location.pathname;
-        const pathSegments = currentPath.split('/').filter(segment => segment);
-        
-        // Helper: Get the last segment of the URL (the potential item)
-        const lastSegment = pathSegments[pathSegments.length - 1];
+        const PathTree = window.location.pathname.split('/').filter(segment => segment);
+        const isTargetItem = PrivateRedirectList.includes(PathTree[PathTree.length - 1] ? PathTree[PathTree.length - 1].toLowerCase() : '');
 
-        // 2. LOGIC: Check for your specific redirect conditions
-        // Condition A: root/{ITEM} (e.g., alfiekunz.co.uk/wedding)
-        // Condition B: root/photography/{ITEM} (e.g., alfiekunz.co.uk/photography/wedding)
-        const isTargetItem = privateList.includes(lastSegment ? lastSegment.toLowerCase() : '');
-        const isRootPath = pathSegments.length === 1;
-        const isPhotoPath = pathSegments.length === 2 && pathSegments[0].toLowerCase() === 'photography';
-
-        if (isTargetItem && (isRootPath || isPhotoPath)) {
-            // Redirect to the specific private gallery URL
+        if (isTargetItem && (PathTree.length === 1 || PathTree.length === 2 && PathTree[0].toLowerCase() === 'photography')) {
+            // Redirects to private gallery.
             window.location.replace('https://www.alfiekunz.co.uk/photography/gallery/?category=private');
         } else {
-            // 3. FALLBACK: Your existing logic runs only if the above fails
-            runFallbackLogic();
+            // Redirects to closest parent.
+            RedirectUpBranch();
         }
 
-        async function runFallbackLogic() {
-            async function pathExists(path) {
+        async function RedirectUpBranch() {
+            async function DoesPathExist(path) {
                 try {
                     const response = await fetch(path, { method: 'HEAD' });
                     return response.ok;
@@ -38,23 +28,20 @@
                 }
             }
             
-            async function findValidParent() {
-                // We work with a copy of segments to avoid mutating the original check
-                let searchSegments = [...pathSegments];
+            async function FindClosestParent() {
+                let PathTreeSegments = [...PathTree];
                 
-                while (searchSegments.length > 0) {
-                    searchSegments.pop();
-                    const parentPath = '/' + searchSegments.join('/');
-                    
-                    if (await pathExists(parentPath) || searchSegments.length === 0) {
-                        window.location.replace(parentPath || '/');
+                while (PathTreeSegments.length > 0) {
+                    PathTreeSegments.pop();
+                    const Parent = '/' + PathTreeSegments.join('/');
+                    if (await DoesPathExist(Parent) || PathTreeSegments.length === 0) {
+                        window.location.replace(Parent || '/');
                         return;
                     }
                 }
                 window.location.replace('/');
             }
-            
-            findValidParent();
+            FindClosestParent();
         }
     </script>
 </head>
