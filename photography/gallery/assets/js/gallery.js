@@ -614,7 +614,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         nameInput.addEventListener("keydown", handleEnter);
         passwordInput.addEventListener("keydown", handleEnter);
-        var UserPasswordInput = passwordInput.value;
 
         modal.style.display = 'flex';
 
@@ -648,8 +647,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             //Checks to see if a password has been entered.
-            var NoPasswordEntered = !passwordInput.value;
-            if (NoPasswordEntered) {
+            var UserPasswordInput = passwordInput.value;
+            if (!passwordInput.value) {
                 UserPasswordInput = nameInput.value;
             }
 
@@ -666,7 +665,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 if (!testUrl) {
                     ErrorCounter += 1;
-                    errorMessage.innerHTML = NoPasswordEntered ? `<br>(${ErrorCounter}) Please enter a password.` : `<br>(${ErrorCounter}) Incorrect password.`;
+                    errorMessage.innerHTML = !passwordInput.value ? `<br>(${ErrorCounter}) Please enter a password.` : `<br>(${ErrorCounter}) Incorrect password.`;
                     submitButton.disabled = false;
                     submitButton.textContent = "Submit";
                     return;
