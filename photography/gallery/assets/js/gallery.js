@@ -614,6 +614,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         nameInput.addEventListener("keydown", handleEnter);
         passwordInput.addEventListener("keydown", handleEnter);
+        var UserPasswordInput = passwordInput.value;
 
         modal.style.display = 'flex';
 
@@ -647,10 +648,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             //Checks to see if a password has been entered.
-            if (!passwordInput.value) {
-                ErrorCounter += 1;
-                errorMessage.innerHTML = `<br>(${ErrorCounter}) Please enter a password.`;
-                return;
+            var NoPasswordEntered = !passwordInput.value;
+            if (NoPasswordEntered) {
+                UserPasswordInput = nameInput.value;
             }
 
             //Attempt to decrypt a single thumb (the first image), using the password as the key. If this succeeds, we assume that all the photos are valid.
@@ -662,11 +662,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 const images = await response.json();
 
                 const encName = images[0].filename.split('.')[0] + ".enc";
-                const testUrl = await Decrypt(`images/private/${username}/thumb/${encName}`, passwordInput.value);
+                const testUrl = await Decrypt(`images/private/${username}/thumb/${encName}`, UserPasswordInput);
                 
                 if (!testUrl) {
                     ErrorCounter += 1;
-                    errorMessage.innerHTML = `<br>(${ErrorCounter}) Incorrect password.`;
+                    errorMessage.innerHTML = NoPasswordEntered ? `<br>(${ErrorCounter}) Please enter a password.` : `<br>(${ErrorCounter}) Incorrect password.`;
                     submitButton.disabled = false;
                     submitButton.textContent = "Submit";
                     return;
@@ -674,7 +674,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Password is correct - save, and render all the images.
                 privateUsername = username;
-                privatePassword = passwordInput.value;
+                privatePassword = UserPasswordInput;
                 allImages = images;
 
                 if (allImages.length > 0 && allImages[0].GalleryTitle) {

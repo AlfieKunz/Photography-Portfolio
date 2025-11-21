@@ -4,32 +4,58 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
+        // 1. DEFINITION: Add your specific list items here
+        const privateList = ['private', 'client', 'clientphotos', 'societyball', 'gallery', 'onlinegallery'];
+        
         const currentPath = window.location.pathname;
         const pathSegments = currentPath.split('/').filter(segment => segment);
         
-        async function pathExists(path) {
-            try {
-                const response = await fetch(path, { method: 'HEAD' });
-                return response.ok;
-            } catch {
-                return false;
-            }
+        // Helper: Get the last segment of the URL (the potential item)
+        const lastSegment = pathSegments[pathSegments.length - 1];
+
+        // 2. LOGIC: Check for your specific redirect conditions
+        // Condition A: root/{ITEM} (e.g., alfiekunz.co.uk/wedding)
+        // Condition B: root/photography/{ITEM} (e.g., alfiekunz.co.uk/photography/wedding)
+        const isTargetItem = privateList.includes(lastSegment ? lastSegment.toLowerCase() : '');
+        const isRootPath = pathSegments.length === 1;
+        const isPhotoPath = pathSegments.length === 2 && pathSegments[0].toLowerCase() === 'photography';
+
+        if (isTargetItem && (isRootPath || isPhotoPath)) {
+            // Redirect to the specific private gallery URL
+            window.location.replace('https://www.alfiekunz.co.uk/photography/gallery/?category=private');
+        } else {
+            // 3. FALLBACK: Your existing logic runs only if the above fails
+            runFallbackLogic();
         }
-        
-        async function findValidParent() {
-            while (pathSegments.length > 0) {
-                pathSegments.pop();
-                const parentPath = '/' + pathSegments.join('/');
-                
-                if (await pathExists(parentPath) || pathSegments.length === 0) {
-                    window.location.replace(parentPath || '/');
-                    return;
+
+        async function runFallbackLogic() {
+            async function pathExists(path) {
+                try {
+                    const response = await fetch(path, { method: 'HEAD' });
+                    return response.ok;
+                } catch {
+                    return false;
                 }
             }
-            window.location.replace('/');
+            
+            async function findValidParent() {
+                // We work with a copy of segments to avoid mutating the original check
+                let searchSegments = [...pathSegments];
+                
+                while (searchSegments.length > 0) {
+                    searchSegments.pop();
+                    const parentPath = '/' + searchSegments.join('/');
+                    
+                    if (await pathExists(parentPath) || searchSegments.length === 0) {
+                        window.location.replace(parentPath || '/');
+                        return;
+                    }
+                }
+                window.location.replace('/');
+            }
+            
+            findValidParent();
         }
-        
-        findValidParent();
     </script>
 </head>
 </html>
