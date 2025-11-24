@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     private: {
         title: "Gallery -<br>Private Collection",
-        description: "This gallery uses client-side AES encryption to secure your photos, meaning only those with the correct password are able to view them.",
+        description: "This gallery uses client-side AES encryption to secure your photos, meaning only those with the correct password are able to view them. Note that, as a result of this 'on-the-fly' decryption, there might be a slight delay when browsing through photos.",
         heightDelta: -0.1,
         tags: ["Signature"]
     }
@@ -598,6 +598,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#header h1").innerHTML = headerContent.title;
         document.querySelector("#header p").innerHTML = headerContent.description;
         document.querySelector("#header p.license").innerHTML = "To save any of these photos, open the photo in full-screen and click the 'Download' button in the top-left corner. If you require any full-size copies, please <a href='/photography/#contact'>contact me!"
+
         // Prompts the viewer for a username and password. The username will be used to access the gallery in question; the password will be used to decrypt the images.
         const modal = document.getElementById('private-popup');
         const nameInput = document.getElementById('username-input');
@@ -680,18 +681,78 @@ document.addEventListener("DOMContentLoaded", () => {
                     document.querySelector("#header h1").innerHTML = `Gallery -<br>${allImages[0].GalleryTitle}`;
                 }
 
+
+
+                // Adds download button next to the home button, that allows the user to download ALL photos.
+                const DownloadAllButton = document.createElement('a');
+                DownloadAllButton.className = 'icon solid fa-download'; 
+                DownloadAllButton.style.fontSize = '1.3rem';
+                DownloadAllButton.style.cursor = 'pointer';
+                DownloadAllButton.innerHTML = '<span class="label">Download All</span>';
+
+                // Downloads all photos upon click.
+                DownloadAllButton.addEventListener('click', async (e) => {
+                    e.stopPropagation(); 
+                    e.preventDefault();
+                    
+                    if (DownloadAllButton.dataset.processing === "true") return;
+                    DownloadAllButton.dataset.processing = "true";
+
+                    const originalClass = DownloadAllButton.className;
+                    const originalHTML = DownloadAllButton.innerHTML;
+                    const originalColor = DownloadAllButton.style.color;
+
+                    DownloadAllButton.className = 'icon solid fa-spinner fa-spin'; 
+                    DownloadAllButton.style.color = '#f69051'; 
+
+                    try {
+                        const zip = new JSZip();
+                        const ImageFolder = zip.folder(`AlfieKunz_${privateUsername}_Collection`);
+
+                        for (let i = 0; i < allImages.length; i++) {
+                            const Image = allImages[i];
+                            const decryptedUrl = await DecryptImage(Image.filename, privateUsername, privatePassword, "full");
+                            if (decryptedUrl) {
+                                const blob = await fetch(decryptedUrl).then(r => r.blob());
+                                ImageFolder.file(Image.filename, blob);
+                            }
+                        }
+                        const DownloadImgFetch = await zip.generateAsync({ type: "blob" });
+                        const a = document.createElement("a");
+                        a.href = URL.createObjectURL(DownloadImgFetch);
+                        a.download = `AlfieKunz_${privateUsername}_All.zip`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+
+                    } catch (err) {
+                        console.error("Download failed", err);
+                    } finally {
+                        // Moves back to original layout.
+                        DownloadAllButton.className = originalClass;
+                        DownloadAllButton.innerHTML = originalHTML;
+                        DownloadAllButton.style.color = originalColor;
+                        DownloadAllButton.dataset.processing = "false";
+                    }
+                });
+                document.querySelector('#header .icons').children[0].after(DownloadAllButton);
+                document.querySelector('#header .icons').classList.add('has-download');
+
+
+
                 modal.style.display = 'none';
                 console.log(`Found ${images.length} Photos - Displaying...`);
                 generateFilterButtons(images);
                 renderThumbnails(images, `private/${username}`, true, true);
 
                 // Adds download button to private gallery.
-                const DownloadButton = document.createElement('div');
-                DownloadButton.className = 'download-toggle'; 
-                DownloadButton.innerHTML = '<span class="icon solid fa-arrow-down"></span>';
+                const DownloadIndButton = document.createElement('div');
+                DownloadIndButton.className = 'download-toggle'; 
+                DownloadIndButton.innerHTML = '<span class="icon solid fa-arrow-down"></span>';
                 
                 // Downloads photo upon click.
-                DownloadButton.addEventListener('click', async (e) => {
+                DownloadIndButton.addEventListener('click', async (e) => {
                     e.stopPropagation(); 
                     e.preventDefault();
                     
@@ -710,7 +771,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         document.body.removeChild(a);
                     }
                 });
-                document.querySelector('#viewer .inner').appendChild(DownloadButton);
+                document.querySelector('#viewer .inner').appendChild(DownloadIndButton);
 
 
             } catch (error) {
