@@ -278,6 +278,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>© ${Credits} Photography - ${YearOfCapture}</p>
                 `;
                 thumbnailsContainer.appendChild(article);
+
+                const ImageCont = article.querySelector('img');
+                const InitImageLoadFade = () => { ImageCont.classList.add('loaded'); };
+                if (ImageCont.complete) {
+                    InitImageLoadFade();
+                } else {
+                    ImageCont.addEventListener('load', InitImageLoadFade);
+                }
                 
                 // Decrypts the thumbs that are in view immediately, s.t we can save the decrypted url.
                 if (category == "private") {

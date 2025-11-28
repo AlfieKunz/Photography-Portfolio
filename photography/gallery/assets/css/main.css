@@ -1055,6 +1055,7 @@ input, select, textarea {
 
 
 #thumbnails article .thumbnail {
+	background-color: #ffffff;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     display: block;
     position: relative;
@@ -1063,10 +1064,12 @@ input, select, textarea {
 }
 
     #thumbnails article .thumbnail img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+        opacity: 0;
+		transition: opacity 0.4s ease-in-out;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
 
     #thumbnails article .thumbnail:before {
         pointer-events: none;
@@ -1088,6 +1091,9 @@ input, select, textarea {
     #thumbnails article .thumbnail:focus:before {
         opacity: 0.5;
     }
+	#thumbnails article .thumbnail img.loaded {
+		opacity: 1;
+	}
 
 #thumbnails article h2, #thumbnails article p {
     display: none;
