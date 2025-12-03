@@ -5,7 +5,7 @@ from PIL import Image, ImageOps
 from PIL.ExifTags import TAGS
 
 # --- CONFIGURATION ---
-CATEGORY = "event"
+CATEGORY = "private/polsoc25"
 DIREC = "C:/Users/alfie/Photography-Portfolio/photography/gallery"
 IMAGE_FOLDER = DIREC + "/images/" + CATEGORY + "/full/"
 JSON_OUTPUT_PATH = DIREC + "/data/" + CATEGORY + ".json"

@@ -685,8 +685,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 privatePassword = UserPasswordInput;
                 allImages = images;
 
-                if (allImages.length > 0 && allImages[0].GalleryTitle) {
-                    document.querySelector("#header h1").innerHTML = `Gallery -<br>${allImages[0].GalleryTitle}`;
+                if (allImages.length > 0) {
+                    if (allImages[0].GalleryTitle) document.querySelector("#header h1").innerHTML = `Gallery -<br>${allImages[0].GalleryTitle}`;
+                    if (allImages[0].GalleryTags) headerContent.tags = allImages[0].GalleryTags;
                 }
 
 
