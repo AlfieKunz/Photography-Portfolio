@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     event: {
         title: "Gallery -<br>Formal Events & Celebrations",
         description: "Whether it be photos of groups, candids, awards, speeches or the venue, I strive to showcase the excitement and atmosphere of an event to remember. I excel in busy situations and when meeting new people, and pride myself on building a friendly and charismatic rapport with guests while maintaining professionalism and strong directorial skills.",
-        NegStartIndex: 31,
+        NegStartIndex: 37,
         heightDelta: -0.25,
         tags: ["Signature", "Groups", "Candids", "Personal & Couples", "Venue", "Awards"]
     },
@@ -658,7 +658,7 @@ document.addEventListener("DOMContentLoaded", () => {
             //Checks to see if a password has been entered.
             var UserPasswordInput = passwordInput.value;
             if (!passwordInput.value) {
-                UserPasswordInput = nameInput.value;
+                UserPasswordInput = username;
             }
 
             //Attempt to decrypt a single thumb (the first image), using the password as the key. If this succeeds, we assume that all the photos are valid.

@@ -3,7 +3,7 @@ import os, io
 
 
 # --- CONFIGURATION ---
-CATEGORY = "private/polsoc25"
+CATEGORY = "event"
 direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/images/" + CATEGORY
 input_folder = direc + "/full"
 output_folder = direc + "/thumb"
