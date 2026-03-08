@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     event: {
         title: "Gallery -<br>Formal Events & Celebrations",
         description: "Whether it be photos of groups, candids, awards, speeches or the venue, I strive to showcase the excitement and atmosphere of an event to remember. I excel in busy situations and when meeting new people, and pride myself on building a friendly and charismatic rapport with guests while maintaining professionalism and strong directorial skills.",
-        NegStartIndex: 37,
-        heightDelta: -0.25,
+        NegStartIndex: 57,
+        heightDelta: 0.25,
         tags: ["Signature", "Groups", "Candids", "Personal & Couples", "Venue", "Awards"]
     },
     landscape: {
