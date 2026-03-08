@@ -16,56 +16,56 @@ document.addEventListener("DOMContentLoaded", () => {
     astro: {
         title: "Gallery -<br>Astrophotography",
         description: "Studying physics at university, and having a knack for long exposure photography, has given me a huge appreciation for the stars & sky. Countless blissful nights were spent taking these photos, nights have now become some of the happiest of my life.",
-        NegStartIndex: 6,
+        StartPhoto: "DSC_8247_1.jpg",
         heightDelta: 0,
         tags: ["Signature", "Moon", "Stars"]
     },
     corporate: {
         title: "Gallery -<br>Corporate",
         description: "My newest avenue of photography! I've been fortunate enough to partner with industry-leading and promising new businesses, taking photos that promises to capture the very essense of a company: the talent of the team, what they have to offer, and the atmosphere of their workplace. From professional headshots and 'action' team shots to venue photograpy and candids at a launch party, I'll do whatever it takes to showcase your business at its absolute best.",
-        NegStartIndex: 9,
+        StartPhoto: "DSR_0003.jpg",
         heightDelta: 0,
         tags: ["Signature", "Headshots", "Action & Directoral", "Venue"]
     },
     event: {
         title: "Gallery -<br>Formal Events & Celebrations",
         description: "Whether it be photos of groups, candids, awards, speeches or the venue, I strive to showcase the excitement and atmosphere of an event to remember. I excel in busy situations and when meeting new people, and pride myself on building a friendly and charismatic rapport with guests while maintaining professionalism and strong directorial skills.",
-        NegStartIndex: 57,
+        StartPhoto: "DSR_0077.jpg",
         heightDelta: 0.25,
         tags: ["Signature", "Groups", "Candids", "Personal & Couples", "Venue", "Awards"]
     },
     landscape: {
         title: "Gallery -<br>Landscapes",
         description: "Powerful, raw, sublime, whatever you want to call it - there's a reason why landscapes move us so deeply. Here, I try to capture some of that feeling, aiming to preserve a place or moment in the beauty it deserves.",
-        NegStartIndex: 28,
+        StartPhoto: "DSR_0019_1.jpg",
         heightDelta: 0,
         tags: ["Signature", "Water & Ocean", "Mountains & Hills", "Fields", "City"]
     },
     nature: {
         title: "Gallery -<br>Animals & Nature",
         description: "<b>Eutierria</b> (noun): 'a pleasing feeling of oneness with the earth and life'. Okay, <i>perhaps</i> that's a little pretentious, but there's a reason why the majority of my photos are of nature! :) I'm really lucky to live where I do, to be surrounded by so much life. Photography helps me explore that 'oneness' through curiosity and mindfulness; I hope to share a piece of that feeling here - hope you enjoy! 😌",
-        NegStartIndex: 12,
+        StartPhoto: "DSR_0334_1.jpg",
         heightDelta: 0,
         tags: ["Signature", "Plants & Greenery", "Animals", "Insects"]
     },
     portrait: {
         title: "Gallery -<br>Portraits",
         description: "An absolutely essential part of my love for photography. A great portrait captures a deep range of emotion and wonder, and I love utilising this to its fullest (especially with friends!) to capture authentic moments that provoke awe and evocation.",
-        NegStartIndex: 4,
+        StartPhoto: "DSC_9804_1.jpg",
         heightDelta: 0,
         tags: ["Signature", "Nature", "Studio", "Landscape", "Animals"]
     },
     studio: {
         title: "Gallery -<br>Studio Work",
         description: "This might just be my favourite kind of photography - getting together with a friend or two, spending hours brainstorming and planning every detail, then jumping up and down with childlike joy when unveiling the results. It's always a blast :D.",
-        NegStartIndex: 10,
+        StartPhoto: "DSR_0610_1.jpg",
         heightDelta: 0,
         tags: ["Signature", "Light & Reflection", "Portrait", "Objects & Products", "Macro"]
     },
     travel: {
         title: "Gallery -<br>Adventures & Travel",
         description: "This is slightly more of a <i>variety</i> collection, spanning everything from everyday travels to international expeditions. Despite the range, I hope that each photo remains striking, telling a unique story that stays true to the original moment.",
-        NegStartIndex: 22,
+        StartPhoto: "DSC_10749_1.jpg",
         heightDelta: 0,
         tags: ["Signature", "Rocks & Mountains", "Greenery", "Street & Buildings", "Water"]
     },
@@ -225,6 +225,15 @@ document.addEventListener("DOMContentLoaded", () => {
         return (category === "event" && OnlyBallPhotosCheckbox && OnlyBallPhotosCheckbox.checked)
     }
 
+    function GetIndexFromName(filename, orderedImages) {
+        let startIndex = 0;
+        if (category !== "private" && headerContent.StartPhoto) {
+            startIndex = orderedImages.findIndex(img => img.filename === filename);
+            if (startIndex === -1) startIndex = 0; 
+        }
+        return startIndex;
+    }
+
 
     function renderThumbnails(imagesToRender, categoryName, firstTime) {
         
@@ -313,7 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Desktop Behavior (Initialize immediately)
             main.initViewer(orderedImages);
             if (firstTime) {
-                main.switchTo(category == "private" ? 0 : orderedImages.length - headerContent.NegStartIndex, true);
+                main.switchTo(GetIndexFromName(headerContent.StartPhoto, orderedImages), true);
             } else {
                 main.switchTo(0, true);
             };
@@ -487,12 +496,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (filteredImages.length > 0) {
                 const OrderedImages = SplitImages(filteredImages, headerContent).orderedImages;
-                
-                let NewIndex = 0;
-                if (FirstTime) {
-                    NewIndex = (category === "private") ? 0 : OrderedImages.length - headerContent.NegStartIndex;
-                }                
-                NewImg = OrderedImages[NewIndex];
+                            
+                NewImg = OrderedImages[GetIndexFromName(headerContent.StartPhoto, OrderedImages)];
             }
             if (CurrentImg && NewImg && CurrentImg.filename === NewImg.filename) {
                 // The images are the same - skip fade-out.
