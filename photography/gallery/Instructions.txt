@@ -8,7 +8,7 @@
 
 Git Commands:
 git add .
-git commit -m "Name"
+git commit -m "Commit Message"
 git push origin main
 
 git pull origin main

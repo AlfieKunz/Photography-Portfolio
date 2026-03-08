@@ -11,7 +11,7 @@ IMAGE_FOLDER = DIREC + "/images/" + CATEGORY + "/full/"
 JSON_OUTPUT_PATH = DIREC + "/data/" + CATEGORY + ".json"
 DEFAULT_TITLE = ""
 DEFAULT_TYPE = ""
-DEFAULT_DATE = "20/07/25"
+DEFAULT_DATE = "08/03/26"
 # ---------------------
 
 
