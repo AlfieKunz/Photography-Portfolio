@@ -501,7 +501,8 @@ initViewer: function(imagesData) {
             $slideImage: null,
             $slideCaption: null,
             url: fullImageUrl,
-            loaded: false
+            loaded: false,
+			isPortrait: (imgData.aspect_ratio || (3 / 2)) < 1
         };
 
         s.$slide = $('<div class="slide"><div class="caption"></div><div class="image"></div></div>');
@@ -598,7 +599,7 @@ initViewer: function(imagesData) {
                         'transform': 'scale(1)',
                         'transition': 'none'
                     });
-                } else if (breakpoints.active('<=medium')) {
+                } else if (breakpoints.active('<=medium') && newSlide.isPortrait) {
                     oldSlide.$slideImage.css({
                         'transform': 'scale(1.1)',
                         'transform-origin': 'center center',
