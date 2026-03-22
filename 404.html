@@ -6,13 +6,16 @@
     <script>
         const PrivateRedirectList = ['private', 'client', 'clientphotos', 'clientshots', 'societyball',
         'warwickball', 'gallery', 'onlinegallery', 'privategallery', 'secure', 'securegallery', 'secureshots'];
+        const EventRedirectList = ['event', 'events', 'formal'];
+        const AllRedirects = [...PrivateRedirectList, ...EventRedirectList];
         
         const PathTree = window.location.pathname.split('/').filter(segment => segment);
-        const isTargetItem = PrivateRedirectList.includes(PathTree[PathTree.length - 1] ? PathTree[PathTree.length - 1].toLowerCase() : '');
+        const lastSegment = PathTree[PathTree.length - 1] ? PathTree[PathTree.length - 1].toLowerCase() : '';
 
-        if (isTargetItem && (PathTree.length === 1 || PathTree.length === 2 && PathTree[0].toLowerCase() === 'photography')) {
+        if (AllRedirects.includes(lastSegment) && (PathTree.length === 1 || PathTree.length === 2 && PathTree[0].toLowerCase() === 'photography')) {
             // Redirects to private gallery.
-            window.location.replace('https://www.alfiekunz.co.uk/photography/gallery/?category=private');
+            const category = PrivateRedirectList.includes(lastSegment) ? "private" : "event";
+            window.location.replace(`https://www.alfiekunz.co.uk/photography/gallery/?category=${category}`);
         } else {
             // Redirects to closest parent.
             RedirectUpBranch();
