@@ -3,9 +3,10 @@ from send2trash import send2trash
 from pathlib import Path
 
 # --- CONFIGURATION ---
-direc = Path("C:/Users/alfie/Photography/Projects/UWCS/")
-input_folder = direc / "Edited - JPEG Watermark"
-output_folder = direc / "Edited - JPEG Full - Copy"
+direcProj = Path("C:/Users/alfie/Photography/")
+direcPort = Path("C:/Users/alfie/Photography-Portfolio/photography/gallery/images/")
+input_folder = direcProj / "Portfolio/Event"
+output_folder = direcPort / "event/thumb"
 DeleteBadPhotos = True # Otherwise, just prints the photos to delete.
 # ---------------------
 

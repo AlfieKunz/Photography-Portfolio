@@ -3,7 +3,8 @@
     "filename": "DSR_0929_1.jpg",
     "title": "Snowdonia - Wales",
     "datetime": "2025-09-05T13:16:52",
-    "type": ["Rocks & Mountains"
+    "type": [
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   },
@@ -21,7 +22,8 @@
     "title": "Snowdonia - Wales",
     "datetime": "2025-09-05T10:59:55",
     "type": [
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -41,7 +43,8 @@
     "datetime": "2025-09-03T17:17:10",
     "type": [
       "Signature",
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -51,7 +54,8 @@
     "datetime": "2025-09-03T17:14:58",
     "type": [
       "Greenery",
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -61,7 +65,8 @@
     "datetime": "2025-09-03T14:51:02",
     "type": [
       "Signature",
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -108,8 +113,7 @@
     "filename": "DSR_0852_1.jpg",
     "title": "Anglesey - Wales",
     "datetime": "2025-09-01T14:56:22",
-    "type": [
-    ],
+    "type": [],
     "aspect_ratio": 1.5
   },
   {
@@ -175,7 +179,8 @@
     "datetime": "2025-08-16T16:07:16",
     "type": [
       "Greenery",
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -236,7 +241,8 @@
     "type": [
       "Signature",
       "Greenery",
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -257,7 +263,8 @@
     "type": [
       "Signature",
       "Greenery",
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -266,7 +273,8 @@
     "title": "Lake District Expedition - Summer 2025",
     "datetime": "2025-08-14T12:02:29",
     "type": [
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -276,7 +284,8 @@
     "datetime": "2025-08-14T11:59:10",
     "type": [
       "Signature",
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -286,7 +295,8 @@
     "datetime": "2025-08-13T19:02:51",
     "type": [
       "Signature",
-      "Greenery", "Rocks & Mountains"
+      "Greenery",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -305,7 +315,8 @@
     "title": "Lake District Expedition - Summer 2025",
     "datetime": "2025-08-13T13:54:58",
     "type": [
-      "Greenery", "Rocks & Mountains"
+      "Greenery",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -323,7 +334,8 @@
     "title": "Lake District Expedition - Summer 2025",
     "datetime": "2025-08-12T17:36:37",
     "type": [
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -370,7 +382,8 @@
     "datetime": "2025-08-02T18:55:48",
     "type": [
       "Signature",
-      "Greenery", "Rocks & Mountains"
+      "Greenery",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   },
@@ -387,7 +400,9 @@
     "filename": "DSR_0530_1.jpg",
     "title": "Ilkley Moor - Bradford",
     "datetime": "2025-08-01T14:20:51",
-    "type": ["Rocks & Mountains"],
+    "type": [
+      "Rocks & Mountains"
+    ],
     "aspect_ratio": 0.667
   },
   {
@@ -395,7 +410,8 @@
     "title": "Ilkley Moor - Bradford",
     "datetime": "2025-08-01T13:54:51",
     "type": [
-      "Signature", "Rocks & Mountains"
+      "Signature",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -429,7 +445,8 @@
     "title": "University of Warwick - Coventry",
     "datetime": "2025-06-18T16:06:55",
     "type": [
-      "Greenery", "Rocks & Mountains"
+      "Greenery",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 0.667
   },
@@ -557,15 +574,33 @@
     "filename": "DSR_0065.JPG",
     "title": "Snowdonia - Watkin Path",
     "datetime": "2024-09-06T09:28:50",
-    "type": ["Rocks & Mountains"],
+    "type": [
+      "Rocks & Mountains"
+    ],
     "aspect_ratio": 0.667
   },
   {
     "filename": "DSR_0002.JPG",
     "title": "",
     "datetime": "2024-08-30T18:34:12",
-    "type": ["Rocks & Mountains"],
+    "type": [
+      "Rocks & Mountains"
+    ],
     "aspect_ratio": 1.5
+  },
+  {
+      "filename": "DSC_10941.JPG",
+      "title": "60th Wedding Anniversary Celebration",
+      "datetime": "2024-08-10T16:50:31",
+      "type": [],
+      "aspect_ratio": 0.667
+  },
+  {
+      "filename": "DSC_10937.JPG",
+      "title": "60th Wedding Anniversary Celebration",
+      "datetime": "2024-08-10T15:32:39",
+      "type": [],
+      "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10925_1.jpg",
@@ -736,8 +771,7 @@
     "filename": "DSC_10685_1.jpg",
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-12T14:00:00",
-    "type": [
-    ],
+    "type": [],
     "aspect_ratio": 0.667
   },
   {
@@ -811,8 +845,7 @@
     "filename": "DSC_10370.JPG",
     "title": "",
     "datetime": "2024-04-14T18:21:06",
-    "type": [
-    ],
+    "type": [],
     "aspect_ratio": 1.5
   },
   {
@@ -829,7 +862,8 @@
     "title": "Gower Peninsula - Wales",
     "datetime": "2023-07-02T17:57:43",
     "type": [
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 1.499
   },
@@ -880,7 +914,8 @@
     "filename": "DSC_1268.JPG",
     "title": "Appleby Castle - Penrith",
     "datetime": "2021-09-03T12:19:27",
-    "type": ["Rocks & Mountains"
+    "type": [
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   },
@@ -889,7 +924,8 @@
     "title": "Barnard Castle - County Durham",
     "datetime": "2021-07-22T17:28:04",
     "type": [
-      "Water", "Rocks & Mountains"
+      "Water",
+      "Rocks & Mountains"
     ],
     "aspect_ratio": 1.5
   }

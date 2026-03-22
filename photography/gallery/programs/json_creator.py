@@ -5,13 +5,13 @@ from PIL import Image, ImageOps
 from PIL.ExifTags import TAGS
 
 # --- CONFIGURATION ---
-CATEGORY = "private/tennis26"
+CATEGORY = "travel"
 DIREC = "C:/Users/alfie/Photography-Portfolio/photography/gallery"
 IMAGE_FOLDER = DIREC + "/images/" + CATEGORY + "/full/"
 JSON_OUTPUT_PATH = DIREC + "/data/" + CATEGORY + ".json"
 DEFAULT_TITLE = ""
 DEFAULT_TYPE = ""
-DEFAULT_DATE = "08/03/26"
+DEFAULT_DATE = "22/03/26"
 # ---------------------
 
 

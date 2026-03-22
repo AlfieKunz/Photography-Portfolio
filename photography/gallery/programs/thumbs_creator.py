@@ -3,7 +3,7 @@ import os, io
 
 
 # --- CONFIGURATION ---
-CATEGORY = "private/tennis26"
+CATEGORY = "nature"
 direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/images/" + CATEGORY
 input_folder = direc + "/full"
 output_folder = direc + "/thumb"
@@ -35,6 +35,7 @@ def load_with_icc(path):
 
 
 os.makedirs(output_folder, exist_ok=True)
+ThumbCount = 0
 for filename in os.listdir(input_folder):
     if filename.lower().endswith(".jpg") or filename.lower().endswith(".jpeg") or filename.lower().endswith(".png"):
         input_path = os.path.join(input_folder, filename)
@@ -60,3 +61,5 @@ for filename in os.listdir(input_folder):
         
         img.thumbnail((450,450), Image.LANCZOS)  # Converts to thumb - LANCZOS represents best quality resampling
         img.save(output_path, "JPEG", quality=95, subsampling=0, optimize=True) # Saves the thumb
+        ThumbCount += 1
+print(f"Saved {ThumbCount} Thumbs.")
