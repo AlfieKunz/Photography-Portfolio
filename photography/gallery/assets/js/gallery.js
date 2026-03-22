@@ -639,7 +639,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 errorMessage.innerHTML = `<br>(${ErrorCounter}) Please enter a username.`;
                 return;
             }
-            const username = nameInput.value.toLowerCase()
+            const username = nameInput.value.toLowerCase().replace(/[\s"]/g, '');
             if (username == "debug") {
                 modal.style.display = 'none';
                 return;
