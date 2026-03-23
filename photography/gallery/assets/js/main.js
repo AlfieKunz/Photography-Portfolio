@@ -611,6 +611,10 @@ initViewer: function(imagesData) {
                         'transform-origin': 'center center',
                         'transition': 'opacity 0.5s ease-in-out, transform 0.75s ease'
                     });
+					newSlide.$slideImage.css({
+						'transform': 'scale(1)',
+						'transform-origin': 'center center'
+					});
                 }
             }
             oldSlide.$slide.removeClass('active');
