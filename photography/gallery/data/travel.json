@@ -1,5 +1,24 @@
 [
   {
+    "filename": "DSR_0967.jpg",
+    "title": "Barnard Castle - County Durham",
+    "datetime": "2026-03-30T12:07:17",
+    "type": [
+      "Signature",
+      "Greenery"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0961.jpg",
+    "title": "Barnard Castle - County Durham",
+    "datetime": "2026-03-30T11:33:24",
+    "type": [
+      "Signature"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
     "filename": "DSR_0929_1.jpg",
     "title": "Snowdonia - Wales",
     "datetime": "2025-09-05T13:16:52",
@@ -589,18 +608,18 @@
     "aspect_ratio": 1.5
   },
   {
-      "filename": "DSC_10941.JPG",
-      "title": "60th Wedding Anniversary Celebration",
-      "datetime": "2024-08-10T16:50:31",
-      "type": [],
-      "aspect_ratio": 0.667
+    "filename": "DSC_10941.JPG",
+    "title": "60th Wedding Anniversary Celebration",
+    "datetime": "2024-08-10T16:50:31",
+    "type": [],
+    "aspect_ratio": 0.667
   },
   {
-      "filename": "DSC_10937.JPG",
-      "title": "60th Wedding Anniversary Celebration",
-      "datetime": "2024-08-10T15:32:39",
-      "type": [],
-      "aspect_ratio": 0.667
+    "filename": "DSC_10937.JPG",
+    "title": "60th Wedding Anniversary Celebration",
+    "datetime": "2024-08-10T15:32:39",
+    "type": [],
+    "aspect_ratio": 0.667
   },
   {
     "filename": "DSC_10925_1.jpg",
