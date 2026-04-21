@@ -1,5 +1,72 @@
 [
   {
+    "filename": "DSR_1006_1.jpg",
+    "title": "Tulley's Tulip Garden, Warwickshire",
+    "datetime": "2026-04-18T19:15:48",
+    "type": [
+      "Signature",
+      "Nature"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_1005_1.jpg",
+    "title": "Tulley's Tulip Garden, Warwickshire",
+    "datetime": "2026-04-18T19:14:12",
+    "type": [
+      "Nature"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0996_1.jpg",
+    "title": "Tulley's Tulip Garden, Warwickshire",
+    "datetime": "2026-04-18T18:58:30",
+    "type": [
+      "Signature",
+      "Nature"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0995_1.jpg",
+    "title": "Tulley's Tulip Garden, Warwickshire",
+    "datetime": "2026-04-18T18:54:28",
+    "type": [
+      "Nature"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0993_1.jpg",
+    "title": "Tulley's Tulip Garden, Warwickshire",
+    "datetime": "2026-04-18T18:54:21",
+    "type": [
+      "Signature",
+      "Nature"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0987_1.jpg",
+    "title": "Tulley's Tulip Garden, Warwickshire",
+    "datetime": "2026-04-18T18:37:14",
+    "type": [
+      "Signature",
+      "Nature"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_0981_1.jpg",
+    "title": "Tulley's Tulip Garden, Warwickshire",
+    "datetime": "2026-04-18T18:16:20",
+    "type": [
+      "Nature"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
     "filename": "DSCF9198.jpg",
     "title": "Barnard Castle, County Durham - With Beth Moore",
     "datetime": "2026-04-02T17:46:46",

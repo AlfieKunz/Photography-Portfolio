@@ -1,5 +1,44 @@
 [
   {
+    "filename": "DSR_1021_1.jpg",
+    "title": "",
+    "datetime": "2026-04-19T19:14:31",
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_1019_1.jpg",
+    "title": "Tulley's Tulip Garden, Warwickshire",
+    "datetime": "2026-04-18T19:35:31",
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_1015_1.jpg",
+    "title": "Tulley's Tulip Garden, Warwickshire",
+    "datetime": "2026-04-18T19:29:18",
+    "type": [
+      "Signature",
+      "Plants & Greenery"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_0973_1.jpg",
+    "title": "",
+    "datetime": "2026-04-16T00:10:05",
+    "type": [
+      "Insects & Macro"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
     "filename": "DSR_0958_1.jpg",
     "title": "Barnard Castle - County Durham",
     "datetime": "2026-03-30T11:12:56",
@@ -24,7 +63,6 @@
     "title": "Snowdonia - Wales",
     "datetime": "2025-09-05T12:55:40",
     "type": [
-      "Signature",
       "Animals"
     ],
     "aspect_ratio": 0.667
@@ -62,7 +100,7 @@
     "datetime": "2025-08-14T13:05:02",
     "type": [
       "Signature",
-      "Insects"
+      "Insects & Macro"
     ],
     "aspect_ratio": 0.667
   },
@@ -89,7 +127,7 @@
     "title": "",
     "datetime": "2025-08-06T13:35:36",
     "type": [
-      "Insects"
+      "Insects & Macro"
     ],
     "aspect_ratio": 0.667
   },
@@ -98,7 +136,7 @@
     "title": "Appletreewick - West Yorkshire",
     "datetime": "2025-07-30T16:04:35",
     "type": [
-      "Insects",
+      "Insects & Macro",
       "Plants & Greenery"
     ],
     "aspect_ratio": 1.5
@@ -108,7 +146,7 @@
     "title": "Appletreewick - West Yorkshire",
     "datetime": "2025-07-30T15:55:41",
     "type": [
-      "Insects"
+      "Insects & Macro"
     ],
     "aspect_ratio": 1.5
   },
@@ -144,7 +182,7 @@
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T12:28:09",
     "type": [
-      "Insects",
+      "Insects & Macro",
       "Plants & Greenery"
     ],
     "aspect_ratio": 1.5
@@ -154,7 +192,7 @@
     "title": "Wedding Reception & Party in Yorkshire",
     "datetime": "2025-07-12T12:01:05",
     "type": [
-      "Animals"
+      "Insects & Macro"
     ],
     "aspect_ratio": 0.667
   },
@@ -389,7 +427,7 @@
     "datetime": "2025-03-22T01:09:42",
     "type": [
       "Signature",
-      "Insects"
+      "Insects & Macro"
     ],
     "aspect_ratio": 1.5
   },
@@ -407,7 +445,7 @@
     "title": "Studio Photo Stack - Spider",
     "datetime": "2024-09-20T00:47:39",
     "type": [
-      "Insects"
+      "Insects & Macro"
     ],
     "aspect_ratio": 1.5
   },
@@ -444,7 +482,7 @@
     "title": "Europe Interrailing 2024",
     "datetime": "2024-07-17T13:59:53",
     "type": [
-      "Insects"
+      "Insects & Macro"
     ],
     "aspect_ratio": 1.499
   },
@@ -472,7 +510,7 @@
     "datetime": "2024-07-13T10:12:02",
     "type": [
       "Signature",
-      "Insects",
+      "Insects & Macro",
       "Plants & Greenery"
     ],
     "aspect_ratio": 1.5
@@ -548,7 +586,7 @@
     "datetime": "2024-07-08T10:31:58",
     "type": [
       "Signature",
-      "Insects",
+      "Insects & Macro",
       "Plants & Greenery"
     ],
     "aspect_ratio": 0.667
@@ -624,7 +662,7 @@
     "datetime": "2024-04-16T13:13:31",
     "type": [
       "Signature",
-      "Insects"
+      "Insects & Macro"
     ],
     "aspect_ratio": 1.333
   },
@@ -804,7 +842,7 @@
     "datetime": "2022-08-06T13:29:00",
     "type": [
       "Signature",
-      "Insects"
+      "Insects & Macro"
     ],
     "aspect_ratio": 1.5
   },
@@ -813,7 +851,7 @@
     "title": "",
     "datetime": "2022-08-06T13:27:37",
     "type": [
-      "Insects"
+      "Insects & Macro"
     ],
     "aspect_ratio": 1.5
   },
@@ -840,7 +878,7 @@
     "title": "",
     "datetime": "2022-06-11T11:15:58",
     "type": [
-      "Insects"
+      "Insects & Macro"
     ],
     "aspect_ratio": 1.5
   },
@@ -898,7 +936,7 @@
     "title": "Appleby Castle - Penrith",
     "datetime": "2021-09-03T13:08:08",
     "type": [
-      "Insects",
+      "Insects & Macro",
       "Plants & Greenery"
     ],
     "aspect_ratio": 1.5
@@ -944,7 +982,7 @@
     "title": "",
     "datetime": "2021-08-04T16:37:56",
     "type": [
-      "Insects",
+      "Insects & Macro",
       "Plants & Greenery"
     ],
     "aspect_ratio": 1.5

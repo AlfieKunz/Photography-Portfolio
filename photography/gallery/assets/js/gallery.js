@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "<b>Eutierria</b> (noun): 'a pleasing feeling of oneness with the earth and life'. Okay, <i>perhaps</i> that's a little pretentious, but there's a reason why the majority of my photos are of nature! :) I'm really lucky to live where I do, to be surrounded by so much life. Photography helps me explore that 'oneness' through curiosity and mindfulness; I hope to share a piece of that feeling here - hope you enjoy! 😌",
         StartPhoto: "DSR_0334_1.jpg",
         heightDelta: 0,
-        tags: ["Signature", "Plants & Greenery", "Animals", "Insects"]
+        tags: ["Signature", "Plants & Greenery", "Animals", "Insects & Macro"]
     },
     portrait: {
         title: "Gallery -<br>Portraits",
