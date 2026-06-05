@@ -1,5 +1,55 @@
 [
   {
+    "filename": "DSR_1050_1.jpg",
+    "title": "Strid Wood - North Yorkshire",
+    "datetime": "2026-06-04T19:25:25",
+    "type": [
+      "Signature",
+      "Animals",
+      "Plants & Greenery"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_1041_1.jpg",
+    "title": "Strid Wood - North Yorkshire",
+    "datetime": "2026-06-04T18:28:14",
+    "type": [
+      "Signature",
+      "Animals"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_1037_1.jpg",
+    "title": "Strid Wood - North Yorkshire",
+    "datetime": "2026-06-04T17:46:23",
+    "type": [
+      "Animals"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
+    "filename": "DSR_1027_1.jpg",
+    "title": "Strid Wood - North Yorkshire",
+    "datetime": "2026-06-04T17:11:47",
+    "type": [
+      "Signature",
+      "Animals"
+    ],
+    "aspect_ratio": 1.5
+  },
+  {
+    "filename": "DSR_1026_1.jpg",
+    "title": "Strid Wood - North Yorkshire",
+    "datetime": "2026-06-04T17:11:23",
+    "type": [
+      "Signature",
+      "Animals"
+    ],
+    "aspect_ratio": 0.667
+  },
+  {
     "filename": "DSR_1021_1.jpg",
     "title": "",
     "datetime": "2026-04-19T19:14:31",
