@@ -16,6 +16,10 @@
             // Redirects to private gallery.
             const category = PrivateRedirectList.includes(lastSegment) ? "private" : "event";
             window.location.replace(`https://www.alfiekunz.co.uk/photography/gallery/?category=${category}`);
+        } else if (PathTree[0].toLowerCase() === 'p') {
+            window.location.replace(`https://www.alfiekunz.co.uk/photography`);
+        } else if (PathTree[0].toLowerCase() === 'a') {
+            window.location.replace(`https://www.alfiekunz.co.uk/academia`);
         } else {
             // Redirects to closest parent.
             RedirectUpBranch();

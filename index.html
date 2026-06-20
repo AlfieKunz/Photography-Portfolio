@@ -2,26 +2,163 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfie Kunz</title>
+    <link href="assets/styles.css" rel="stylesheet" />
 
     <!-- Favicons-->
-    <link rel="icon" href="photography/assets/favicon/favicon.ico" type="image/x-icon" />
-    <link rel="icon" type="image/png" sizes="32x32" href="photography/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="photography/assets/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="photography/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 
     <!-- Details for search indexing. -->
-    <meta property="og:title" content="Alfie Kunz - Photography Services & Projects">
-    <meta name="description" content="Hi! I'm Alfie, a 21-year-old Student (University of Warwick, MMathPhys) and Professional Photographer. I specialise in Event and Studio work, and pride myself on my friendly and charismatic approach to projects. Let me know if I can be of service! 😊">
-    <meta property="og:description" content="Hi! I'm Alfie, a 21-year-old Student (University of Warwick, MMathPhys) and Professional Photographer. I specialise in Event and Studio work, and pride myself on my friendly and charismatic approach to projects. Let me know if I can be of service! 😊">
-    <meta property="og:image" content="https://alfiekunz.co.uk/photography/assets/img/logo.jpg">
+    <meta property="og:title" content="Alfie Kunz - Photographer, Masters Student">
+    <meta name="description" content="The home of both my Photography Projects & Services, and my Academic Portfolio and CV.<br>Please enjoy your stay! :)">
+    <meta property="og:description" content="The home of both my Photography Projects & Services, and my Academic Portfolio and CV.<br>Please enjoy your stay! :)">
+    <meta property="og:image" content="https://alfiekunz.co.uk/assets/img/logo.png">
     <meta property="og:url" content="https://alfiekunz.co.uk">
     <meta property="og:type" content="website">
 
-    <!-- Sends user to /photography -->
-    <link rel="canonical" href="https://www.alfiekunz.co.uk/photography"/>
-    <meta http-equiv="refresh" content="0; url=./photography">
-
 </head>
+<body>
+    <canvas id="background"></canvas>
+    <section class="main">
+        
+        <header class="header">
+            <h1>Alfie Kunz</h1>
+            <p class="subtitle">The home of both my Photography Projects & Services, and my Academic Portfolio and CV.<br>Please enjoy your stay! :)</p>
+        </header>
+
+        <div class="content">
+ 
+            <a href="/photography" class="panel panel-photography">
+                <div class="panel-bg"></div>
+                <div class="panel-label">
+                    <h2>Photography</h2>
+                    <div class="panel-label-rule"></div>
+                </div>
+            </a>
+            <a href="/academia" class="panel panel-academia">
+                <div class="panel-bg"></div>
+                <div class="panel-label">
+                    <h2>Academia</h2>
+                    <div class="panel-label-rule"></div>
+                </div>
+            </a>
+ 
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 Alfie Kunz.&nbsp&nbsp&nbspAll rights reserved.</p>
+        </footer>
+
+    </section>
+
+
+    <!-- Background Wave Pattern -->
+    <script>
+        const canvas = document.getElementById('background');
+        const ctx    = canvas.getContext('2d');
+
+        const LINE_SPACING   = 18;     
+        const MAX_AMPLITUDE  = 100;     
+        const BUFFER_LINES   = Math.ceil(MAX_AMPLITUDE / LINE_SPACING);
+
+        let W, H, lineCount;
+        let t = 0;
+        let lastTime = performance.now();
+        let prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function resize() {
+            W = window.innerWidth;
+            H = window.innerHeight;
+            canvas.width  = W;
+            canvas.height = H;
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+            lineCount = Math.ceil(H / LINE_SPACING) + (BUFFER_LINES * 2);
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        function drawFrame() {
+            ctx.clearRect(0, 0, W, H);
+
+            ctx.save();
+            ctx.globalAlpha = 0.85;
+            ctx.lineWidth   = 1.1;
+
+            const tMacro = t * 0.3;
+            const tOct1  = t * 1.8;
+            const tOct2  = t * 3.2;
+            const batches = new Map();
+
+            for (let i = 0; i < lineCount; i++) {
+                const baseY = (i - BUFFER_LINES) * LINE_SPACING;
+
+                const baseYMacro = baseY * 0.003; 
+
+                ctx.beginPath();
+
+                const STEP = 8;
+                let maxBrightness = 100; 
+                let stepCounter = 0;
+
+                for (let x = -STEP; x <= W + STEP; x += STEP) {
+                    
+                    const macroWave = Math.sin(x * 0.005 + baseYMacro + tMacro);
+                    const jaggedOctave1 = Math.sin(x * 0.025 - tOct1 + macroWave * 6.5);
+                    const jaggedOctave2 = Math.cos(x * 0.075 + tOct2 + jaggedOctave1 * 3.0);
+                    
+                    const combinedField = (macroWave * 0.75) + (jaggedOctave1 * 0.15 + jaggedOctave2 * 0.08);
+                    const y = baseY + (combinedField * MAX_AMPLITUDE);
+
+                    if (stepCounter++ % 4 === 0) {
+                        const localTurbulence = Math.abs(jaggedOctave1 * jaggedOctave2);
+                        const currentBrightness = 130 + localTurbulence * 125;
+                        if (currentBrightness > maxBrightness) {
+                            maxBrightness = currentBrightness;
+                        }
+                    }
+
+                    if (x <= -STEP) {
+                        ctx.moveTo(x, y);
+                    } else {
+                        ctx.lineTo(x, y);
+                    }
+                }
+
+                const finalBrightness = Math.round(maxBrightness);
+                ctx.strokeStyle = `rgb(${finalBrightness},${finalBrightness},${finalBrightness})`;
+                ctx.stroke();
+            }
+
+            ctx.restore();
+        }
+
+        function loop(currentTime) {
+            const dt = (currentTime - lastTime) / 1000;
+            lastTime = currentTime;
+
+            if (!prefersReduced) {
+                t += dt * 0.5; 
+            }
+            
+            drawFrame();
+            requestAnimationFrame(loop);
+        }
+
+        window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', e => {
+            prefersReduced = e.matches;
+        });
+
+        requestAnimationFrame((time) => {
+            lastTime = time;
+            loop(time);
+        });
+    </script>
+
+</body>
 </html>
