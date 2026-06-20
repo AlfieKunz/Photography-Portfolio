@@ -15,11 +15,15 @@
 
     <!-- Details for search indexing. -->
     <meta property="og:title" content="Alfie Kunz - Photographer, Masters Student">
-    <meta name="description" content="The home of both my Photography Projects & Services, and my Academic Portfolio and CV.<br>Please enjoy your stay! :)">
-    <meta property="og:description" content="The home of both my Photography Projects & Services, and my Academic Portfolio and CV.<br>Please enjoy your stay! :)">
+    <meta name="description" content="The home of both my Photography Projects & Services, and my Academic Portfolio & CV.<br>Please enjoy your stay! :)">
+    <meta property="og:description" content="The home of both my Photography Projects & Services, and my Academic Portfolio & CV.<br>Please enjoy your stay! :)">
     <meta property="og:image" content="https://alfiekunz.co.uk/assets/img/logo.png">
     <meta property="og:url" content="https://alfiekunz.co.uk">
     <meta property="og:type" content="website">
+
+    <!-- Prioritises loading of images before background animation. -->
+    <link rel="preload" href="./img/Photography.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="./img/Academia.jpg" as="image" fetchpriority="high">
 
 </head>
 <body>
@@ -28,7 +32,7 @@
         
         <header class="header">
             <h1>Alfie Kunz</h1>
-            <p class="subtitle">The home of both my Photography Projects & Services, and my Academic Portfolio and CV.<br>Please enjoy your stay! :)</p>
+            <p class="subtitle">The home of both my Photography Projects & Services, and my Academic Portfolio & CV.<br>Please enjoy your <span class="fixed-spacing">s</span>tay! :)</p>
         </header>
 
         <div class="content">
@@ -60,103 +64,102 @@
     <!-- Background Wave Pattern -->
     <script>
         const canvas = document.getElementById('background');
-        const ctx    = canvas.getContext('2d');
+        const CanvasDraw = canvas.getContext('2d');
 
-        const LINE_SPACING   = 18;     
-        const MAX_AMPLITUDE  = 100;     
-        const BUFFER_LINES   = Math.ceil(MAX_AMPLITUDE / LINE_SPACING);
+        const LineSpacing = 18;     
+        const StepSize = 8;
+        const NoExtraLines = Math.ceil(100 / LineSpacing);
 
-        let W, H, lineCount;
-        let t = 0;
-        let lastTime = performance.now();
-        let prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let Width, Height, NoLines;
+        let CurrentTime = 0;
+        let PreviousTime = performance.now();
+        let PRM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        function resize() {
-            W = window.innerWidth;
-            H = window.innerHeight;
-            canvas.width  = W;
-            canvas.height = H;
-            ctx.setTransform(1, 0, 0, 1, 0, 0);
-
-            lineCount = Math.ceil(H / LINE_SPACING) + (BUFFER_LINES * 2);
+        function GetCanvasData() {
+            // Gets canvas info upon rescaling of window.
+            Width = window.innerWidth;
+            Height = window.innerHeight;
+            canvas.width = Width;
+            canvas.height = Height;
+            CanvasDraw.setTransform(1, 0, 0, 1, 0, 0); // Identity: represents Device Pixel Ratio of 1 (speedy).
+            NoLines = Math.ceil(Height / LineSpacing) + (NoExtraLines * 2);
         }
-        window.addEventListener('resize', resize);
-        resize();
+        window.addEventListener('resize', GetCanvasData);
+        GetCanvasData();
 
-        function drawFrame() {
-            ctx.clearRect(0, 0, W, H);
+        function DrawFrame() {
+            // Resets Canvas.
+            CanvasDraw.clearRect(0, 0, Width, Height);
+            CanvasDraw.save();
+            CanvasDraw.globalAlpha = 0.85;
+            CanvasDraw.lineWidth   = 1.1;
 
-            ctx.save();
-            ctx.globalAlpha = 0.85;
-            ctx.lineWidth   = 1.1;
+            for (let yUnperturbed = -NoExtraLines * LineSpacing; yUnperturbed < (NoLines - NoExtraLines) * LineSpacing; yUnperturbed += LineSpacing) {
+                CanvasDraw.beginPath();
+                let MaxBrightness = 100; 
+                let IterationCount = 0;
 
-            const tMacro = t * 0.3;
-            const tOct1  = t * 1.8;
-            const tOct2  = t * 3.2;
-            const batches = new Map();
-
-            for (let i = 0; i < lineCount; i++) {
-                const baseY = (i - BUFFER_LINES) * LINE_SPACING;
-
-                const baseYMacro = baseY * 0.003; 
-
-                ctx.beginPath();
-
-                const STEP = 8;
-                let maxBrightness = 100; 
-                let stepCounter = 0;
-
-                for (let x = -STEP; x <= W + STEP; x += STEP) {
+                for (let x = -StepSize; x <= Width + StepSize; x += StepSize) {
+                    // Creates three waves, a large-amplitude wave, and then two out-of-phase jagged waves.
+                    const GlobalWave = Math.sin(x * 0.005 + (yUnperturbed * 0.003) + (CurrentTime * 0.3));
+                    const JaggedWave = Math.sin(x * 0.025 - (CurrentTime * 1.8) + GlobalWave * 6.5);
+                    const JaggedJaggedWave = Math.cos(x * 0.075 + (CurrentTime * 3.2) + JaggedWave * 3.0);
                     
-                    const macroWave = Math.sin(x * 0.005 + baseYMacro + tMacro);
-                    const jaggedOctave1 = Math.sin(x * 0.025 - tOct1 + macroWave * 6.5);
-                    const jaggedOctave2 = Math.cos(x * 0.075 + tOct2 + jaggedOctave1 * 3.0);
-                    
-                    const combinedField = (macroWave * 0.75) + (jaggedOctave1 * 0.15 + jaggedOctave2 * 0.08);
-                    const y = baseY + (combinedField * MAX_AMPLITUDE);
-
-                    if (stepCounter++ % 4 === 0) {
-                        const localTurbulence = Math.abs(jaggedOctave1 * jaggedOctave2);
-                        const currentBrightness = 130 + localTurbulence * 125;
-                        if (currentBrightness > maxBrightness) {
-                            maxBrightness = currentBrightness;
+                    IterationCount++;
+                    if (IterationCount % 4 === 0) {
+                        // Gets the scaled local disturbance to calculate a value of Brightness ~ A^2
+                        const Brightness = 130 + Math.abs(JaggedWave * JaggedJaggedWave) * 125;
+                        if (Brightness > MaxBrightness) {
+                            MaxBrightness = Brightness;
                         }
                     }
 
-                    if (x <= -STEP) {
-                        ctx.moveTo(x, y);
+                    // Paints the wave.
+                    let y = yUnperturbed + 100 * (GlobalWave * 0.75 + JaggedWave * 0.15 + JaggedJaggedWave * 0.08);
+                    if (x <= -StepSize) {
+                        CanvasDraw.moveTo(x, y);
                     } else {
-                        ctx.lineTo(x, y);
+                        CanvasDraw.lineTo(x, y);
                     }
                 }
 
-                const finalBrightness = Math.round(maxBrightness);
-                ctx.strokeStyle = `rgb(${finalBrightness},${finalBrightness},${finalBrightness})`;
-                ctx.stroke();
+                const RoundedBrightness = Math.round(MaxBrightness);
+                CanvasDraw.strokeStyle = `rgb(${RoundedBrightness},${RoundedBrightness},${RoundedBrightness})`;
+                CanvasDraw.stroke();
             }
-
-            ctx.restore();
+            CanvasDraw.restore();
         }
 
-        function loop(currentTime) {
-            const dt = (currentTime - lastTime) / 1000;
-            lastTime = currentTime;
-
-            if (!prefersReduced) {
-                t += dt * 0.5; 
-            }
-            
-            drawFrame();
-            requestAnimationFrame(loop);
+        function PlayAnimation(currentTime) {
+            const dt = (currentTime - PreviousTime) / 1000;
+            PreviousTime = currentTime;
+            // Ensures that the animation plays the same irrespective of frame rate.
+            if (!PRM) {CurrentTime += dt * 0.5; }
+            DrawFrame();
+            requestAnimationFrame(PlayAnimation);
         }
-
         window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', e => {
-            prefersReduced = e.matches;
+            PRM = e.matches;
         });
-
         requestAnimationFrame((time) => {
-            lastTime = time;
-            loop(time);
+            PreviousTime = time;
+            PlayAnimation(time);
+        });
+    </script>
+
+    <!-- Enables Panel Activation for touch screens upon click (instead of hover for desktop). -->
+    <script>
+        const panels = document.querySelectorAll('.panel');
+        panels.forEach(panel => {
+            panel.addEventListener('click', function(e) {
+                if (this.classList.contains('active-redirect')) return;
+                e.preventDefault();
+                panels.forEach(p => p.classList.remove('active-redirect'));
+                this.classList.add('active-redirect');
+                setTimeout(() => {
+                    window.location.href = this.getAttribute('href');
+                }, 400);
+            });
         });
     </script>
 
