@@ -226,13 +226,13 @@ html, body {
     .main {
         height: auto;
         min-height: 100vh;
-        gap: 40px;
+        gap: 20px;
         padding: 28px 15px;
     }
 
     .header h1 { font-size: clamp(2.8rem, 9vw, 6rem); }
-    .header .subtitle { font-size: clamp(0.9rem, 2.4vw, 1.2rem); }
-    .content { height: 70vh; }
+    .header .subtitle { font-size: clamp(0.8rem, 2.1vw, 1.0rem); }
+    .content { height: 65vh; width: 95%; }
 
     .panel-photography { 
         clip-path: polygon(0 0, 100% 0, 100% 56%, 0 44%); 

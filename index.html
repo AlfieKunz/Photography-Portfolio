@@ -161,6 +161,12 @@
                 }, 400);
             });
         });
+        // Deactivates panels if the back button is hit.
+        window.addEventListener('pageshow', function(e) {
+            if (e.persisted) {
+                panels.forEach(p => p.classList.remove('active-redirect'));
+            }
+        });
     </script>
 
 </body>
