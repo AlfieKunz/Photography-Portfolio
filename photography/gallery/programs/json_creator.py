@@ -5,8 +5,8 @@ from PIL import Image, ImageOps
 from PIL.ExifTags import TAGS
 
 # --- CONFIGURATION ---
-CATEGORY = "portrait"
-DIREC = "C:/Users/alfie/Photography-Portfolio/photography/gallery"
+CATEGORY = "private/netball26"
+DIREC = "C:/Users/alfie/Website-Portfolio/photography/gallery"
 IMAGE_FOLDER = DIREC + "/images/" + CATEGORY + "/full/"
 JSON_OUTPUT_PATH = DIREC + "/data/" + CATEGORY + ".json"
 DEFAULT_TITLE = ""
@@ -29,6 +29,8 @@ match CATEGORY:
         DEFAULT_TYPE = ["Signature", "Animals", "Insects & Macro", "Plants & Greenery"]
     case "portrait":
         DEFAULT_TYPE = ["Signature", "Nature", "Studio", "Landscape", "Animals"]
+    case "sport":
+        DEFAULT_TYPE = ["Signature", "Action", "Emotion", "Portaits", "Team"]
     case "studio":
         DEFAULT_TYPE = ["Signature", "Light & Reflection", "Portrait", "Objects & Products", "Macro"]
     case "travel":

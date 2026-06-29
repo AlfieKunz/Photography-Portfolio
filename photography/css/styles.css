@@ -1,6 +1,6 @@
 
 @charset "UTF-8";
-@import url(../gallery/assets/css/fontawesome-all.min.css);
+@import url(/assets/css/fontawesome-all.min.css);
 /*!
 * Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
 * Copyright 2013-2023 Start Bootstrap
@@ -11109,4 +11109,16 @@ ul.icons a.icon:hover {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
+}
+
+.custom-accent-link {
+  color: #f4623a;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+  border-bottom: 2px dashed rgba(244, 98, 58, 0.7);
+}
+
+.custom-accent-link:hover {
+  color: #F47B3A;
+  border-bottom: 2px solid #F47B3A;
 }

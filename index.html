@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alfie Kunz</title>
-    <link href="assets/styles.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
 
     <!-- Favicons-->
     <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
@@ -163,8 +163,9 @@
         });
         // Deactivates panels if the back button is hit.
         window.addEventListener('pageshow', function(e) {
-            if (e.persisted) {
-                panels.forEach(p => p.classList.remove('active-redirect'));
+            panels.forEach(p => p.classList.remove('active-redirect'));
+            if (document.activeElement && typeof document.activeElement.blur === 'function') {
+                document.activeElement.blur();
             }
         });
     </script>

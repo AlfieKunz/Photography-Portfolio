@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 CATEGORY = "event"
-DIREC = Path("C:/Users/alfie/Photography-Portfolio/photography/gallery/data/")
+DIREC = Path("C:/Users/alfie/Website-Portfolio/photography/gallery/data/")
 old_json_path = DIREC / f"{CATEGORY} - Old.json"
 new_json_path = DIREC / f"{CATEGORY}.json"
 photo_folder = Path("C:/Users/alfie/Photography/Portfolio/Event")

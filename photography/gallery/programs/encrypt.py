@@ -6,9 +6,9 @@ from Crypto.Util.Padding import pad, unpad
 from Crypto.Random import get_random_bytes
 
 # --- CONFIGURATION ---
-USERNAME = "tennis26"
-PASSKEY = "tennis26"
-direc = "C:/Users/alfie/Photography-Portfolio/photography/gallery/images/private/" + USERNAME
+USERNAME = "netball26"
+PASSKEY = "netball26"
+direc = "C:/Users/alfie/Website-Portfolio/photography/gallery/images/private/" + USERNAME
 full_folder = direc + "/full"
 thumb_folder = direc + "/thumb"
 # ---------------------

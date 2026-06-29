@@ -2,7 +2,7 @@ Original Templates:
 
 -Lens by HTML5 UP
 
--Creative by Start Bootstrap
+-Creative & Personal by Start Bootstrap
 
 
 

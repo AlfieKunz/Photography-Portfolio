@@ -4,7 +4,7 @@ from pathlib import Path
 
 # --- CONFIGURATION ---
 direcProj = Path("C:/Users/alfie/Photography/")
-direcPort = Path("C:/Users/alfie/Photography-Portfolio/photography/gallery/images/")
+direcPort = Path("C:/Users/alfie/Website-Portfolio/photography/gallery/images/")
 input_folder = direcProj / "Portfolio/Event"
 output_folder = direcPort / "event/thumb"
 DeleteBadPhotos = True # Otherwise, just prints the photos to delete.

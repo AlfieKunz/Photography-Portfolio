@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     corporate: {
         title: "Gallery -<br>Corporate",
-        description: "My newest avenue of photography! I've been fortunate enough to partner with industry-leading and promising new businesses, taking photos that promises to capture the very essense of a company: the talent of the team, what they have to offer, and the atmosphere of their workplace. From professional headshots and 'action' team shots to venue photograpy and candids at a launch party, I'll do whatever it takes to showcase your business at its absolute best.",
+        description: "I've been fortunate enough to partner with industry-leading and promising new businesses, taking photos that promises to capture the very essense of a company: the talent of the team, what they have to offer, and the atmosphere of their workplace. From professional headshots and 'action' team shots to venue photograpy and candids at a launch party, I'll do whatever it takes to showcase your business at its absolute best.",
         StartPhoto: "DSR_0003.jpg",
         heightDelta: 0,
         tags: ["Signature", "Headshots", "Action & Directoral", "Venue"]
@@ -54,6 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
         StartPhoto: "DSC_9804_1.jpg",
         heightDelta: 0,
         tags: ["Signature", "Nature", "Studio", "Landscape", "Animals"]
+    },
+    sport: {
+        title: "Gallery -<br>Sport",
+        description: "Having competed in a wide variety of sports since childhood, I'm intuitively aware of which moments best highlight a team, no matter the game. I'm highly driven to showcase the emotion, the action, and the narrative behind every move or play, never failing to capture impactful images in even the most extreme of environments.",
+        StartPhoto: "DSC_8247_1.jpg",
+        heightDelta: 0,
+        tags: ["Signature", "Action", "Emotion", "Portaits", "Team"]
     },
     studio: {
         title: "Gallery -<br>Studio Work",

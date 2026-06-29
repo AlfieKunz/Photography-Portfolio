@@ -1,7 +1,7 @@
 import json
 
 CATEGORY = "event"
-DIREC = "C:/Users/alfie/Photography-Portfolio/photography/gallery/data/" + CATEGORY
+DIREC = "C:/Users/alfie/Website-Portfolio/photography/gallery/data/" + CATEGORY
 old_json_path = DIREC + '.json'
 new_json_dir = DIREC + ' - New.json'
 output_dir = DIREC + '.json'
