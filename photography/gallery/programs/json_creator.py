@@ -30,7 +30,7 @@ match CATEGORY:
     case "portrait":
         DEFAULT_TYPE = ["Signature", "Nature", "Studio", "Landscape", "Animals"]
     case "sport":
-        DEFAULT_TYPE = ["Signature", "Action", "Emotion", "Portaits", "Team"]
+        DEFAULT_TYPE = ["Signature", "Action", "Emotion", "Portraits", "Team"]
     case "studio":
         DEFAULT_TYPE = ["Signature", "Light & Reflection", "Portrait", "Objects & Products", "Macro"]
     case "travel":
