@@ -148,6 +148,10 @@ window.addEventListener('DOMContentLoaded', event => {
         SliderTracking.appendChild(clone);
     });
 
+    setTimeout(() => {
+        SliderTracking.classList.add('is-animating');
+    }, 50);
+
     // Adds lazy loading to wrapped images
     const WrappedImages = SliderTracking.querySelectorAll('img[data-src]');
     WrappedImages.forEach(img => {

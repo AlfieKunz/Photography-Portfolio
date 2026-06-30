@@ -7806,6 +7806,15 @@ textarea.form-control-lg {
 .pt-5 {
   padding-top: 3rem !important;
 }
+.pt-6 {
+  padding-top: 4rem !important;
+}
+.pt-7 {
+  padding-top: 5rem !important;
+}
+.pt-8 {
+  padding-top: 6rem !important;
+}
 
 .pe-0 {
   padding-right: 0 !important;
@@ -11115,13 +11124,17 @@ header.masthead .container {
   height: 100%;
   z-index: 0;
   overflow: hidden;
+  background-color: #000000;
 }
 
 .slider-track {
   display: flex;
   width: max-content;
   height: 100%;
-  animation: continuousPan 30s infinite linear;
+  background-color: #000000;
+}
+.slider-track.is-animating {
+  animation: continuousPan 60s infinite linear;
 }
 
 .slider-track img {
@@ -11129,6 +11142,7 @@ header.masthead .container {
   width: auto;
   object-fit: cover;
   flex-shrink: 0;
+  padding-right: 10px;
 }
 
 .masthead-overlay {
@@ -11137,7 +11151,7 @@ header.masthead .container {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.55) 0%, rgba(92, 77, 66, 0.35) 100%);
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.65) 0%, rgba(92, 77, 66, 0.45) 100%);
   z-index: 1;
 }
 
