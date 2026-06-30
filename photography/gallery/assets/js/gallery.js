@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sport: {
         title: "Gallery -<br>Sport",
         description: "Having competed in a wide variety of sports since childhood, I'm intuitively aware of which moments best highlight a team, no matter the game. I'm highly driven to showcase the emotion, the action, and the narrative behind every move or play, never failing to capture impactful images in even the most extreme of environments.",
-        StartPhoto: "DSC_8247_1.jpg",
+        StartPhoto: "DSR_1152.jpg",
         heightDelta: 0,
         tags: ["Signature", "Action", "Emotion", "Portraits", "Team"]
     },

@@ -1,11 +1,12 @@
 import json
 from pathlib import Path
 
-CATEGORY = "event"
+# Adds a subset of the data from old_json_path (those that are in photo_folder) to to new_json_path (if it does not exist in there already).
+CATEGORY = "sport"
 DIREC = Path("C:/Users/alfie/Website-Portfolio/photography/gallery/data/")
 old_json_path = DIREC / f"{CATEGORY} - Old.json"
 new_json_path = DIREC / f"{CATEGORY}.json"
-photo_folder = Path("C:/Users/alfie/Photography/Portfolio/Event")
+photo_folder = Path("C:/Users/alfie/Photography/Portfolio/Sport")
 
 with open(old_json_path, "r", encoding="utf-8") as f:
     old_data = json.load(f)
